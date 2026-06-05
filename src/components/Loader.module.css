@@ -1,0 +1,163 @@
+.loaderContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--bg-dark);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 0.8s cubic-bezier(0.25, 1, 0.5, 1), visibility 0.8s;
+  overflow: hidden;
+}
+
+.loaderContainer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: var(--zellige-watermark);
+  background-size: 60px 60px;
+  opacity: 0.15;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.fadeOut {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.loaderContent {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 90%;
+}
+
+/* Star Insignia */
+.starInsignia {
+  width: 60px;
+  height: 60px;
+  position: relative;
+  margin-bottom: 25px;
+  animation: rotateStar 6s infinite linear;
+}
+
+.starLine, .starLine2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 1.5px solid var(--primary-gold);
+  border-radius: 4px;
+  box-shadow: var(--shadow-glow);
+}
+
+.starLine2 {
+  transform: rotate(45deg);
+}
+
+.title {
+  font-family: var(--font-serif);
+  font-size: 2.2rem;
+  font-weight: 300;
+  letter-spacing: 4px;
+  color: var(--text-ivory);
+  text-shadow: 0 0 10px rgba(207, 168, 83, 0.3);
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  animation: pulseText 2s infinite ease-in-out;
+}
+
+.divider {
+  width: 120px;
+  height: 8px;
+  background-image: var(--zellige-pattern);
+  background-repeat: repeat-x;
+  background-size: 8px 8px;
+  margin-bottom: 12px;
+  border-radius: 2px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+
+.subtitle {
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  letter-spacing: 8px;
+  color: var(--text-gold);
+  text-transform: uppercase;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+
+/* Spinner loading bar */
+.spinner {
+  width: 120px;
+  height: 2px;
+  background-color: rgba(23, 33, 47, 0.08);
+  position: relative;
+  overflow: hidden;
+  border-radius: 1px;
+}
+
+.spinnerBar {
+  position: absolute;
+  width: 30%;
+  height: 100%;
+  background-color: var(--primary-gold);
+  box-shadow: var(--shadow-glow);
+  animation: loadProgress 1.6s infinite ease-in-out;
+}
+
+@keyframes rotateStar {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulseText {
+  0%, 100% {
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 1;
+    text-shadow: 0 0 15px rgba(207, 168, 83, 0.6);
+  }
+}
+
+@keyframes loadProgress {
+  0% {
+    left: -30%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.6rem;
+    letter-spacing: 3px;
+  }
+  .subtitle {
+    font-size: 0.8rem;
+    letter-spacing: 6px;
+  }
+  .starInsignia {
+    width: 50px;
+    height: 50px;
+  }
+}

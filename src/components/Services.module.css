@@ -1,0 +1,222 @@
+.servicesSection {
+  background-color: transparent;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+/* Background Moroccan arch shape */
+.bgDecoration {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 80%;
+  border: 1.5px solid rgba(178, 127, 36, 0.08);
+  border-radius: 50% 50% 0 0 / 40% 40% 0 0; /* Islamic arch shape */
+  pointer-events: none;
+  z-index: 1;
+}
+
+.container {
+  position: relative;
+  z-index: 2;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  width: 100%;
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.badge {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--primary-gold);
+  margin-bottom: 15px;
+}
+
+.title {
+  font-family: var(--font-serif);
+  font-size: 2.5rem;
+  font-weight: 300;
+  color: var(--text-ivory);
+  letter-spacing: 1px;
+}
+
+.ornament {
+  width: 180px;
+  height: 12px;
+  background-image: var(--zellige-pattern);
+  background-repeat: repeat-x;
+  background-size: 12px 12px;
+  margin-top: 15px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(23, 33, 47, 0.08);
+}
+
+.subtitle {
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  color: var(--text-gold);
+  letter-spacing: 1px;
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+/* Grid layout */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+/* Service Card styling */
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-gold);
+  padding: 46px 30px 40px;
+  border-radius: 12px;
+  transition: var(--transition-smooth);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background-image: var(--zellige-pattern);
+  background-repeat: repeat-x;
+  background-size: 6px 6px;
+  z-index: 10;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  border-color: var(--emeraude);
+  background: var(--ivoire);
+  box-shadow: 0 12px 35px rgba(12, 108, 66, 0.12);
+}
+
+.iconContainer {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: rgba(178, 127, 36, 0.04);
+  border: 1px solid var(--border-gold);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 25px;
+  color: var(--primary-gold);
+  transition: var(--transition-smooth);
+}
+
+.card:hover .iconContainer {
+  background: var(--primary-gold);
+  color: var(--bg-dark);
+  box-shadow: var(--shadow-glow);
+  transform: rotate(360deg);
+}
+
+.cardIcon {
+  transition: color 0.4s ease;
+}
+
+.highlightBadge {
+  font-size: 0.7rem;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--text-gold);
+  border: 1px solid var(--border-gold);
+  padding: 4px 12px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+.card:hover .highlightBadge {
+  border-color: var(--primary-gold);
+  color: var(--text-ivory);
+}
+
+.serviceTitle {
+  font-family: var(--font-serif);
+  font-size: 1.4rem;
+  font-weight: 300;
+  color: var(--text-ivory);
+  margin-bottom: 15px;
+  letter-spacing: 0.5px;
+}
+
+.desc {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+/* Bullet list specs */
+.bulletList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: left;
+  width: 100%;
+  border-top: 1px solid var(--border-gold);
+  padding-top: 20px;
+  margin-top: auto;
+}
+
+.bulletItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.8rem;
+  color: var(--text-gold);
+}
+
+.bulletIcon {
+  color: var(--primary-gold);
+  flex-shrink: 0;
+}
+
+/* Responsive grid */
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+  .title {
+    font-size: 2rem;
+  }
+  .card {
+    padding: 30px 20px;
+  }
+}

@@ -1,0 +1,78 @@
+:root {
+  /* Core Moroccan Palace Palette (Zellige Light & Plaster Theme) */
+  --acajou: #17212f;         /* Deep Indigo Navy - for structural lines and dark text */
+  --acajou-dark: #0e1520;    /* Deepest Indigo - for premium contrast headlines */
+  --cuivre: #c5562d;         /* Terracotta Copper - rich orange zellige accents */
+  --cuivre-rgb: 197, 86, 45;
+  --or-vieilli: #b27f24;     /* Sun Gold - antique gold optimized for light contrast */
+  --or-vieilli-rgb: 178, 127, 36;
+  --sable-beige: #f2ebd9;    /* Sand Lime Plaster - warm light stone tones */
+  --ivoire: #fefdfa;         /* Luminous White Lime Plaster - traditional mortar & base */
+  --ivoire-rgb: 254, 253, 250;
+
+  /* Contrast Accent Colors (Zellige & Gardens) */
+  --emeraude: #0c6c42;       /* Emerald Green glaze - Marrakech green tiles */
+  --emeraude-rgb: 12, 108, 66;
+  --majorelle: #1a8e9e;      /* Turquoise Teal glaze - Fez blue/cyan tiles */
+  --majorelle-rgb: 26, 142, 158;
+
+  /* Theme Configurations */
+  --bg-dark: #faf9f5;        /* Warm lime-plaster white body background */
+  --bg-dark-rgb: 250, 249, 245;
+  --bg-card: rgba(254, 253, 250, 0.95); /* Luminous plaster-white card background */
+  --bg-glass: rgba(254, 253, 250, 0.85); /* Frosted glass-plaster navbar background */
+  --border-gold: rgba(223, 168, 61, 0.22);
+  --border-cuivre: rgba(197, 86, 45, 0.25);
+  
+  /* Repeating Zellige Mosaic Tile Pattern (Teal, Terracotta, Saffron Gold, Navy, White mortar) */
+  --zellige-pattern: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='80' height='80' fill='%23fefdfa'/%3E%3Cpolygon points='40,2 48,10 40,18 32,10' fill='%231a8e9e' stroke='%23fefdfa' stroke-width='1.5'/%3E%3Cpolygon points='40,78 48,70 40,62 32,70' fill='%231a8e9e' stroke='%23fefdfa' stroke-width='1.5'/%3E%3Cpolygon points='2,40 10,48 18,40 10,32' fill='%231a8e9e' stroke='%23fefdfa' stroke-width='1.5'/%3E%3Cpolygon points='78,40 70,48 62,40 70,32' fill='%231a8e9e' stroke='%23fefdfa' stroke-width='1.5'/%3E%3Cpolygon points='20,12 28,20 20,28 12,20' fill='%23c5562d' stroke='%23fefdfa' stroke-width='1.5'/%3E%3Cpolygon points='60,12 68,20 60,28 52,20' fill='%23c5562d' stroke='%23fefdfa' stroke-width='1.5'/%3E%3Cpolygon points='60,62 68,70 60,78 52,70' fill='%23c5562d' stroke='%23fefdfa' stroke-width='1.5'/%3E%3Cpolygon points='20,62 28,70 20,78 12,70' fill='%23c5562d' stroke='%23fefdfa' stroke-width='1.5'/%3E%3Crect x='28' y='28' width='24' height='24' fill='%23dfa83d' stroke='%23fefdfa' stroke-width='1.5'/%3E%3Crect x='28' y='28' width='24' height='24' fill='%23dfa83d' transform='rotate%2845%2040%2040%29' stroke='%23fefdfa' stroke-width='1.5'/%3E%3Crect x='-12' y='-12' width='24' height='24' fill='%23dfa83d' stroke='%23fefdfa' stroke-width='1.5'/%3E%3Crect x='-12' y='-12' width='24' height='24' fill='%23dfa83d' transform='rotate%2845%200%200%29' stroke='%23fefdfa' stroke-width='1.5'/%3E%3Crect x='68' y='-12' width='24' height='24' fill='%23dfa83d' stroke='%23fefdfa' stroke-width='1.5'/%3E%3Crect x='68' y='-12' width='24' height='24' fill='%23dfa83d' transform='rotate%2845%2080%200%29' stroke='%23fefdfa' stroke-width='1.5'/%3E%3Crect x='68' y='68' width='24' height='24' fill='%23dfa83d' stroke='%23fefdfa' stroke-width='1.5'/%3E%3Crect x='68' y='68' width='24' height='24' fill='%23dfa83d' transform='rotate%2845%2080%2080%29' stroke='%23fefdfa' stroke-width='1.5'/%3E%3Crect x='-12' y='68' width='24' height='24' fill='%23dfa83d' stroke='%23fefdfa' stroke-width='1.5'/%3E%3Crect x='-12' y='68' width='24' height='24' fill='%23dfa83d' transform='rotate%2845%200%2080%29' stroke='%23fefdfa' stroke-width='1.5'/%3E%3Ccircle cx='40' cy='40' r='3.5' fill='%2317212f'/%3E%3Ccircle cx='0' cy='0' r='3.5' fill='%2317212f'/%3E%3Ccircle cx='80' cy='0' r='3.5' fill='%2317212f'/%3E%3Ccircle cx='80' cy='80' r='3.5' fill='%2317212f'/%3E%3Ccircle cx='0' cy='80' r='3.5' fill='%2317212f'/%3E%3C/svg%3E");
+
+  /* Repeating Zellige Watermark (Engraved tone-on-tone sand/gold lines on plaster walls) */
+  --zellige-watermark: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23dfa83d' stroke-opacity='0.07' stroke-width='0.75'%3E%3Cpolygon points='40,2 48,10 40,18 32,10'/%3E%3Cpolygon points='40,78 48,70 40,62 32,70'/%3E%3Cpolygon points='2,40 10,48 18,40 10,32'/%3E%3Cpolygon points='78,40 70,48 62,40 70,32'/%3E%3Cpolygon points='20,12 28,20 20,28 12,20'/%3E%3Cpolygon points='60,12 68,20 60,28 52,20'/%3E%3Cpolygon points='60,62 68,70 60,78 52,70'/%3E%3Cpolygon points='20,62 28,70 20,78 12,70'/%3E%3Crect x='28' y='28' width='24' height='24'/%3E%3Crect x='28' y='28' width='24' height='24' transform='rotate%2845 40 40%29'/%3E%3Crect x='-12' y='-12' width='24' height='24'/%3E%3Crect x='-12' y='-12' width='24' height='24' transform='rotate%2845 0 0%29'/%3E%3Crect x='78' y='-12' width='24' height='24'/%3E%3Crect x='78' y='-12' width='24' height='24' transform='rotate%2845 80 0%29'/%3E%3Crect x='78' y='78' width='24' height='24'/%3E%3Crect x='78' y='78' width='24' height='24' transform='rotate%2845 80 80%29'/%3E%3Crect x='-12' y='78' width='24' height='24'/%3E%3Crect x='-12' y='78' width='24' height='24' transform='rotate%2845 0 80%29'/%3E%3Ccircle cx='40' cy='40' r='3'/%3E%3C/g%3E%3C/svg%3E");
+
+  /* Text styling */
+  --text-ivory: #17212f;      /* Indigo-black for text on light backgrounds */
+  --text-gold: #b27f24;       /* Antique gold for text on light backgrounds */
+  --text-muted: #52637a;      /* Slate grey-blue for subtitles and descriptions */
+  --white: #ffffff;
+
+  /* Typography */
+  --font-serif: 'Playfair Display', serif;
+  --font-sans: 'Montserrat', sans-serif;
+
+  /* Layout specs */
+  --max-width: 1400px;
+  --header-height: 80px;
+
+  /* Shadow glows (Inspired by Image 1 layered soft star shadows) */
+  --shadow-gold: 0 10px 30px rgba(23, 33, 47, 0.06), 0 1px 3px rgba(23, 33, 47, 0.02);
+  --shadow-glow: 0 0 15px rgba(26, 142, 158, 0.15);
+  --shadow-glow-large: 0 10px 40px rgba(26, 142, 158, 0.25);
+  --shadow-cuivre: 0 8px 25px rgba(197, 86, 45, 0.08);
+
+  /* Transitions */
+  --transition-smooth: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+  --transition-quick: all 0.25s ease;
+
+  /* Legacy Variable Mappings for Component Compatibility */
+  --primary-gold: var(--or-vieilli);
+  --primary-gold-rgb: var(--or-vieilli-rgb);
+  --light-gold: #dfa83d;
+  --dark-gold: #9e731d;
+  --zellige-green: var(--emeraude);
+  --zellige-green-rgb: var(--emeraude-rgb);
+  --terracotta: var(--cuivre);
+}
+
+[data-theme='light'] {
+  /* Keep theme values aligned since light is now the default luxury layout */
+  --bg-dark: #faf9f5;
+  --bg-dark-rgb: 250, 249, 245;
+  --bg-card: rgba(254, 253, 250, 0.95);
+  --bg-glass: rgba(254, 253, 250, 0.85);
+  --border-gold: rgba(223, 168, 61, 0.22);
+  --text-ivory: #17212f;
+  --text-gold: #b27f24;
+  --text-muted: #52637a;
+  --shadow-gold: 0 10px 30px rgba(23, 33, 47, 0.06);
+}
