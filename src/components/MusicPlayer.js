@@ -21,11 +21,22 @@ export default function MusicPlayer({ currentLang }) {
 
   useEffect(() => {
     // Load the YouTube Iframe API script if not already loaded
-    if (!window.YT) {
+    let addedScript = false;
+    const existingScript = document.querySelector('script[src="https://www.youtube.com/iframe_api"]');
+    if (!window.YT && !existingScript) {
       const tag = document.createElement('script');
       tag.src = 'https://www.youtube.com/iframe_api';
+      tag.id = 'yt-iframe-api';
       const firstScriptTag = document.getElementsByTagName('script')[0];
-      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+      if (firstScriptTag && firstScriptTag.parentNode) {
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+      } else if (document.head) {
+        document.head.appendChild(tag);
+      } else {
+        // Fallback: append to documentElement to avoid throwing
+        document.documentElement.appendChild(tag);
+      }
+      addedScript = true;
     }
 
     let isMounted = true;
@@ -76,8 +87,24 @@ export default function MusicPlayer({ currentLang }) {
     }, 100);
 
     return () => {
+      // Cleanup: mark unmounted, clear interval, destroy player if present, and remove script if we added it
       isMounted = false;
       clearInterval(checkYT);
+
+      try {
+        if (player && typeof player.destroy === 'function') {
+          player.destroy();
+        }
+      } catch (err) {
+        // ignore cleanup errors
+      }
+
+      if (addedScript) {
+        const s = document.getElementById('yt-iframe-api');
+        if (s && s.parentNode) {
+          s.parentNode.removeChild(s);
+        }
+      }
     };
   }, []);
 

@@ -2,9 +2,11 @@
 
 import React from 'react';
 import { ChevronDown } from 'lucide-react';
+import ScrollReveal from './ScrollReveal';
+import BookingForm from './BookingForm';
 import styles from './Hero.module.css';
 
-export default function Hero({ translations, currentLang }) {
+export default function Hero({ translations, currentLang, selectedRoom }) {
   const t = translations[currentLang].hero;
 
   const scrollToBooking = () => {
@@ -39,42 +41,37 @@ export default function Hero({ translations, currentLang }) {
     }
   };
 
-  // Luxury video background URL representing serene Moroccan riad / courtyard pool
-  const videoUrl = "https://player.vimeo.com/external/371433846.sd.mp4?s=236da2f3c054117ebecf9cb190204aa70ecaf636&profile_id=165&oauth2_token_id=57447761";
-
   return (
-    <header id="home" className={styles.hero}>
-      {/* Background Video */}
-      <div className={styles.videoWrapper}>
-        <video 
-          className={styles.video}
-          autoPlay 
-          loop 
-          muted 
-          playsInline 
-          src={videoUrl}
-        />
+    <ScrollReveal duration={1}>
+      <header id="home" className={styles.hero}>
+        {/* Background Image is applied via CSS background-url */}
         <div className={styles.overlay}></div>
-      </div>
 
-      {/* Hero Content */}
-      <div className={styles.content}>
-        <span className={styles.welcome}>{t.welcome}</span>
-        <h1 className={styles.title}>{t.slogan}</h1>
-        <p className={styles.subtitle}>{t.subSlogan}</p>
-        
-        <button onClick={scrollToRooms} className={styles.ctaBtn}>
-          {t.cta}
+        {/* Hero Content */}
+        <div className={styles.content}>
+          <span className={styles.welcome}>{t.welcome}</span>
+          <h1 className={styles.title}>{t.slogan}</h1>
+          <p className={styles.subtitle}>{t.subSlogan}</p>
+          
+          <button onClick={scrollToRooms} className={styles.ctaBtn}>
+            {t.cta}
+          </button>
+        </div>
+
+        {/* Scroll Down Mouse Indicator */}
+        <button onClick={scrollToBooking} className={styles.scrollIndicator} aria-label="Scroll Down">
+          <span className={styles.mouse}>
+            <span className={styles.wheel}></span>
+          </span>
+          <ChevronDown className={styles.arrow} size={20} />
         </button>
-      </div>
-
-      {/* Scroll Down Mouse Indicator */}
-      <button onClick={scrollToBooking} className={styles.scrollIndicator} aria-label="Scroll Down">
-        <span className={styles.mouse}>
-          <span className={styles.wheel}></span>
-        </span>
-        <ChevronDown className={styles.arrow} size={20} />
-      </button>
-    </header>
+          <div className={styles.bookingWrapper}>
+            <BookingForm 
+              translations={translations} 
+              currentLang={currentLang} 
+              selectedRoom={selectedRoom}
+            />
+          </div>      </header>
+    </ScrollReveal>
   );
 }

@@ -4,8 +4,9 @@
   left: 0;
   width: 100%;
   height: var(--header-height);
-  z-index: 999;
+  z-index: 1100;
   display: flex;
+  background: white;
   align-items: center;
   border-bottom: 1px solid var(--border-gold);
   transition: var(--transition-smooth);

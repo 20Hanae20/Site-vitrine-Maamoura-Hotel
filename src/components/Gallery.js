@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { X, ChevronLeft, ChevronRight, Maximize2 } from 'lucide-react';
+import ScrollReveal from './ScrollReveal';
 import styles from './Gallery.module.css';
 
 export default function Gallery({ translations, currentLang }) {
@@ -70,7 +71,8 @@ export default function Gallery({ translations, currentLang }) {
   };
 
   return (
-    <section id="gallery" className={styles.gallerySection}>
+    <ScrollReveal>
+      <section id="gallery" className={styles.gallerySection}>
       <div className={styles.container}>
         <div className={styles.sectionHeader}>
           <span className={styles.badge}>Art & Lumière</span>
@@ -157,5 +159,6 @@ export default function Gallery({ translations, currentLang }) {
         </div>
       )}
     </section>
+    </ScrollReveal>
   );
 }

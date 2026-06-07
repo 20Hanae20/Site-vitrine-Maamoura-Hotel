@@ -1,39 +1,44 @@
 .hero {
   position: relative;
+  z-index: 10;
   width: 100%;
-  height: 100vh;
+  height: calc(100vh - 10px); /* Soustrait la hauteur de la navbar */
+  min-height: 850px;
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
+  overflow: visible;
   text-align: center;
   padding: 0 20px;
+  padding-bottom: 180px;
+  background: url('/images/lhotel.png') center center / cover no-repeat;
+  background-color: #2a2418;
+  margin-top: 0;
 }
 
-.videoWrapper {
+.bookingWrapper {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
+  left: 50%;
+  bottom: -120px;
+  transform: translateX(-50%);
+  width: min(100%, 1180px);
+  padding: 0 20px;
+  z-index: 3;
 }
 
-.video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+/* Hide video wrapper */
+.videoWrapper {
+  display: none;
 }
 
-/* Luminous plaster-white overlay for premium lighting */
+/* Overlay for better text contrast */
 .overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: radial-gradient(circle, rgba(250, 249, 245, 0.5) 0%, rgba(250, 249, 245, 0.85) 100%),
-              linear-gradient(180deg, rgba(250, 249, 245, 0.7) 0%, transparent 50%, rgba(250, 249, 245, 1) 100%);
+  background: radial-gradient(circle at 30% 20%, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.55) 100%);
 }
 
 .content {
@@ -43,80 +48,87 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  animation: heroFadeIn 1.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+  animation: heroFadeIn 1.2s ease-out forwards;
 }
 
 .welcome {
   font-family: var(--font-sans);
-  font-size: 0.9rem;
-  letter-spacing: 8px;
+  font-size: 0.8rem;
+  letter-spacing: 6px;
   text-transform: uppercase;
-  color: var(--primary-gold);
+  color: #dbbc87;
   margin-bottom: 20px;
-  font-weight: 600;
-  text-shadow: var(--shadow-glow);
+  font-weight: 500;
+  background: rgba(0,0,0,0.4);
+  padding: 6px 18px;
+  border-radius: 40px;
+  backdrop-filter: blur(4px);
 }
 
 .title {
   font-family: var(--font-serif);
-  font-size: 3.5rem;
-  font-weight: 300;
-  line-height: 1.25;
-  letter-spacing: 1px;
-  color: var(--text-ivory);
-  margin-bottom: 25px;
-  text-shadow: 0 4px 15px rgba(178, 127, 36, 0.1);
+  font-size: 4rem;
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: 2px;
+  color: #f5efdf;
+  margin-bottom: 20px;
+  text-shadow: 0 2px 15px rgba(0,0,0,0.3);
 }
 
 .subtitle {
   font-family: var(--font-sans);
-  font-size: 1.1rem;
-  font-weight: 300;
-  color: var(--text-gold);
-  letter-spacing: 2px;
+  font-size: 1rem;
+  font-weight: 400;
+  color: rgba(245, 239, 223, 0.95);
+  letter-spacing: 1px;
   max-width: 650px;
   margin-bottom: 40px;
   line-height: 1.6;
+  text-shadow: 0 1px 8px rgba(0,0,0,0.2);
 }
 
 /* Call to Action Button */
 .ctaBtn {
   background: transparent;
-  color: var(--primary-gold);
-  border: 1px solid var(--primary-gold);
-  padding: 14px 32px;
-  border-radius: 30px;
+  color: #f5efdf;
+  border: 1px solid #dbbc87;
+  padding: 12px 36px;
+  border-radius: 50px;
   font-size: 0.8rem;
-  font-weight: 600;
+  font-weight: 500;
   text-transform: uppercase;
-  letter-spacing: 2px;
-  transition: var(--transition-smooth);
-  box-shadow: 0 0 10px rgba(207, 168, 83, 0.1);
+  letter-spacing: 2.5px;
+  transition: all 0.4s ease;
+  backdrop-filter: blur(4px);
+  background-color: rgba(0,0,0,0.2);
+  cursor: pointer;
 }
 
 .ctaBtn:hover {
-  background: var(--primary-gold);
-  color: var(--bg-dark);
-  box-shadow: var(--shadow-glow-large);
+  background: #dbbc87;
+  color: #1f1c16;
+  border-color: #dbbc87;
   transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
 }
 
 /* Scroll Mouse Indicator */
 .scrollIndicator {
   position: absolute;
-  bottom: 40px;
+  bottom: 30px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 2;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
   background: transparent;
   border: none;
   cursor: pointer;
-  opacity: 0.7;
-  transition: var(--transition-quick);
+  opacity: 0.8;
+  transition: all 0.3s ease;
 }
 
 .scrollIndicator:hover {
@@ -125,35 +137,37 @@
 }
 
 .mouse {
-  width: 22px;
-  height: 36px;
-  border: 1.5px solid var(--text-muted);
-  border-radius: 12px;
+  width: 24px;
+  height: 38px;
+  border: 1.5px solid #dbbc87;
+  border-radius: 14px;
   position: relative;
   display: block;
+  background: rgba(0,0,0,0.2);
+  backdrop-filter: blur(2px);
 }
 
 .wheel {
-  width: 3px;
-  height: 6px;
-  background-color: var(--primary-gold);
-  border-radius: 1.5px;
+  width: 2px;
+  height: 7px;
+  background-color: #dbbc87;
+  border-radius: 2px;
   position: absolute;
-  top: 6px;
+  top: 7px;
   left: 50%;
   transform: translateX(-50%);
   animation: scrollWheel 1.6s infinite ease-in-out;
 }
 
 .arrow {
-  color: var(--primary-gold);
+  color: #dbbc87;
   animation: bounceArrow 1.6s infinite ease-in-out;
 }
 
 @keyframes heroFadeIn {
   from {
     opacity: 0;
-    transform: translateY(40px);
+    transform: translateY(30px);
   }
   to {
     opacity: 1;
@@ -177,31 +191,47 @@
     transform: translateY(0);
   }
   50% {
-    transform: translateY(4px);
+    transform: translateY(5px);
   }
 }
 
 /* Responsive Styles */
 @media (max-width: 768px) {
+  .hero {
+    height: calc(100vh - 70px);
+    min-height: 450px;
+  }
+  
   .title {
-    font-size: 2.2rem;
-    line-height: 1.3;
+    font-size: 2.5rem;
   }
+  
   .subtitle {
-    font-size: 0.95rem;
-    letter-spacing: 1px;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
   }
+  
   .ctaBtn {
-    padding: 12px 26px;
-    font-size: 0.75rem;
+    padding: 10px 28px;
+    font-size: 0.7rem;
+  }
+  
+  .welcome {
+    font-size: 0.7rem;
+    letter-spacing: 4px;
+    padding: 4px 14px;
   }
 }
 
 @media (max-width: 480px) {
-  .title {
-    font-size: 1.8rem;
+  .hero {
+    height: calc(100vh - 60px);
+    min-height: 400px;
   }
-  .welcome {
-    letter-spacing: 5px;
-  }
+  
+ .title {
+  font-size: clamp(3rem, 6vw, 5.5rem);
+  max-width: 1100px;
+  line-height: 1.1;
+}
 }

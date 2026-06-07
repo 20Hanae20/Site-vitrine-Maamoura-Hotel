@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { MapPin, Phone, Mail, Award } from 'lucide-react';
+import ScrollReveal from './ScrollReveal';
 import styles from './Footer.module.css';
 
 export default function Footer({ translations, currentLang }) {
@@ -26,8 +27,9 @@ export default function Footer({ translations, currentLang }) {
   };
 
   return (
-    <footer id="contact" className={styles.footer}>
-      <div className={styles.container}>
+    <ScrollReveal>
+      <footer id="contact" className={styles.footer}>
+        <div className={styles.container}>
         <div className={styles.topSection}>
           {/* Brand Col */}
           <div className={styles.brandCol}>
@@ -109,6 +111,7 @@ export default function Footer({ translations, currentLang }) {
           <p className={styles.rights}>{t.rights}</p>
         </div>
       </div>
-    </footer>
+      </footer>
+    </ScrollReveal>
   );
 }

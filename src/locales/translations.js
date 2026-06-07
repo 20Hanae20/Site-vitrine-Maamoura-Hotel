@@ -41,32 +41,176 @@ export const translations = {
     rooms: {
       title: "Nos Chambres & Suites",
       subtitle: "Un raffinement traditionnel allié au confort moderne absolu",
-      viewDetails: "Découvrir la chambre",
-      maxGuests: "Capacité : {count} personnes",
+      viewDetails: "Voir les détails",
+      reserve: "Réserver",
+      amenities: "Équipements",
+      pricePerNight: "Par nuit",
       types: [
         {
-          id: "traditional",
-          title: "Chambre Traditionnelle",
-          desc: "Un cocon de sérénité orné de plâtres sculptés à la main et de zelliges ancestraux. Parfait pour une immersion calme.",
-          capacity: 2,
-          price: "À partir de 120€ / nuit",
-          features: ["Lit Queen Size", "Salle de bain en tadelakt", "Climatisation", "Vue patio"]
+          id: "simple",
+          title: "Chambre Simple",
+          description: "Chambres élégantes et intimistes, parfaitement adaptées au voyageur seul.",
+          rooms: [
+            {
+              id: "101",
+              number: "Chambre 101",
+              price: "120€",
+              capacity: 1,
+              area: 18,
+              image: "/images/double/image.png",
+              amenities: ["Lit simple", "Salle de bain privée", "Climatisation", "Vue patio"]
+            },
+            {
+              id: "102",
+              number: "Chambre 102",
+              price: "120€",
+              capacity: 1,
+              area: 18,
+              image: "/images/double/image1.png",
+              amenities: ["Lit simple", "Salle de bain privée", "Climatisation", "Vue patio"]
+            },
+            {
+              id: "103",
+              number: "Chambre 103",
+              price: "120€",
+              capacity: 1,
+              area: 18,
+              image: "/images/zalige2.jpg",
+              amenities: ["Lit simple", "Salle de bain privée", "Climatisation", "Vue jardin"]
+            },
+            {
+              id: "104",
+              number: "Chambre 104",
+              price: "120€",
+              capacity: 1,
+              area: 18,
+              image: "/images/lhotel.png",
+              amenities: ["Lit simple", "Salle de bain privée", "Climatisation", "Vue patio"]
+            },
+            {
+              id: "105",
+              number: "Chambre 105",
+              price: "120€",
+              capacity: 1,
+              area: 18,
+              image: "/images/p2.png",
+              amenities: ["Lit simple", "Salle de bain privée", "Climatisation", "Vue jardin"]
+            },
+            {
+              id: "106",
+              number: "Chambre 106",
+              price: "120€",
+              capacity: 1,
+              area: 18,
+              image: "/images/zalige2.jpg",
+              amenities: ["Lit simple", "Salle de bain privée", "Climatisation", "Vue patio"]
+            }
+          ]
         },
         {
-          id: "family",
+          id: "double",
+          title: "Chambre Double",
+          description: "Espaces raffinés pour les couples, avec un confort moderne et une atmosphère chaleureuse.",
+          rooms: [
+            {
+              id: "201",
+              number: "Chambre 201",
+              price: "180€",
+              capacity: 2,
+              area: 28,
+              image: "/images/p2.png",
+              amenities: ["Lit Queen Size", "Salle de bain en marbre", "Climatisation", "Balcon privé"]
+            },
+            {
+              id: "202",
+              number: "Chambre 202",
+              price: "180€",
+              capacity: 2,
+              area: 28,
+              image: "/images/zalige2.jpg",
+              amenities: ["Lit Queen Size", "Salle de bain en marbre", "Climatisation", "Balcon privé"]
+            },
+            {
+              id: "203",
+              number: "Chambre 203",
+              price: "180€",
+              capacity: 2,
+              area: 28,
+              image: "/images/lhotel.png",
+              amenities: ["Lit Queen Size", "Salle de bain en marbre", "Climatisation", "Vue jardin"]
+            },
+            {
+              id: "204",
+              number: "Chambre 204",
+              price: "180€",
+              capacity: 2,
+              area: 28,
+              image: "/images/p2.png",
+              amenities: ["Lit Queen Size", "Salle de bain en marbre", "Climatisation", "Balcon privé"]
+            },
+            {
+              id: "205",
+              number: "Chambre 205",
+              price: "180€",
+              capacity: 2,
+              area: 28,
+              image: "/images/zalige2.jpg",
+              amenities: ["Lit Queen Size", "Salle de bain en marbre", "Climatisation", "Vue jardin"]
+            },
+            {
+              id: "206",
+              number: "Chambre 206",
+              price: "180€",
+              capacity: 2,
+              area: 28,
+              image: "/images/lhotel.png",
+              amenities: ["Lit Queen Size", "Salle de bain en marbre", "Climatisation", "Balcon privé"]
+            }
+          ]
+        },
+        {
+          id: "suite",
           title: "Suite Familiale",
-          desc: "Un espace luxueux conçu spécialement pour les familles, offrant une véritable séparation des chambres pour préserver l'intimité parentale tout en gardant les enfants à proximité.",
-          capacity: 5,
-          price: "À partir de 250€ / nuit",
-          features: ["Chambre parentale séparée", "Deuxième chambre séparée", "Salon traditionnel marocain", "2 salles de bain", "Terrasse privée"]
-        },
-        {
-          id: "royal",
-          title: "Suite Royale",
-          desc: "L'incarnation suprême du luxe traditionnel. De grands volumes, un lit King Size majestueux et des détails artisanaux dignes des plus grands palais.",
-          capacity: 3,
-          price: "À partir de 380€ / nuit",
-          features: ["Lit King Size", "Salon avec cheminée", "Baignoire en cuivre", "Balcon sur jardin", "Service majordome"]
+          description: "Des suites luxueuses offrant espace, raffinement et intimité pour les familles.",
+          rooms: [
+            {
+              id: "301",
+              number: "Suite 301",
+              price: "320€",
+              capacity: 4,
+              area: 50,
+              image: "/images/familia/f2.jpeg",
+              amenities: ["2 chambres", "Salon privé", "2 salles de bain", "Terrasse", "Service concierge"]
+            },
+            {
+              id: "302",
+              number: "Suite 302",
+              price: "320€",
+              capacity: 4,
+              area: 50,
+              image: "/images/familia/f3.jpeg",
+              amenities: ["2 chambres", "Salon privé", "2 salles de bain", "Terrasse", "Service concierge"]
+            },
+            {
+              id: "303",
+              number: "Suite 303",
+              price: "320€",
+              capacity: 4,
+              area: 50,
+              image: "/images/familia/f4.jpeg",
+              amenities: ["2 chambres", "Salon privé", "2 salles de bain", "Terrasse", "Service concierge"]
+            },
+            {
+              id: "304",
+              number: "Suite 304",
+              price: "320€",
+              capacity: 4,
+              area: 50,
+              image: "/images/familia/famil1.jpeg",
+              amenities: ["2 chambres", "Salon privé", "2 salles de bain", "Terrasse", "Service concierge"]
+            },
+            
+          ]
         }
       ]
     },
@@ -149,31 +293,192 @@ export const translations = {
       title: "Our Rooms & Suites",
       subtitle: "Traditional refinement combined with absolute modern comfort",
       viewDetails: "View Details",
-      maxGuests: "Capacity: {count} guests",
+      reserve: "Reserve",
+      amenities: "Amenities",
+      pricePerNight: "Per night",
       types: [
         {
-          id: "traditional",
-          title: "Traditional Room",
-          desc: "A cocoon of serenity adorned with hand-carved plaster and ancestral zellige tiling. Perfect for a quiet immersion.",
-          capacity: 2,
-          price: "From €120 / night",
-          features: ["Queen Size Bed", "Tadelakt bathroom", "Air conditioning", "Patio view"]
+          id: "simple",
+          title: "Simple Room",
+          description: "Elegant private rooms designed for the solo traveler.",
+          rooms: [
+            {
+              id: "101",
+              number: "Room 101",
+              price: "€120",
+              capacity: 1,
+              area: 18,
+              image: "/images/lhotel.png",
+              amenities: ["Single bed", "Private bathroom", "Air conditioning", "Patio view"]
+            },
+            {
+              id: "102",
+              number: "Room 102",
+              price: "€120",
+              capacity: 1,
+              area: 18,
+              image: "/images/p2.png",
+              amenities: ["Single bed", "Private bathroom", "Air conditioning", "Patio view"]
+            },
+            {
+              id: "103",
+              number: "Room 103",
+              price: "€120",
+              capacity: 1,
+              area: 18,
+              image: "/images/zalige2.jpg",
+              amenities: ["Single bed", "Private bathroom", "Air conditioning", "Garden view"]
+            },
+            {
+              id: "104",
+              number: "Room 104",
+              price: "€120",
+              capacity: 1,
+              area: 18,
+              image: "/images/lhotel.png",
+              amenities: ["Single bed", "Private bathroom", "Air conditioning", "Patio view"]
+            },
+            {
+              id: "105",
+              number: "Room 105",
+              price: "€120",
+              capacity: 1,
+              area: 18,
+              image: "/images/p2.png",
+              amenities: ["Single bed", "Private bathroom", "Air conditioning", "Garden view"]
+            },
+            {
+              id: "106",
+              number: "Room 106",
+              price: "€120",
+              capacity: 1,
+              area: 18,
+              image: "/images/zalige2.jpg",
+              amenities: ["Single bed", "Private bathroom", "Air conditioning", "Patio view"]
+            }
+          ]
         },
         {
-          id: "family",
+          id: "double",
+          title: "Double Room",
+          description: "Refined spaces for couples with modern comfort and warm ambiance.",
+          rooms: [
+            {
+              id: "201",
+              number: "Room 201",
+              price: "€180",
+              capacity: 2,
+              area: 28,
+              image: "/images/p2.png",
+              amenities: ["Queen size bed", "Marble bathroom", "Air conditioning", "Private balcony"]
+            },
+            {
+              id: "202",
+              number: "Room 202",
+              price: "€180",
+              capacity: 2,
+              area: 28,
+              image: "/images/zalige2.jpg",
+              amenities: ["Queen size bed", "Marble bathroom", "Air conditioning", "Private balcony"]
+            },
+            {
+              id: "203",
+              number: "Room 203",
+              price: "€180",
+              capacity: 2,
+              area: 28,
+              image: "/images/lhotel.png",
+              amenities: ["Queen size bed", "Marble bathroom", "Air conditioning", "Garden view"]
+            },
+            {
+              id: "204",
+              number: "Room 204",
+              price: "€180",
+              capacity: 2,
+              area: 28,
+              image: "/images/p2.png",
+              amenities: ["Queen size bed", "Marble bathroom", "Air conditioning", "Private balcony"]
+            },
+            {
+              id: "205",
+              number: "Room 205",
+              price: "€180",
+              capacity: 2,
+              area: 28,
+              image: "/images/zalige2.jpg",
+              amenities: ["Queen size bed", "Marble bathroom", "Air conditioning", "Garden view"]
+            },
+            {
+              id: "206",
+              number: "Room 206",
+              price: "€180",
+              capacity: 2,
+              area: 28,
+              image: "/images/lhotel.png",
+              amenities: ["Queen size bed", "Marble bathroom", "Air conditioning", "Private balcony"]
+            }
+          ]
+        },
+        {
+          id: "suite",
           title: "Family Suite",
-          desc: "A luxurious space designed specifically for families, offering physical room separation to preserve parents' privacy while keeping children close.",
-          capacity: 5,
-          price: "From €250 / night",
-          features: ["Separate master bedroom", "Second separate bedroom", "Traditional Moroccan salon", "2 bathrooms", "Private terrace"]
-        },
-        {
-          id: "royal",
-          title: "Royal Suite",
-          desc: "The ultimate embodiment of traditional luxury. Spacious rooms, majestic King Size bed, and artisanal details worthy of the finest palaces.",
-          capacity: 3,
-          price: "From €380 / night",
-          features: ["King Size Bed", "Living room with fireplace", "Copper bathtub", "Balcony overlooking the garden", "Butler service"]
+          description: "Luxurious suites offering space and refinement for family stays.",
+          rooms: [
+            {
+              id: "301",
+              number: "Suite 301",
+              price: "€320",
+              capacity: 4,
+              area: 50,
+              image: "/images/zalige2.jpg",
+              amenities: ["2 bedrooms", "Private lounge", "2 bathrooms", "Terrace", "Concierge service"]
+            },
+            {
+              id: "302",
+              number: "Suite 302",
+              price: "€320",
+              capacity: 4,
+              area: 50,
+              image: "/images/lhotel.png",
+              amenities: ["2 bedrooms", "Private lounge", "2 bathrooms", "Terrace", "Concierge service"]
+            },
+            {
+              id: "303",
+              number: "Suite 303",
+              price: "€320",
+              capacity: 4,
+              area: 50,
+              image: "/images/p2.png",
+              amenities: ["2 bedrooms", "Private lounge", "2 bathrooms", "Terrace", "Concierge service"]
+            },
+            {
+              id: "304",
+              number: "Suite 304",
+              price: "€320",
+              capacity: 4,
+              area: 50,
+              image: "/images/zalige2.jpg",
+              amenities: ["2 bedrooms", "Private lounge", "2 bathrooms", "Terrace", "Concierge service"]
+            },
+            {
+              id: "305",
+              number: "Suite 305",
+              price: "€320",
+              capacity: 4,
+              area: 50,
+              image: "/images/lhotel.png",
+              amenities: ["2 bedrooms", "Private lounge", "2 bathrooms", "Terrace", "Concierge service"]
+            },
+            {
+              id: "306",
+              number: "Suite 306",
+              price: "€320",
+              capacity: 4,
+              area: 50,
+              image: "/images/p2.png",
+              amenities: ["2 bedrooms", "Private lounge", "2 bathrooms", "Terrace", "Concierge service"]
+            }
+          ]
         }
       ]
     },
@@ -256,31 +561,192 @@ export const translations = {
       title: "غرفنا وأجنحتنا",
       subtitle: "رقي تقليدي يمتزج بالراحة العصرية المطلقة",
       viewDetails: "اكتشف الغرفة",
-      maxGuests: "السعة: {count} أشخاص",
+      reserve: "احجز",
+      amenities: "المرافق",
+      pricePerNight: "لكل ليلة",
       types: [
         {
-          id: "traditional",
-          title: "غرفة تقليدية",
-          desc: "ملاذ من الطمأنينة مزين بنقوش الجبس اليدوية والزليج التقليدي العريق. مثالية لتجربة هادئة.",
-          capacity: 2,
-          price: "ابتداءً من 120€ / ليلة",
-          features: ["سرير حجم كوين", "حمام من التادلاكت", "تكييف هواء", "إطلالة على البهو"]
+          id: "simple",
+          title: "غرفة بسيطة",
+          description: "غرف أنيقة وخاصة مثالية للمسافر الفردي.",
+          rooms: [
+            {
+              id: "101",
+              number: "الغرفة 101",
+              price: "120€",
+              capacity: 1,
+              area: 18,
+              image: "/images/lhotel.png",
+              amenities: ["سرير مفرد", "حمام خاص", "تكييف", "إطلالة على البهو"]
+            },
+            {
+              id: "102",
+              number: "الغرفة 102",
+              price: "120€",
+              capacity: 1,
+              area: 18,
+              image: "/images/p2.png",
+              amenities: ["سرير مفرد", "حمام خاص", "تكييف", "إطلالة على البهو"]
+            },
+            {
+              id: "103",
+              number: "الغرفة 103",
+              price: "120€",
+              capacity: 1,
+              area: 18,
+              image: "/images/zalige2.jpg",
+              amenities: ["سرير مفرد", "حمام خاص", "تكييف", "إطلالة على الحديقة"]
+            },
+            {
+              id: "104",
+              number: "الغرفة 104",
+              price: "120€",
+              capacity: 1,
+              area: 18,
+              image: "/images/lhotel.png",
+              amenities: ["سرير مفرد", "حمام خاص", "تكييف", "إطلالة على البهو"]
+            },
+            {
+              id: "105",
+              number: "الغرفة 105",
+              price: "120€",
+              capacity: 1,
+              area: 18,
+              image: "/images/p2.png",
+              amenities: ["سرير مفرد", "حمام خاص", "تكييف", "إطلالة على الحديقة"]
+            },
+            {
+              id: "106",
+              number: "الغرفة 106",
+              price: "120€",
+              capacity: 1,
+              area: 18,
+              image: "/images/zalige2.jpg",
+              amenities: ["سرير مفرد", "حمام خاص", "تكييف", "إطلالة على البهو"]
+            }
+          ]
         },
         {
-          id: "family",
+          id: "double",
+          title: "غرفة مزدوجة",
+          description: "مساحات راقية للأزواج مع أجواء دافئة وراحة عصرية.",
+          rooms: [
+            {
+              id: "201",
+              number: "الغرفة 201",
+              price: "180€",
+              capacity: 2,
+              area: 28,
+              image: "/images/p2.png",
+              amenities: ["سرير كوين", "حمام رخامي", "تكييف", "شرفة خاصة"]
+            },
+            {
+              id: "202",
+              number: "الغرفة 202",
+              price: "180€",
+              capacity: 2,
+              area: 28,
+              image: "/images/zalige2.jpg",
+              amenities: ["سرير كوين", "حمام رخامي", "تكييف", "شرفة خاصة"]
+            },
+            {
+              id: "203",
+              number: "الغرفة 203",
+              price: "180€",
+              capacity: 2,
+              area: 28,
+              image: "/images/lhotel.png",
+              amenities: ["سرير كوين", "حمام رخامي", "تكييف", "إطلالة على الحديقة"]
+            },
+            {
+              id: "204",
+              number: "الغرفة 204",
+              price: "180€",
+              capacity: 2,
+              area: 28,
+              image: "/images/p2.png",
+              amenities: ["سرير كوين", "حمام رخامي", "تكييف", "شرفة خاصة"]
+            },
+            {
+              id: "205",
+              number: "الغرفة 205",
+              price: "180€",
+              capacity: 2,
+              area: 28,
+              image: "/images/zalige2.jpg",
+              amenities: ["سرير كوين", "حمام رخامي", "تكييف", "إطلالة على الحديقة"]
+            },
+            {
+              id: "206",
+              number: "الغرفة 206",
+              price: "180€",
+              capacity: 2,
+              area: 28,
+              image: "/images/lhotel.png",
+              amenities: ["سرير كوين", "حمام رخامي", "تكييف", "شرفة خاصة"]
+            }
+          ]
+        },
+        {
+          id: "suite",
           title: "الجناح العائلي",
-          desc: "مساحة فاخرة مصممة خصيصاً للعائلات، وتوفر غرفاً منفصلة تماماً للحفاظ على خصوصية الوالدين مع إبقاء الأطفال بالقرب.",
-          capacity: 5,
-          price: "ابتداءً من 250€ / ليلة",
-          features: ["غرفة ماستر منفصلة", "غرفة أطفال منفصلة ثانية", "صالون مغربي تقليدي", "حمامين", "شرفة خاصة"]
-        },
-        {
-          id: "royal",
-          title: "الجناح الملكي",
-          desc: "التجسيد الأسمى للفخامة التقليدية. مساحات شاسعة، سرير ملكي فاخر، وتفاصيل حرفية تليق بأرقى القصور.",
-          capacity: 3,
-          price: "ابتداءً من 380€ / ليلة",
-          features: ["سرير ملكي ضخم", "صالون مع مدفأة", "حوض استحمام نحاسي", "شرفة مطلة على الحديقة", "خدمة خادم خاص"]
+          description: "أجنحة فخمة تجمع بين الفخامة والمساحة المثالية للعائلات.",
+          rooms: [
+            {
+              id: "301",
+              number: "الجناح 301",
+              price: "320€",
+              capacity: 4,
+              area: 50,
+              image: "/images/zalige2.jpg",
+              amenities: ["غرفتان", "صالون خاص", "حمامين", "شرفة", "خدمة كونسيرج"]
+            },
+            {
+              id: "302",
+              number: "الجناح 302",
+              price: "320€",
+              capacity: 4,
+              area: 50,
+              image: "/images/lhotel.png",
+              amenities: ["غرفتان", "صالون خاص", "حمامين", "شرفة", "خدمة كونسيرج"]
+            },
+            {
+              id: "303",
+              number: "الجناح 303",
+              price: "320€",
+              capacity: 4,
+              area: 50,
+              image: "/images/p2.png",
+              amenities: ["غرفتان", "صالون خاص", "حمامين", "شرفة", "خدمة كونسيرج"]
+            },
+            {
+              id: "304",
+              number: "الجناح 304",
+              price: "320€",
+              capacity: 4,
+              area: 50,
+              image: "/images/zalige2.jpg",
+              amenities: ["غرفتان", "صالون خاص", "حمامين", "شرفة", "خدمة كونسيرج"]
+            },
+            {
+              id: "305",
+              number: "الجناح 305",
+              price: "320€",
+              capacity: 4,
+              area: 50,
+              image: "/images/lhotel.png",
+              amenities: ["غرفتان", "صالون خاص", "حمامين", "شرفة", "خدمة كونسيرج"]
+            },
+            {
+              id: "306",
+              number: "الجناح 306",
+              price: "320€",
+              capacity: 4,
+              area: 50,
+              image: "/images/p2.png",
+              amenities: ["غرفتان", "صالون خاص", "حمامين", "شرفة", "خدمة كونسيرج"]
+            }
+          ]
         }
       ]
     },
@@ -363,31 +829,192 @@ export const translations = {
       title: "Nuestras Habitaciones & Suites",
       subtitle: "Refinamiento tradicional combinado con el máximo confort moderno",
       viewDetails: "Descubrir habitación",
-      maxGuests: "Capacidad: {count} personas",
+      reserve: "Reservar",
+      amenities: "Servicios",
+      pricePerNight: "Por noche",
       types: [
         {
-          id: "traditional",
-          title: "Habitación Tradicional",
-          desc: "Un capullo de serenidad adornado con yeso tallado a mano y azulejos zellige ancestrales. Perfecto para una inmersión tranquila.",
-          capacity: 2,
-          price: "Desde 120€ / noche",
-          features: ["Cama Queen Size", "Baño en tadelakt", "Aire acondicionado", "Vista al patio"]
+          id: "simple",
+          title: "Habitación Simple",
+          description: "Habitaciones discretas y elegantes, ideales para el viajero individual.",
+          rooms: [
+            {
+              id: "101",
+              number: "Habitación 101",
+              price: "120€",
+              capacity: 1,
+              area: 18,
+              image: "/images/lhotel.png",
+              amenities: ["Cama individual", "Baño privado", "Aire acondicionado", "Vista al patio"]
+            },
+            {
+              id: "102",
+              number: "Habitación 102",
+              price: "120€",
+              capacity: 1,
+              area: 18,
+              image: "/images/p2.png",
+              amenities: ["Cama individual", "Baño privado", "Aire acondicionado", "Vista al patio"]
+            },
+            {
+              id: "103",
+              number: "Habitación 103",
+              price: "120€",
+              capacity: 1,
+              area: 18,
+              image: "/images/zalige2.jpg",
+              amenities: ["Cama individual", "Baño privado", "Aire acondicionado", "Vista al jardín"]
+            },
+            {
+              id: "104",
+              number: "Habitación 104",
+              price: "120€",
+              capacity: 1,
+              area: 18,
+              image: "/images/lhotel.png",
+              amenities: ["Cama individual", "Baño privado", "Aire acondicionado", "Vista al patio"]
+            },
+            {
+              id: "105",
+              number: "Habitación 105",
+              price: "120€",
+              capacity: 1,
+              area: 18,
+              image: "/images/p2.png",
+              amenities: ["Cama individual", "Baño privado", "Aire acondicionado", "Vista al jardín"]
+            },
+            {
+              id: "106",
+              number: "Habitación 106",
+              price: "120€",
+              capacity: 1,
+              area: 18,
+              image: "/images/zalige2.jpg",
+              amenities: ["Cama individual", "Baño privado", "Aire acondicionado", "Vista al patio"]
+            }
+          ]
         },
         {
-          id: "family",
+          id: "double",
+          title: "Habitación Doble",
+          description: "Espacios refinados para parejas con una atmósfera cálida y moderna.",
+          rooms: [
+            {
+              id: "201",
+              number: "Habitación 201",
+              price: "180€",
+              capacity: 2,
+              area: 28,
+              image: "/images/p2.png",
+              amenities: ["Cama Queen Size", "Baño de mármol", "Aire acondicionado", "Balcón privado"]
+            },
+            {
+              id: "202",
+              number: "Habitación 202",
+              price: "180€",
+              capacity: 2,
+              area: 28,
+              image: "/images/zalige2.jpg",
+              amenities: ["Cama Queen Size", "Baño de mármol", "Aire acondicionado", "Balcón privado"]
+            },
+            {
+              id: "203",
+              number: "Habitación 203",
+              price: "180€",
+              capacity: 2,
+              area: 28,
+              image: "/images/lhotel.png",
+              amenities: ["Cama Queen Size", "Baño de mármol", "Aire acondicionado", "Vista al jardín"]
+            },
+            {
+              id: "204",
+              number: "Habitación 204",
+              price: "180€",
+              capacity: 2,
+              area: 28,
+              image: "/images/p2.png",
+              amenities: ["Cama Queen Size", "Baño de mármol", "Aire acondicionado", "Balcón privado"]
+            },
+            {
+              id: "205",
+              number: "Habitación 205",
+              price: "180€",
+              capacity: 2,
+              area: 28,
+              image: "/images/zalige2.jpg",
+              amenities: ["Cama Queen Size", "Baño de mármol", "Aire acondicionado", "Vista al jardín"]
+            },
+            {
+              id: "206",
+              number: "Habitación 206",
+              price: "180€",
+              capacity: 2,
+              area: 28,
+              image: "/images/lhotel.png",
+              amenities: ["Cama Queen Size", "Baño de mármol", "Aire acondicionado", "Balcón privado"]
+            }
+          ]
+        },
+        {
+          id: "suite",
           title: "Suite Familiar",
-          desc: "Un espacio lujoso diseñado especialmente para familias, que ofrece una verdadera separación física de habitaciones para preservar la privacidad de los padres manteniendo a los niños cerca.",
-          capacity: 5,
-          price: "Desde 250€ / noche",
-          features: ["Dormitorio principal independiente", "Segundo dormitorio independiente", "Salón tradicional marroquí", "2 baños", "Terraza privada"]
-        },
-        {
-          id: "royal",
-          title: "Suite Real",
-          desc: "La encarnación suprema del lujo tradicional. Amplios espacios, cama King Size majestuosa y detalles artesanales dignos de los palacios más distinguidos.",
-          capacity: 3,
-          price: "Desde 380€ / noche",
-          features: ["Cama King Size", "Salón con chimenea", "Bañera de cobre", "Balcón con vistas al jardín", "Servicio de mayordomo"]
+          description: "Suites de lujo con espacio para toda la familia.",
+          rooms: [
+            {
+              id: "301",
+              number: "Suite 301",
+              price: "320€",
+              capacity: 4,
+              area: 50,
+              image: "/images/zalige2.jpg",
+              amenities: ["2 dormitorios", "Sala privada", "2 baños", "Terraza", "Servicio de concierge"]
+            },
+            {
+              id: "302",
+              number: "Suite 302",
+              price: "320€",
+              capacity: 4,
+              area: 50,
+              image: "/images/lhotel.png",
+              amenities: ["2 dormitorios", "Sala privada", "2 baños", "Terraza", "Servicio de concierge"]
+            },
+            {
+              id: "303",
+              number: "Suite 303",
+              price: "320€",
+              capacity: 4,
+              area: 50,
+              image: "/images/p2.png",
+              amenities: ["2 dormitorios", "Sala privada", "2 baños", "Terraza", "Servicio de concierge"]
+            },
+            {
+              id: "304",
+              number: "Suite 304",
+              price: "320€",
+              capacity: 4,
+              area: 50,
+              image: "/images/zalige2.jpg",
+              amenities: ["2 dormitorios", "Sala privada", "2 baños", "Terraza", "Servicio de concierge"]
+            },
+            {
+              id: "305",
+              number: "Suite 305",
+              price: "320€",
+              capacity: 4,
+              area: 50,
+              image: "/images/lhotel.png",
+              amenities: ["2 dormitorios", "Sala privada", "2 baños", "Terraza", "Servicio de concierge"]
+            },
+            {
+              id: "306",
+              number: "Suite 306",
+              price: "320€",
+              capacity: 4,
+              area: 50,
+              image: "/images/p2.png",
+              amenities: ["2 dormitorios", "Sala privada", "2 baños", "Terraza", "Servicio de concierge"]
+            }
+          ]
         }
       ]
     },

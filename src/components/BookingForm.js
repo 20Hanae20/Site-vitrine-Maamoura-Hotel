@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Calendar, Users, Star, Car, ArrowRight, AlertCircle } from 'lucide-react';
+import ScrollReveal from './ScrollReveal';
 import styles from './BookingForm.module.css';
 
 export default function BookingForm({ translations, currentLang, selectedRoom }) {
@@ -79,14 +80,12 @@ export default function BookingForm({ translations, currentLang, selectedRoom })
   };
 
   return (
-    <section id="booking" className={styles.bookingSection}>
-      <div className={styles.sectionHeader}>
-        <span className={styles.badge}>Hôtel Maamoura</span>
-        <h2 className={styles.title}>{t.title}</h2>
-        <div className={styles.ornament}></div>
-      </div>
+    <ScrollReveal>
+      <section id="booking" className={styles.bookingSection}>
+        <div className={styles.sectionHeader}>
+        </div>
 
-      <div className={styles.card}>
+        <div className={styles.card}>
         {error && (
           <div className={styles.errorBanner}>
             <AlertCircle size={18} />
@@ -219,5 +218,6 @@ export default function BookingForm({ translations, currentLang, selectedRoom })
         </form>
       </div>
     </section>
+    </ScrollReveal>
   );
 }

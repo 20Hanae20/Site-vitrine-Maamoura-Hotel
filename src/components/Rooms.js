@@ -1,93 +1,142 @@
 'use client';
 
-import React from 'react';
-import { Users, Bed, ShieldCheck, ChevronRight } from 'lucide-react';
+import React, { useState } from 'react';
+import Image from 'next/image';
+import { Users, Maximize2, ShieldCheck, ChevronRight } from 'lucide-react';
+import ScrollReveal from './ScrollReveal';
 import styles from './Rooms.module.css';
 
 export default function Rooms({ translations, currentLang, onSelectRoom }) {
   const t = translations[currentLang].rooms;
+  const [selectedTypeId, setSelectedTypeId] = useState(t.types[0].id);
 
-  const roomImages = {
-    traditional: "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&q=80&w=800",
-    family: "https://images.unsplash.com/photo-1600121848594-d8644e57abab?auto=format&fit=crop&q=80&w=800",
-    royal: "https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&q=80&w=800"
+  const selectedType = t.types.find(type => type.id === selectedTypeId);
+  const roomsToDisplay = selectedType?.rooms || [];
+
+  const handleBookNow = (roomNumber) => {
+    if (onSelectRoom) {
+      onSelectRoom(selectedTypeId, roomNumber);
+    }
   };
 
-  const handleBookNow = (roomId) => {
-    // Call the selection callback which handles updating booking form selection and scroll
-    onSelectRoom(roomId);
+  const getCapacityLabel = (capacity) => {
+    if (capacity === 1) {
+      return currentLang === 'fr' ? '1 personne' :
+             currentLang === 'en' ? '1 guest' :
+             currentLang === 'es' ? '1 persona' : '1 شخص';
+    }
+    return `${capacity} ${
+      currentLang === 'fr' ? 'personnes' :
+      currentLang === 'en' ? 'guests' :
+      currentLang === 'es' ? 'personas' : 'أشخاص'
+    }`;
   };
 
   return (
-    <section id="rooms" className={styles.roomsSection}>
-      <div className={styles.sectionHeader}>
-        <span className={styles.badge}>Hébergements</span>
-        <h2 className={styles.title}>{t.title}</h2>
-        <div className={styles.ornament}></div>
-        <p className={styles.subtitle}>{t.subtitle}</p>
-      </div>
+    <ScrollReveal>
+      <section id="rooms" className={styles.roomsSection}>
+        {/* Section Header */}
+        <div className={styles.sectionHeader}>
+          <span className={styles.badge}>
+            {currentLang === 'fr' && "Hébergements"}
+            {currentLang === 'en' && "Accommodations"}
+            {currentLang === 'es' && "Alojamientos"}
+            {currentLang === 'ar' && "الإقامة"}
+          </span>
+          <h2 className={styles.title}>{t.title}</h2>
+          <div className={styles.ornament}></div>
+          <p className={styles.subtitle}>{t.subtitle}</p>
+        </div>
 
-      <div className={styles.grid}>
-        {t.types.map((room) => (
-          <div 
-            key={room.id} 
-            className={`${styles.card} ${room.id === 'family' ? styles.featuredCard : ''}`}
-          >
-            {room.id === 'family' && (
-              <div className={styles.featuredBadge}>
-                {currentLang === 'fr' && "Idéal Famille"}
-                {currentLang === 'en' && "Family Choice"}
-                {currentLang === 'es' && "Ideal Familia"}
-                {currentLang === 'ar' && "خيار العائلات"}
-              </div>
-            )}
-            
-            <div className={styles.imageWrapper}>
-              <img 
-                src={roomImages[room.id]} 
-                alt={room.title}
-                className={styles.image}
-                loading="lazy"
-              />
-              <div className={styles.priceTag}>{room.price}</div>
-            </div>
+        {/* Type Filter Buttons */}
+        <div className={styles.filterContainer}>
+          {t.types.map((type) => (
+            <button
+              key={type.id}
+              className={`${styles.filterBtn} ${selectedTypeId === type.id ? styles.filterBtnActive : ''}`}
+              onClick={() => setSelectedTypeId(type.id)}
+            >
+              <span className={styles.filterBtnTitle}>{type.title}</span>
+              <span className={styles.filterBtnDesc}>{type.description}</span>
+            </button>
+          ))}
+        </div>
 
-            <div className={styles.details}>
-              <h3 className={styles.roomTitle}>{room.title}</h3>
-              
-              <p className={styles.desc}>{room.desc}</p>
-              
-              <div className={styles.specs}>
-                <div className={styles.specItem}>
-                  <Users size={16} className={styles.specIcon} />
-                  <span>{t.maxGuests.replace('{count}', room.capacity)}</span>
-                </div>
-                <div className={styles.specItem}>
-                  <Bed size={16} className={styles.specIcon} />
-                  <span>{room.id === 'family' ? '2 Lits doubles + 1 Lit simple' : room.id === 'royal' ? '1 Lit King Size' : '1 Lit Queen Size'}</span>
-                </div>
-              </div>
+        {/* Type Description */}
+        <div className={styles.typeHeader}>
+          <h3 className={styles.typeTitle}>{selectedType?.title}</h3>
+          <p className={styles.typeDescription}>{selectedType?.description}</p>
+        </div>
 
-              <div className={styles.featuresList}>
-                {room.features.map((feat, index) => (
-                  <div key={index} className={styles.featureTag}>
-                    <ShieldCheck size={12} className={styles.checkIcon} />
-                    <span>{feat}</span>
+        {/* Rooms Grid */}
+        <div className={styles.roomsGrid}>
+          {roomsToDisplay.map((room, index) => (
+            <ScrollReveal key={room.id} delay={index * 0.08}>
+              <div className={styles.roomCard}>
+                {/* Image Container */}
+                <div className={styles.imageContainer}>
+                  <Image
+                    src={room.image}
+                    alt={room.number}
+                    className={styles.roomImage}
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    priority={false}
+                  />
+                  <div className={styles.priceOverlay}>
+                    <span className={styles.price}>{room.price}</span>
+                    <span className={styles.priceLabel}>{t.pricePerNight}</span>
                   </div>
-                ))}
-              </div>
+                </div>
 
-              <button 
-                onClick={() => handleBookNow(room.id)}
-                className={`${styles.bookBtn} ${room.id === 'family' ? styles.featuredBtn : ''}`}
-              >
-                <span>{t.viewDetails}</span>
-                <ChevronRight size={16} className={styles.btnArrow} />
-              </button>
-            </div>
-          </div>
-        ))}
-      </div>
-    </section>
+                {/* Card Content */}
+                <div className={styles.cardContent}>
+                  <h4 className={styles.roomNumber}>{room.number}</h4>
+
+                  {/* Room Stats */}
+                  <div className={styles.statsContainer}>
+                    <div className={styles.stat}>
+                      <Users size={16} className={styles.statIcon} />
+                      <span className={styles.statText}>{getCapacityLabel(room.capacity)}</span>
+                    </div>
+                    <div className={styles.stat}>
+                      <Maximize2 size={16} className={styles.statIcon} />
+                      <span className={styles.statText}>{room.area}m²</span>
+                    </div>
+                  </div>
+
+                  {/* Amenities */}
+                  <div className={styles.amenitiesContainer}>
+                    <h5 className={styles.amenitiesTitle}>{t.amenities}</h5>
+                    <div className={styles.amenitiesList}>
+                      {room.amenities.map((amenity, idx) => (
+                        <div key={idx} className={styles.amenityItem}>
+                          <ShieldCheck size={12} className={styles.amenityIcon} />
+                          <span>{amenity}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Action Buttons */}
+                  <div className={styles.actionButtons}>
+                    <button className={styles.detailsBtn}>
+                      <span>{t.viewDetails}</span>
+                      <ChevronRight size={16} className={styles.btnIcon} />
+                    </button>
+                    <button
+                      className={styles.reserveBtn}
+                      onClick={() => handleBookNow(room.number)}
+                    >
+                      {t.reserve}
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </ScrollReveal>
+          ))}
+        </div>
+      </section>
+    </ScrollReveal>
   );
 }

@@ -8,7 +8,6 @@ import Loader from '../components/Loader';
 import Navbar from '../components/Navbar';
 import MusicPlayer from '../components/MusicPlayer';
 import Hero from '../components/Hero';
-import BookingForm from '../components/BookingForm';
 import Rooms from '../components/Rooms';
 import Services from '../components/Services';
 import Gallery from '../components/Gallery';
@@ -61,18 +60,11 @@ export default function Home() {
 
       {/* Main Content Sections */}
       <main>
-        {/* Welcome Hero Area */}
+        {/* Welcome Hero Area with booking overlay */}
         <Hero 
           translations={translations} 
           currentLang={language} 
-        />
-
-        {/* Calendar Booking & WhatsApp Contact */}
-        <BookingForm 
-          translations={translations} 
-          currentLang={language} 
           selectedRoom={selectedRoom}
-          // We pass down a custom selected room state to synchronize it on click
         />
 
         {/* Accommodation Section */}

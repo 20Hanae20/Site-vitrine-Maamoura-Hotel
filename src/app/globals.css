@@ -131,6 +131,8 @@ h1, h2, h3, h4 {
   animation: fadeIn 1.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
 }
 
+
+
 .animate-slide-up {
   animation: slideUp 1.2s cubic-bezier(0.25, 1, 0.5, 1) forwards;
 }
@@ -145,7 +147,7 @@ h1, h2, h3, h4 {
 
 /* Section styling with progressive reveal spacer */
 section {
-  padding: 110px 20px;
+  padding: 50px 20px;
   position: relative;
   overflow: hidden;
 }
@@ -154,4 +156,15 @@ section {
   section {
     padding: 70px 15px;
   }
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  background-image: url('/images/p2.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
