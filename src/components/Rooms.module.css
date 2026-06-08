@@ -1,7 +1,8 @@
+/* Rooms Section */
 .roomsSection {
   background-color: transparent;
   max-width: var(--max-width);
-  margin: 0 auto;
+  margin: 180px auto 0 auto;
   width: 100%;
   padding: 0 20px;
 }
@@ -9,7 +10,7 @@
 /* Section Header */
 .sectionHeader {
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 60px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -47,15 +48,10 @@
 }
 
 .ornament {
-  width: 200px;
-  height: 12px;
-  background-image: var(--zellige-pattern);
-  background-repeat: repeat-x;
-  background-size: 12px 12px;
-  margin-top: 20px;
-  margin-bottom: 25px;
-  border-radius: 4px;
-  box-shadow: 0 2px 8px rgba(23, 33, 47, 0.12);
+  width: 80px;
+  height: 2px;
+  background: var(--primary-gold);
+  margin: 20px auto;
 }
 
 .subtitle {
@@ -73,43 +69,24 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 10px;
-  margin-bottom: 40px;
+  gap: 15px;
+  margin-bottom: 50px;
   margin-top: 30px;
   animation: fadeInUp 0.8s ease-out 0.2s both;
 }
 
 .filterBtn {
   background: transparent;
-  border: 1.5px solid var(--border-gold);
+  border: 1px solid var(--border-gold);
   color: var(--text-gold);
   font-family: var(--font-sans);
   font-weight: 500;
-  padding: 10px 16px;
-  border-radius: 8px;
+  padding: 12px 24px;
+  border-radius: 30px;
   cursor: pointer;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2px;
-  position: relative;
-  overflow: hidden;
-  min-width: auto;
-  max-width: 220px;
-  text-align: center;
-}
-
-.filterBtn::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: var(--primary-gold);
-  transition: left 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  z-index: -1;
+  transition: all 0.3s ease;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
 }
 
 .filterBtn:hover {
@@ -117,48 +94,17 @@
   color: var(--primary-gold);
 }
 
-.filterBtn:hover::before {
-  left: 0;
-}
-
-.filterBtnTitle {
-  font-size: 0.85rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-}
-
-.filterBtnDesc {
-  font-size: 0.7rem;
-  color: inherit;
-  opacity: 0.8;
-  font-weight: 400;
-}
-
 .filterBtnActive {
   background: var(--primary-gold);
   color: var(--bg-dark);
   border-color: var(--primary-gold);
-  box-shadow: 0 8px 30px rgba(178, 127, 36, 0.3);
-}
-
-.filterBtnActive .filterBtnTitle,
-.filterBtnActive .filterBtnDesc {
-  color: var(--bg-dark);
-}
-
-.filterBtnActive::before {
-  left: 0;
 }
 
 /* Type Header */
 .typeHeader {
   text-align: center;
-  margin-bottom: 45px;
+  margin-bottom: 50px;
   animation: fadeInUp 0.8s ease-out 0.3s both;
-  padding: 30px 20px;
-  border-top: 1px solid var(--border-gold);
-  border-bottom: 1px solid var(--border-gold);
 }
 
 .typeTitle {
@@ -180,13 +126,15 @@
   line-height: 1.7;
 }
 
-/* Rooms Grid */
+/* Rooms Grid - 3 COLONNES */
 .roomsGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(3, 1fr);  /* 3 colonnes fixes */
   gap: 30px;
   align-items: stretch;
   animation: fadeIn 0.6s ease-out 0.4s both;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 @keyframes fadeIn {
@@ -198,110 +146,84 @@
   }
 }
 
-/* Room Card */
+/* Room Card - CARTES CLAIRES ET VISIBLES */
 .roomCard {
-  background: var(--bg-card);
-  border: 1px solid var(--border-gold);
-  border-radius: 12px;
+  background: #FFFFFF;  /* Fond blanc pour meilleure visibilité */
+  border-radius: 20px;
   overflow: hidden;
-  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
   display: flex;
   flex-direction: column;
   height: 100%;
-  box-shadow: 0 4px 15px rgba(23, 33, 47, 0.08);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
   position: relative;
+  border: 1px solid rgba(212, 175, 55, 0.15);
 }
 
+/* Bordure dorée animée au hover */
 .roomCard::before {
   content: '';
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  right: 0;
   height: 4px;
-  background: linear-gradient(90deg, var(--primary-gold), var(--text-gold), var(--primary-gold));
-  z-index: 10;
+  background: linear-gradient(90deg, var(--primary-gold), #d4a017, var(--primary-gold));
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: 2;
+  border-radius: 20px 20px 0 0;
+}
+
+.roomCard:hover::before {
+  opacity: 1;
 }
 
 .roomCard:hover {
-  transform: translateY(-12px);
-  border-color: var(--primary-gold);
-  box-shadow: 0 15px 40px rgba(178, 127, 36, 0.2);
+  transform: translateY(-8px);
+  box-shadow: 0 25px 45px rgba(212, 175, 55, 0.2);
+  border-color: rgba(212, 175, 55, 0.3);
 }
 
 /* Image Container */
 .imageContainer {
   position: relative;
-  height: 280px;
+  height: 240px;
   overflow: hidden;
-  background-color: var(--bg-dark);
+  background-color: #f5f5f5;
 }
 
 .roomImage {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.6s ease;
 }
 
 .roomCard:hover .roomImage {
-  transform: scale(1.12);
+  transform: scale(1.08);
 }
 
-/* Price Overlay */
+/* Supprimer price overlay de l'image */
 .priceOverlay {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  background: linear-gradient(135deg, rgba(178, 127, 36, 0.95) 0%, rgba(178, 127, 36, 0.85) 100%);
-  backdrop-filter: blur(10px);
-  padding: 16px 20px;
-  border-radius: 12px 0 0 0;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 4px;
-  box-shadow: 0 -4px 15px rgba(23, 33, 47, 0.2);
+  display: none;
 }
 
-[dir="rtl"] .priceOverlay {
-  right: auto;
-  left: 0;
-  border-radius: 0 12px 0 0;
-  align-items: flex-start;
-}
-
-.price {
-  font-family: var(--font-serif);
-  font-size: 1.4rem;
-  font-weight: 600;
-  color: #fff;
-  letter-spacing: 0.5px;
-}
-
-.priceLabel {
-  font-family: var(--font-sans);
-  font-size: 0.65rem;
-  color: rgba(255, 255, 255, 0.9);
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-weight: 500;
-}
-
-/* Card Content */
+/* Card Content - fond clair */
 .cardContent {
-  padding: 28px;
+  padding: 24px;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-  gap: 20px;
+  gap: 15px;
+  background: #FFFFFF;
 }
 
 .roomNumber {
   font-family: var(--font-serif);
-  font-size: 1.6rem;
-  font-weight: 400;
-  color: var(--text-ivory);
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #1a1a2e;
   letter-spacing: 0.5px;
   margin: 0;
   transition: color 0.3s ease;
@@ -314,121 +236,186 @@
 /* Stats Container */
 .statsContainer {
   display: flex;
-  gap: 25px;
-  padding-bottom: 20px;
-  border-bottom: 1px solid var(--border-gold);
+  justify-content: flex-start;
+  gap: 20px;
+  padding: 12px 0;
+  border-top: 1px solid rgba(212, 175, 55, 0.2);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.2);
 }
 
 .stat {
   display: flex;
   align-items: center;
-  gap: 10px;
-  font-size: 0.8rem;
-  color: var(--text-gold);
-  font-weight: 500;
+  gap: 8px;
+  transition: all 0.3s ease;
 }
 
+.stat:not(:last-child) {
+  padding-right: 20px;
+  border-right: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+[dir="rtl"] .stat:not(:last-child) {
+  padding-right: 0;
+  padding-left: 20px;
+  border-right: none;
+  border-left: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+/* Icones */
 .statIcon {
   color: var(--primary-gold);
-  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  transition: all 0.3s ease;
+}
+
+.stat:hover .statIcon {
+  transform: scale(1.1);
 }
 
 .statText {
-  line-height: 1.4;
+  font-size: 0.75rem;
+  color: #333333;
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+.statSurface {
+  font-size: 0.7rem;
+  color: var(--primary-gold);
+  font-weight: 500;
+  margin-left: 4px;
 }
 
 /* Amenities Container */
 .amenitiesContainer {
-  flex-grow: 1;
+  flex-grow: 0;
 }
 
 .amenitiesTitle {
   font-family: var(--font-sans);
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   font-weight: 700;
-  color: var(--text-ivory);
+  color: var(--primary-gold);
   text-transform: uppercase;
   letter-spacing: 1.5px;
-  margin: 0 0 12px 0;
+  margin: 0 0 10px 0;
 }
 
 .amenitiesList {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   gap: 8px;
 }
 
 .amenityItem {
   display: flex;
   align-items: center;
-  gap: 8px;
-  font-size: 0.8rem;
-  color: var(--text-muted);
-  transition: color 0.3s ease;
+  gap: 6px;
+  font-size: 0.7rem;
+  color: #555555;
+  background: rgba(212, 175, 55, 0.08);
+  padding: 5px 12px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
 }
 
-.roomCard:hover .amenityItem {
-  color: var(--text-gold);
+.amenityItem:hover {
+  background: rgba(212, 175, 55, 0.15);
+  transform: translateY(-2px);
 }
 
 .amenityIcon {
   color: var(--primary-gold);
-  flex-shrink: 0;
+  width: 12px;
+  height: 12px;
+}
+
+/* Prix */
+.priceContainer {
+  margin: 5px 0;
+  padding: 8px 12px;
+  background: rgba(212, 175, 55, 0.1);
+  border-radius: 10px;
+  text-align: center;
+  width: 100%;
+}
+
+.priceValue {
+  font-family: var(--font-serif);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--primary-gold);
+  letter-spacing: 1px;
+}
+
+.pricePeriod {
+  font-size: 0.7rem;
+  color: #666666;
+  font-weight: 500;
 }
 
 /* Action Buttons */
 .actionButtons {
   display: flex;
   gap: 12px;
-  margin-top: auto;
+  margin-top: 10px;
 }
 
-.detailsBtn,
-.reserveBtn {
+.detailsBtn {
   flex: 1;
   padding: 12px 16px;
-  border-radius: 6px;
-  border: none;
+  border-radius: 40px;
+  border: 1.5px solid var(--primary-gold);
+  background: transparent;
   font-family: var(--font-sans);
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 1.2px;
+  letter-spacing: 1.5px;
   cursor: pointer;
   transition: all 0.3s ease;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 6px;
-}
-
-.detailsBtn {
-  background: transparent;
+  gap: 8px;
   color: var(--primary-gold);
-  border: 1.5px solid var(--primary-gold);
 }
 
 .detailsBtn:hover {
   background: var(--primary-gold);
-  color: var(--bg-dark);
-  box-shadow: 0 4px 12px rgba(178, 127, 36, 0.25);
+  color: #FFFFFF;
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
 }
 
 .reserveBtn {
-  background: var(--primary-gold);
-  color: var(--bg-dark);
-  border: 1.5px solid var(--primary-gold);
+  flex: 1;
+  padding: 12px 16px;
+  border-radius: 40px;
+  border: none;
+  background: linear-gradient(135deg, var(--primary-gold) 0%, #d4a017 100%);
+  color: #FFFFFF;
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
   font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .reserveBtn:hover {
-  background: var(--bg-dark);
-  color: var(--primary-gold);
-  box-shadow: 0 6px 20px rgba(178, 127, 36, 0.3);
+  background: linear-gradient(135deg, #d4a017 0%, var(--primary-gold) 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(212, 175, 55, 0.3);
+  color: #FFFFFF;
 }
 
 .btnIcon {
   transition: transform 0.3s ease;
+  width: 14px;
+  height: 14px;
 }
 
 .detailsBtn:hover .btnIcon {
@@ -439,143 +426,369 @@
   transform: translateX(-3px) scaleX(-1);
 }
 
-/* Responsive Design */
-@media (max-width: 1024px) {
+/* Responsive - 3 colonnes sur grand écran */
+@media (max-width: 1200px) {
   .roomsGrid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);  /* 2 colonnes sur tablette */
     gap: 25px;
-  }
-
-  .filterContainer {
-    gap: 12px;
-  }
-
-  .filterBtn {
-    min-width: 160px;
-    padding: 12px 20px;
-  }
-
-  .filterBtnTitle {
-    font-size: 0.8rem;
-  }
-
-  .filterBtnDesc {
-    font-size: 0.65rem;
   }
 }
 
 @media (max-width: 768px) {
-  .roomsSection {
-    padding: 0 15px;
-  }
-
   .roomsGrid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr;  /* 1 colonne sur mobile */
     gap: 20px;
   }
-
+  
   .title {
     font-size: 2rem;
   }
-
-  .typeTitle {
-    font-size: 1.5rem;
-  }
-
-  .typeHeader {
-    padding: 20px 15px;
-  }
-
-  .filterContainer {
-    gap: 10px;
-    flex-direction: column;
-  }
-
-  .filterBtn {
-    width: 100%;
-    min-width: unset;
-    padding: 12px 16px;
-    flex-direction: row;
-    justify-content: center;
-    gap: 8px;
-  }
-
-  .filterBtnTitle {
-    font-size: 0.75rem;
-  }
-
-  .filterBtnDesc {
-    display: none;
-  }
-
+  
   .imageContainer {
-    height: 220px;
+    height: 200px;
   }
-
-  .cardContent {
-    padding: 20px;
-    gap: 15px;
-  }
-
-  .roomNumber {
-    font-size: 1.3rem;
-  }
-
+  
   .statsContainer {
     flex-wrap: wrap;
     gap: 15px;
   }
-
-  .actionButtons {
-    flex-direction: column;
-    gap: 10px;
+  
+  .stat:not(:last-child) {
+    border-right: none;
+    padding-right: 0;
   }
-
-  .detailsBtn,
-  .reserveBtn {
-    width: 100%;
+  
+  .actionButtons {
+    flex-direction: row;
   }
 }
 
 @media (max-width: 480px) {
-  .title {
-    font-size: 1.7rem;
+  .actionButtons {
+    flex-direction: column;
   }
-
-  .subtitle {
-    font-size: 0.85rem;
+  
+  .cardContent {
+    padding: 18px;
   }
-
-  .typeTitle {
+  
+  .roomNumber {
     font-size: 1.2rem;
   }
-
-  .typeDescription {
-    font-size: 0.85rem;
-  }
-
-  .badge {
-    font-size: 0.65rem;
-  }
-
-  .imageContainer {
-    height: 200px;
-  }
-
-  .cardContent {
-    padding: 16px;
-  }
-
-  .roomNumber {
+  
+  .priceValue {
     font-size: 1.1rem;
-  }
-
-  .amenitiesTitle {
-    font-size: 0.7rem;
-  }
-
-  .amenityItem {
-    font-size: 0.75rem;
   }
 }
 
+/* Amenity icon in card */
+.amenityCardIcon {
+  display: flex;
+  align-items: center;
+  color: var(--primary-gold);
+  flex-shrink: 0;
+}
+
+/* ===== Modal ===== */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(14, 21, 32, 0.85);
+  backdrop-filter: blur(6px);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  animation: fadeIn 0.25s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.modal {
+  display: flex;
+  max-width: 900px;
+  width: 100%;
+  max-height: 85vh;
+  background: var(--ivoire);
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+  animation: slideUp 0.35s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.closeBtn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(0, 0, 0, 0.45);
+  color: #fff;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease;
+}
+
+.closeBtn:hover {
+  background: var(--primary-gold);
+}
+
+[dir="rtl"] .closeBtn {
+  right: auto;
+  left: 16px;
+}
+
+/* Left: Image */
+.modalImageWrap {
+  position: relative;
+  width: 45%;
+  min-height: 400px;
+  flex-shrink: 0;
+  background: var(--acajau-dark);
+  overflow: hidden;
+}
+
+.modalImg {
+  object-fit: cover;
+}
+
+/* Right: Content */
+.modalContent {
+  width: 55%;
+  padding: 35px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.modalBadge {
+  font-family: var(--font-sans);
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--primary-gold);
+  margin-bottom: 8px;
+}
+
+.modalTitle {
+  font-family: var(--font-serif);
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: var(--text-ivory);
+  margin: 0 0 12px 0;
+  letter-spacing: 0.5px;
+}
+
+.modalDesc {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin: 0 0 20px 0;
+}
+
+/* Stats in modal */
+.modalStats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  padding: 18px 0;
+  border-top: 1px solid var(--border-gold);
+  border-bottom: 1px solid var(--border-gold);
+  margin-bottom: 20px;
+}
+
+.modalStat {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.modalStatIcon {
+  color: var(--primary-gold);
+  flex-shrink: 0;
+}
+
+.modalStat div {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.modalStatVal {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-ivory);
+}
+
+.modalStatLbl {
+  font-family: var(--font-sans);
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+
+/* Amenities in modal */
+.modalAmenities {
+  margin-bottom: 20px;
+}
+
+.modalAmenitiesTitle {
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--text-ivory);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 0 0 12px 0;
+}
+
+.modalAmenitiesList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.modalAmenity {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-gold);
+  border-radius: 30px;
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  transition: border-color 0.3s ease;
+}
+
+.modalAmenity:hover {
+  border-color: var(--primary-gold);
+}
+
+.modalAmenityIcon {
+  display: flex;
+  align-items: center;
+  color: var(--primary-gold);
+}
+
+/* Action */
+.modalAction {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: auto;
+  padding-top: 20px;
+  border-top: 1px solid var(--border-gold);
+}
+
+.modalPrice {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+}
+
+.modalPriceVal {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-gold);
+}
+
+.modalPriceLbl {
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+
+.modalReserveBtn {
+  padding: 14px 28px;
+  border: none;
+  border-radius: 8px;
+  background: var(--primary-gold);
+  color: var(--bg-dark);
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.modalReserveBtn:hover {
+  background: var(--text-ivory);
+  color: var(--ivoire);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(23, 33, 47, 0.2);
+}
+
+/* Modal responsive */
+@media (max-width: 768px) {
+  .modal {
+    flex-direction: column;
+    max-height: 90vh;
+  }
+  .modalImageWrap {
+    width: 100%;
+    min-height: 220px;
+    height: 220px;
+  }
+  .modalContent {
+    width: 100%;
+    padding: 25px;
+  }
+  .modalTitle {
+    font-size: 1.4rem;
+  }
+  .modalAction {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .modalReserveBtn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .modalImageWrap {
+    min-height: 180px;
+    height: 180px;
+  }
+  .modalContent {
+    padding: 20px;
+  }
+  .modalStats {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}

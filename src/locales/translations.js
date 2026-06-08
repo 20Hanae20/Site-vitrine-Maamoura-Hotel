@@ -179,7 +179,7 @@ export const translations = {
               price: "320€",
               capacity: 4,
               area: 50,
-              image: "/images/familia/f2.jpeg",
+              image: "/images/familia/image.png",
               amenities: ["2 chambres", "Salon privé", "2 salles de bain", "Terrasse", "Service concierge"]
             },
             {
@@ -188,7 +188,7 @@ export const translations = {
               price: "320€",
               capacity: 4,
               area: 50,
-              image: "/images/familia/f3.jpeg",
+              image: "/images/familia/image1.png",
               amenities: ["2 chambres", "Salon privé", "2 salles de bain", "Terrasse", "Service concierge"]
             },
             {
@@ -206,7 +206,7 @@ export const translations = {
               price: "320€",
               capacity: 4,
               area: 50,
-              image: "/images/familia/famil1.jpeg",
+              image: "/images/familia/image3.png",
               amenities: ["2 chambres", "Salon privé", "2 salles de bain", "Terrasse", "Service concierge"]
             },
             
@@ -242,6 +242,14 @@ export const translations = {
       hotel: "Hôtel",
       rooms: "Suites",
       wellness: "Bien-être"
+    },
+    location: {
+      address: "59 Rue Ibn Batouta, Casablanca, Maroc",
+      phoneValue: "+212600000000",
+      emailValue: "contact@hotelmaamoura.com",
+      googleMapsDestination: "59 Rue Ibn Batouta, Casablanca, Maroc",
+      mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3324.1!2d-7.6114!3d33.5883!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda7d2b1c2e4f5a6%3A0x0!2s59%20Rue%20Ibn%20Batouta%2C%20Casablanca!5e0!3m2!1sfr!2sma",
+      description: "Idéalement situé au cœur de Casablanca, l'Hôtel Maamoura vous accueille dans un cadre d'exception à quelques pas des principaux quartiers d'affaires et de loisirs de la ville."
     },
     footer: {
       address: "Adresse : 45 Boulevard Moulay Youssef, Casablanca, Maroc",
@@ -511,6 +519,14 @@ export const translations = {
       rooms: "Suites",
       wellness: "Wellness"
     },
+    location: {
+      address: "59 Rue Ibn Batouta, Casablanca, Morocco",
+      phoneValue: "+212600000000",
+      emailValue: "contact@hotelmaamoura.com",
+      googleMapsDestination: "59 Rue Ibn Batouta, Casablanca, Morocco",
+      mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3324.1!2d-7.6114!3d33.5883!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda7d2b1c2e4f5a6%3A0x0!2s59%20Rue%20Ibn%20Batouta%2C%20Casablanca!5e0!3m2!1sen!2sma",
+      description: "Ideally located in the heart of Casablanca, Hôtel Maamoura welcomes you in an exceptional setting just steps from the city's main business and leisure districts."
+    },
     footer: {
       address: "Address: 45 Moulay Youssef Boulevard, Casablanca, Morocco",
       phone: "Phone: +212 6 00 00 00 00",
@@ -778,6 +794,14 @@ export const translations = {
       hotel: "الفندق",
       rooms: "الأجنحة",
       wellness: "الاستجمام"
+    },
+    location: {
+      address: "59 شارع ابن بطوطة، الدار البيضاء، المغرب",
+      phoneValue: "+212600000000",
+      emailValue: "contact@hotelmaamoura.com",
+      googleMapsDestination: "59 Rue Ibn Batouta, Casablanca, Maroc",
+      mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3324.1!2d-7.6114!3d33.5883!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda7d2b1c2e4f5a6%3A0x0!2s59%20Rue%20Ibn%20Batouta%2C%20Casablanca!5e0!3m2!1sfr!2sma",
+      description: "يقع فندق المعمورة في قلب الدار البيضاء، في موقع مثالي على بعد خطوات من أهم أحياء الأعمال والترفيه في المدينة."
     },
     footer: {
       address: "العنوان: 45 شارع مولاي يوسف، الدار البيضاء، المغرب",
@@ -1047,8 +1071,16 @@ export const translations = {
       rooms: "Suites",
       wellness: "Bienestar"
     },
+    location: {
+      address: "59 Rue Ibn Batouta, Casablanca, Maroc",
+      phoneValue: "+212600000000",
+      emailValue: "contact@hotelmaamoura.com",
+      googleMapsDestination: "59 Rue Ibn Batouta, Casablanca, Maroc",
+      mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3323.5!2d-7.627!3d33.578!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda7d2b0c8f4a6e2%3A0x7b3c9d1e5f2a4b6c!2s59 Rue Ibn Batouta, Casablanca, Maroc!5e0!3m2!1sfr!2sma",
+      description: "Idealmente situado en el corazón de Casablanca, el Hôtel Maamoura le recibe en un entorno excepcional a pocos pasos de los principales distritos de negocios y ocio de la ciudad."
+    },
     footer: {
-      address: "Dirección: 45 Boulevard Moulay Youssef, Casablanca, Marruecos",
+      address: "59 Rue Ibn Batouta, Casablanca, Maroc",
       phone: "Teléfono: +212 6 00 00 00 00",
       email: "Correo: contact@hotelmaamoura.com",
       rights: "© 2026 Hôtel Maamoura. Todos los derechos reservados. Inspirado en el prestigio del arte tradicional marroquí."

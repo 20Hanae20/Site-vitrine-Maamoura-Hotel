@@ -11,6 +11,7 @@ import Hero from '../components/Hero';
 import Rooms from '../components/Rooms';
 import Services from '../components/Services';
 import Gallery from '../components/Gallery';
+import Location from '../components/Location';
 import Footer from '../components/Footer';
 
 export default function Home() {
@@ -82,6 +83,12 @@ export default function Home() {
 
         {/* Immersive Photo Gallery */}
         <Gallery 
+          translations={translations} 
+          currentLang={language} 
+        />
+
+        {/* Location & Map */}
+        <Location 
           translations={translations} 
           currentLang={language} 
         />

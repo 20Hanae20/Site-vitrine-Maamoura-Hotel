@@ -43,13 +43,27 @@
   max-width: 90%;
 }
 
-/* Star Insignia */
+/* Star Insignia - AMÉLIORÉ */
 .starInsignia {
-  width: 60px;
-  height: 60px;
+  width: 80px;
+  height: 80px;
   position: relative;
-  margin-bottom: 25px;
-  animation: rotateStar 6s infinite linear;
+  margin-bottom: 30px;
+  animation: rotateStar 8s infinite linear;
+}
+
+/* Effet de glow autour de l'étoile */
+.starInsignia::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  background: radial-gradient(circle, rgba(212, 175, 55, 0.3) 0%, transparent 70%);
+  border-radius: 50%;
+  animation: glowPulse 2s infinite ease-in-out;
+  z-index: -1;
 }
 
 .starLine, .starLine2 {
@@ -58,13 +72,32 @@
   left: 0;
   width: 100%;
   height: 100%;
-  border: 1.5px solid var(--primary-gold);
-  border-radius: 4px;
-  box-shadow: var(--shadow-glow);
+  border: 2px solid var(--primary-gold);
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.5), inset 0 0 5px rgba(212, 175, 55, 0.3);
+  transition: all 0.3s ease;
+}
+
+.starLine {
+  animation: borderPulse 2s infinite ease-in-out 0s;
 }
 
 .starLine2 {
   transform: rotate(45deg);
+  animation: borderPulse 2s infinite ease-in-out 0.5s;
+}
+
+/* Petit diamant au centre */
+.starInsignia::after {
+  content: '✦';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.2rem;
+  color: var(--primary-gold);
+  animation: sparkle 1.5s infinite ease-in-out;
+  text-shadow: 0 0 10px rgba(212, 175, 55, 0.8);
 }
 
 .title {
@@ -119,12 +152,52 @@
   animation: loadProgress 1.6s infinite ease-in-out;
 }
 
+/* ========== NOUVELLES ANIMATIONS POUR L'ICÔNE ========== */
+
 @keyframes rotateStar {
   0% {
-    transform: rotate(0deg);
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(180deg) scale(1.05);
   }
   100% {
-    transform: rotate(360deg);
+    transform: rotate(360deg) scale(1);
+  }
+}
+
+@keyframes glowPulse {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.1);
+  }
+}
+
+@keyframes borderPulse {
+  0%, 100% {
+    border-color: var(--primary-gold);
+    box-shadow: 0 0 5px rgba(212, 175, 55, 0.3);
+  }
+  50% {
+    border-color: #ffd700;
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.8), inset 0 0 10px rgba(212, 175, 55, 0.5);
+  }
+}
+
+@keyframes sparkle {
+  0%, 100% {
+    opacity: 0.5;
+    transform: translate(-50%, -50%) scale(0.8);
+    text-shadow: 0 0 5px rgba(212, 175, 55, 0.5);
+  }
+  50% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.2);
+    text-shadow: 0 0 20px rgba(212, 175, 55, 1);
   }
 }
 
@@ -147,6 +220,7 @@
   }
 }
 
+/* Responsive */
 @media (max-width: 480px) {
   .title {
     font-size: 1.6rem;
@@ -157,7 +231,10 @@
     letter-spacing: 6px;
   }
   .starInsignia {
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
+  }
+  .starInsignia::after {
+    font-size: 0.9rem;
   }
 }

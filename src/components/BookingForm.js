@@ -72,7 +72,7 @@ export default function BookingForm({ translations, currentLang, selectedRoom })
       .replace('{moroccoChauffeur}', moroccoLabel);
 
     // WhatsApp target link (using default target phone number from footer)
-    const phone = "212600000000"; 
+    const phone = "212699779600"; 
     const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
     
     // Open in new tab

@@ -1,0 +1,354 @@
+.main {
+  min-height: 100vh;
+  background: var(--bg-dark);
+}
+
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  font-family: var(--font-sans);
+  color: var(--text-muted);
+  font-size: 1rem;
+}
+
+.notFound {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  gap: 20px;
+  font-family: var(--font-sans);
+}
+
+.notFound h1 {
+  font-family: var(--font-serif);
+  color: var(--text-ivory);
+  font-weight: 300;
+}
+
+.notFound a {
+  color: var(--primary-gold);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* Split Layout */
+.splitLayout {
+  display: flex;
+  min-height: calc(100vh - 80px);
+}
+
+/* Left: Image Panel */
+.imagePanel {
+  position: sticky;
+  top: 80px;
+  width: 50%;
+  height: calc(100vh - 80px);
+  flex-shrink: 0;
+  overflow: hidden;
+  background: var(--acajou-dark);
+}
+
+.roomImage {
+  object-fit: cover;
+}
+
+/* Right: Content Panel */
+.contentPanel {
+  width: 50%;
+  padding: 40px 50px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.backBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-muted);
+  text-decoration: none;
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  transition: color 0.3s ease;
+  margin-bottom: 30px;
+}
+
+.backBtn:hover {
+  color: var(--primary-gold);
+}
+
+[dir="rtl"] .backBtn svg {
+  transform: scaleX(-1);
+}
+
+.contentInner {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.roomBadge {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--primary-gold);
+  margin-bottom: 10px;
+}
+
+.roomTitle {
+  font-family: var(--font-serif);
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: var(--text-ivory);
+  margin: 0 0 16px 0;
+  letter-spacing: 0.5px;
+  line-height: 1.2;
+}
+
+.roomDesc {
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.8;
+  margin: 0 0 30px 0;
+}
+
+/* Stats Grid */
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  padding: 24px 0;
+  border-top: 1px solid var(--border-gold);
+  border-bottom: 1px solid var(--border-gold);
+  margin-bottom: 30px;
+}
+
+.statItem {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.statSvg {
+  color: var(--primary-gold);
+  flex-shrink: 0;
+}
+
+.statItem div {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.statVal {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-ivory);
+}
+
+.statLbl {
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+
+/* Amenities */
+.amenitiesSection {
+  margin-bottom: 30px;
+}
+
+.amenitiesTitle {
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--text-ivory);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 0 0 16px 0;
+}
+
+.amenitiesList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.amenityTag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-gold);
+  border-radius: 30px;
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  transition: all 0.3s ease;
+}
+
+.amenityTag:hover {
+  border-color: var(--primary-gold);
+  color: var(--text-gold);
+  box-shadow: var(--shadow-gold);
+}
+
+.amenityIcon {
+  display: flex;
+  align-items: center;
+  color: var(--primary-gold);
+}
+
+.amenityIcon svg {
+  width: 14px;
+  height: 14px;
+}
+
+/* Action Bar */
+.actionBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: auto;
+  padding-top: 30px;
+  border-top: 1px solid var(--border-gold);
+}
+
+.priceBox {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+}
+
+.priceVal {
+  font-family: var(--font-serif);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--primary-gold);
+}
+
+.priceLbl {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+
+.reserveBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 32px;
+  border: none;
+  border-radius: 8px;
+  background: var(--primary-gold);
+  color: var(--bg-dark);
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.reserveBtn:hover {
+  background: var(--text-ivory);
+  color: var(--ivoire);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(23, 33, 47, 0.2);
+}
+
+.reserveBtn svg {
+  transition: transform 0.3s ease;
+}
+
+.reserveBtn:hover svg {
+  transform: translateX(4px);
+}
+
+[dir="rtl"] .reserveBtn svg {
+  transform: scaleX(-1);
+}
+
+[dir="rtl"] .reserveBtn:hover svg {
+  transform: scaleX(-1) translateX(-4px);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .contentPanel {
+    padding: 30px 35px;
+  }
+  .roomTitle {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .splitLayout {
+    flex-direction: column;
+  }
+  .imagePanel {
+    position: relative;
+    top: 0;
+    width: 100%;
+    height: 40vh;
+    min-height: 280px;
+  }
+  .contentPanel {
+    width: 100%;
+    padding: 25px 20px;
+  }
+  .roomTitle {
+    font-size: 1.8rem;
+  }
+  .actionBar {
+    flex-direction: column;
+    gap: 16px;
+  }
+  .reserveBtn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .imagePanel {
+    height: 35vh;
+    min-height: 220px;
+  }
+  .roomTitle {
+    font-size: 1.5rem;
+  }
+  .statsGrid {
+    gap: 12px;
+    padding: 18px 0;
+  }
+  .statVal {
+    font-size: 1rem;
+  }
+  .amenityTag {
+    font-size: 0.75rem;
+    padding: 6px 12px;
+  }
+}
