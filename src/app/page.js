@@ -8,6 +8,7 @@ import Loader from '../components/Loader';
 import Navbar from '../components/Navbar';
 import MusicPlayer from '../components/MusicPlayer';
 import Hero from '../components/Hero';
+import About from '../components/About';
 import Rooms from '../components/Rooms';
 import Services from '../components/Services';
 import Gallery from '../components/Gallery';
@@ -16,7 +17,7 @@ import Footer from '../components/Footer';
 
 export default function Home() {
   const [language, setLanguage] = useState('fr');
-  const [selectedRoom, setSelectedRoom] = useState('family');
+  const [selectedRoom, setSelectedRoom] = useState('suite');
 
   // React to language change to adjust document dir for Arabic RTL
   useEffect(() => {
@@ -66,6 +67,12 @@ export default function Home() {
           translations={translations} 
           currentLang={language} 
           selectedRoom={selectedRoom}
+        />
+
+        {/* About Section */}
+        <About 
+          translations={translations} 
+          currentLang={language} 
         />
 
         {/* Accommodation Section */}

@@ -22,9 +22,9 @@ export const translations = {
       guests: "Voyageurs",
       roomType: "Hébergement",
       roomOptions: {
-        traditional: "Chambre Traditionnelle",
-        royal: "Suite Royale",
-        family: "Suite Familiale (avec séparation parentale)"
+       simple: "Chambre simple",
+        double: "Chambre Double",
+        suite: "Suite Familiale"
       },
       airportTransfer: "Transfert Aéroport",
       airportOptions: {
@@ -37,6 +37,59 @@ export const translations = {
       chauffeurMorocco: "Séjour au Maroc avec chauffeur (Flexible)",
       submit: "Vérifier la disponibilité sur WhatsApp",
       whatsappMessage: "Bonjour Hôtel Maamoura, je souhaite réserver un séjour :\n\n🏨 Hébergement : {room}\n📅 Arrivée : {checkIn}\n📅 Départ : {checkOut}\n👥 Voyageurs : {guests}\n🚗 Transfert Aéroport : {transfer}\n🗺️ Visite Ville avec Chauffeur : {cityChauffeur}\n🚙 Séjour Maroc avec Chauffeur : {moroccoChauffeur}\n\nMerci de me confirmer la disponibilité."
+    },
+    about: {
+      badge: "À Propos de Nous",
+      title: "Bienvenue à l'Hôtel Maamoura",
+      subtitle: "Une oasis de sérénité au cœur de Casablanca.",
+      storyTitle: "Notre Histoire",
+      storyParagraphs: [
+        "L'Hôtel Maamoura est un hôtel 3 étoiles situé au cœur de Casablanca, dans le quartier historique de la Médina Sidi Belyout.",
+        "Inspiré de l'architecture marocaine traditionnelle, notre établissement allie authenticité et confort moderne afin d'offrir une expérience chaleureuse et raffinée.",
+        "Avec ses 60 chambres climatisées et équipées, son restaurant, son accueil attentif et ses services personnalisés, l'hôtel accompagne chaque voyageur tout au long de son séjour.",
+        "Depuis votre arrivée jusqu'à votre départ, notre équipe veille à transformer votre visite en un souvenir inoubliable."
+      ],
+      storyBtn: "Découvrir notre histoire",
+      valuesTitle: "Nos Valeurs",
+      values: [
+        { title: "Authenticité", desc: "Une décoration inspirée du patrimoine marocain et de l'art traditionnel." },
+        { title: "Excellence", desc: "Un service personnalisé et une attention particulière à chaque détail." },
+        { title: "Hospitalité", desc: "Un accueil chaleureux pour que chaque visiteur se sente comme chez lui." }
+      ],
+      stats: [
+        { target: 5000, isPlus: true, suffix: "", label: "Voyageurs satisfaits" },
+        { target: 60, isPlus: false, suffix: "", label: "Chambres élégantes" },
+        { target: 3, isPlus: false, suffix: "étoiles", label: "Hôtel" },
+        { target: 24, isPlus: false, suffix: "/7", label: "Service disponible" }
+      ],
+      info: {
+        title: "Informations",
+        items: [
+          "Check-in : 12h00 – 23h59",
+          "Check-out : jusqu'à 12h00",
+          "Licence : 20000HT0596",
+          "Petit-déjeuner continental servi chaque jour"
+        ]
+      },
+      equipment: {
+        title: "Équipements",
+        items: [
+          "Wi-Fi gratuit dans les espaces publics",
+          "Parking disponible",
+          "Coffre-fort",
+          "Ascenseur"
+        ]
+      },
+      roomsAmenities: {
+        title: "Chambres",
+        items: [
+          "Climatisation",
+          "TV satellite",
+          "Coin dressing",
+          "Articles de toilette gratuits",
+          "Réveil AM/FM"
+        ]
+      }
     },
     rooms: {
       title: "Nos Chambres & Suites",
@@ -281,9 +334,9 @@ export const translations = {
       guests: "Guests",
       roomType: "Accommodation",
       roomOptions: {
-        traditional: "Traditional Room",
-        royal: "Royal Suite",
-        family: "Family Suite (with parental privacy separation)"
+        simple: "Simple Room",
+        double: "Double Room",
+        suite: "Family Suite (with parental privacy separation)"
       },
       airportTransfer: "Airport Transfer",
       airportOptions: {
@@ -296,6 +349,59 @@ export const translations = {
       chauffeurMorocco: "Morocco flexible tour with chauffeur",
       submit: "Check Availability on WhatsApp",
       whatsappMessage: "Hello Hôtel Maamoura, I would like to book a stay:\n\n🏨 Accommodation: {room}\n📅 Arrival: {checkIn}\n📅 Departure: {checkOut}\n👥 Guests: {guests}\n🚗 Airport Transfer: {transfer}\n🗺️ City Tour with Chauffeur: {cityChauffeur}\n🚙 Morocco Tour with Chauffeur: {moroccoChauffeur}\n\nThank you for confirming availability."
+    },
+    about: {
+      badge: "About Us",
+      title: "Welcome to Hôtel Maamoura",
+      subtitle: "An oasis of serenity in the heart of Casablanca.",
+      storyTitle: "Our Story",
+      storyParagraphs: [
+        "Hôtel Maamoura is a 3-star hotel located in the heart of Casablanca, in the historic district of Médina Sidi Belyout.",
+        "Inspired by traditional Moroccan architecture, our establishment combines authenticity and modern comfort to offer a warm and refined experience.",
+        "With its 60 air-conditioned and well-equipped rooms, restaurant, attentive welcome, and personalized services, the hotel accompanies every traveler throughout their stay.",
+        "From your arrival until your departure, our team is dedicated to turning your visit into an unforgettable memory."
+      ],
+      storyBtn: "Discover our story",
+      valuesTitle: "Our Values",
+      values: [
+        { title: "Authenticity", desc: "A decor inspired by Moroccan heritage and traditional art." },
+        { title: "Excellence", desc: "Personalized service with special attention to every detail." },
+        { title: "Hospitality", desc: "A warm welcome so every guest feels at home." }
+      ],
+      stats: [
+        { target: 5000, isPlus: true, suffix: "", label: "Satisfied travelers" },
+        { target: 60, isPlus: false, suffix: "", label: "Elegant rooms" },
+        { target: 3, isPlus: false, suffix: "stars", label: "Hotel" },
+        { target: 24, isPlus: false, suffix: "/7", label: "Service available" }
+      ],
+      info: {
+        title: "Information",
+        items: [
+          "Check-in: 12:00 PM – 11:59 PM",
+          "Check-out: until 12:00 PM",
+          "License: 20000HT0596",
+          "Continental breakfast served daily"
+        ]
+      },
+      equipment: {
+        title: "Equipment",
+        items: [
+          "Free Wi-Fi in public areas",
+          "Parking available",
+          "Safety deposit box",
+          "Elevator"
+        ]
+      },
+      roomsAmenities: {
+        title: "Rooms",
+        items: [
+          "Air conditioning",
+          "Satellite TV",
+          "Dressing area",
+          "Free toiletries",
+          "AM/FM alarm clock"
+        ]
+      }
     },
     rooms: {
       title: "Our Rooms & Suites",
@@ -557,9 +663,9 @@ export const translations = {
       guests: "عدد الضيوف",
       roomType: "نوع الإقامة",
       roomOptions: {
-        traditional: "غرفة تقليدية",
-        royal: "جناح ملكي",
-        family: "جناح عائلي (مع فصل تام لخصوصية الوالدين)"
+        simple: "غرفة مفردة",
+        double: "غرفة مزدوجة",
+        suite: "جناح عائلي (مع فصل تام لخصوصية الوالدين)"
       },
       airportTransfer: "توصيل المطار",
       airportOptions: {
@@ -572,6 +678,59 @@ export const translations = {
       chauffeurMorocco: "رحلة مرنة في المغرب مع سائق",
       submit: "التحقق من التوفر عبر الواتساب",
       whatsappMessage: "مرحباً فندق المعمورة، أود حجز إقامة:\n\n🏨 الإقامة: {room}\n📅 الوصول: {checkIn}\n📅 المغادرة: {checkOut}\n👥 الضيوف: {guests}\n🚗 توصيل المطار: {transfer}\n🗺️ جولة المدينة مع سائق: {cityChauffeur}\n🚙 جولة المغرب مع سائق: {moroccoChauffeur}\n\nشكراً لتأكيد التوفر."
+    },
+    about: {
+      badge: "معلومات عنا",
+      title: "مرحباً بكم في فندق المعمورة",
+      subtitle: "واحة من السكينة في قلب الدار البيضاء.",
+      storyTitle: "قصتنا",
+      storyParagraphs: [
+        "فندق المعمورة هو فندق 3 نجوم يقع في قلب الدار البيضاء، في الحي التاريخي للمدينة سيدي بليوط.",
+        "مستوحى من العمارة المغربية التقليدية، يمزج فندقنا بين الأصالة والراحة العصرية لتقديم تجربة دافئة وراقية.",
+        "بفضل 60 غرفة مكيفة ومجهزة تجهيزاً كاملاً، ومطعم، واستقبال يقظ، وخدمات شخصية، يرافق الفندق كل مسافر طوال إقامته.",
+        "من وصولك حتى مغادرتك، يحرص فريقنا على تحويل زيارتك إلى ذكرى لا تنسى."
+      ],
+      storyBtn: "اكتشف قصتنا",
+      valuesTitle: "قيمنا",
+      values: [
+        { title: "الأصالة", desc: "ديكور مستوحى من التراث المغربي والفن التقليدي." },
+        { title: "التميز", desc: "خدمة شخصية واهتمام خاص بكل التفاصيل." },
+        { title: "الضيافة", desc: "استقبال دافئ ليشعر كل زائر وكأنه في منزله." }
+      ],
+      stats: [
+        { target: 5000, isPlus: true, suffix: "", label: "مسافر راضٍ" },
+        { target: 60, isPlus: false, suffix: "", label: "غرفة راقية" },
+        { target: 3, isPlus: false, suffix: "نجوم", label: "فندق" },
+        { target: 24, isPlus: false, suffix: "/7", label: "خدمة متوفرة" }
+      ],
+      info: {
+        title: "معلومات",
+        items: [
+          "تسجيل الوصول: 12:00 – 23:59",
+          "تسجيل المغادرة: حتى 12:00",
+          "الرخصة: 20000HT0596",
+          "إفطار كونتيننتال يُقدم يومياً"
+        ]
+      },
+      equipment: {
+        title: "التجهيزات",
+        items: [
+          "واي فاي مجاني في الأماكن العامة",
+          "موقف سيارات متوفر",
+          "خزينة أمان",
+          "مصعد"
+        ]
+      },
+      roomsAmenities: {
+        title: "الغرف",
+        items: [
+          "تكييف الهواء",
+          "تلفاز فضائي",
+          "منطقة ملابس",
+          "مستلزمات استحمام مجانية",
+          "منبه AM/FM"
+        ]
+      }
     },
     rooms: {
       title: "غرفنا وأجنحتنا",
@@ -833,9 +992,9 @@ export const translations = {
       guests: "Huéspedes",
       roomType: "Alojamiento",
       roomOptions: {
-        traditional: "Habitación Tradicional",
-        royal: "Suite Real",
-        family: "Suite Familiar (con separación para privacidad parental)"
+        simple: "Habitación Simple",
+        double: "Habitación Doble",
+        suite: "Suite Familiar (con separación para privacidad parental)"
       },
       airportTransfer: "Traslado al Aeropuerto",
       airportOptions: {
@@ -848,6 +1007,59 @@ export const translations = {
       chauffeurMorocco: "Estancia en Marruecos con chófer (Flexible)",
       submit: "Verificar disponibilidad en WhatsApp",
       whatsappMessage: "Hola Hôtel Maamoura, deseo reservar una estancia:\n\n🏨 Alojamiento: {room}\n📅 Entrada: {checkIn}\n📅 Salida: {checkOut}\n👥 Huéspedes: {guests}\n🚗 Traslado Aeropuerto: {transfer}\n🗺️ Visita Ciudad con Chófer: {cityChauffeur}\n🚙 Tour Marruecos con Chófer: {moroccoChauffeur}\n\nGracias por confirmarme disponibilidad."
+    },
+    about: {
+      badge: "Sobre Nosotros",
+      title: "Bienvenido al Hôtel Maamoura",
+      subtitle: "Un oasis de serenidad en el corazón de Casablanca.",
+      storyTitle: "Nuestra Historia",
+      storyParagraphs: [
+        "El Hôtel Maamoura es un hotel de 3 estrellas situado en el corazón de Casablanca, en el histórico barrio de la Médina Sidi Belyout.",
+        "Inspirado en la arquitectura tradicional marroquí, nuestro establecimiento combina autenticidad y confort moderno para ofrecer una experiencia cálida y refinada.",
+        "Con sus 60 habitaciones climatizadas y equipadas, restaurante, recepción atenta y servicios personalizados, el hotel acompaña a cada viajero durante toda su estancia.",
+        "Desde su llegada hasta su partida, nuestro equipo se esfuerza por convertir su visita en un recuerdo inolvidable."
+      ],
+      storyBtn: "Descubrir nuestra historia",
+      valuesTitle: "Nuestros Valores",
+      values: [
+        { title: "Autenticidad", desc: "Una decoración inspirada en el patrimonio marroquí y el arte tradicional." },
+        { title: "Excelencia", desc: "Un servicio personalizado y una atención especial a cada detalle." },
+        { title: "Hospitalidad", desc: "Una cálida bienvenida para que cada huésped se sienta como en casa." }
+      ],
+      stats: [
+        { target: 5000, isPlus: true, suffix: "", label: "Viajeros satisfechos" },
+        { target: 60, isPlus: false, suffix: "", label: "Habitaciones elegantes" },
+        { target: 3, isPlus: false, suffix: "estrellas", label: "Hotel" },
+        { target: 24, isPlus: false, suffix: "/7", label: "Servicio disponible" }
+      ],
+      info: {
+        title: "Información",
+        items: [
+          "Check-in: 12:00 – 23:59",
+          "Check-out: hasta las 12:00",
+          "Licencia: 20000HT0596",
+          "Desayuno continental servido a diario"
+        ]
+      },
+      equipment: {
+        title: "Equipamiento",
+        items: [
+          "Wi-Fi gratuito en áreas públicas",
+          "Estacionamiento disponible",
+          "Caja fuerte",
+          "Ascensor"
+        ]
+      },
+      roomsAmenities: {
+        title: "Habitaciones",
+        items: [
+          "Aire acondicionado",
+          "TV satélite",
+          "Vestidor",
+          "Artículos de aseo gratuitos",
+          "Despertador AM/FM"
+        ]
+      }
     },
     rooms: {
       title: "Nuestras Habitaciones & Suites",
