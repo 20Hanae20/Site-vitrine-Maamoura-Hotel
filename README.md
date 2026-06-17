@@ -31,5 +31,5 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 
 ## Deploy on OVHCloud
 
-[click here]((https://maamoura.luxtech.ma/))
+[click here](https://maamoura.luxtech.ma/)- le site sur net.
 
