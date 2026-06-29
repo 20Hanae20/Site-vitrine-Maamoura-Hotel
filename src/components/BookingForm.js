@@ -1,6 +1,9 @@
-import React, { useState, useEffect } from 'react';
-import { Calendar, Users, Star, Car, ArrowRight, AlertCircle } from 'lucide-react';
+import React, { useState, useEffect, useRef } from 'react';
+import { Calendar, Users, Star, Car, ArrowRight, AlertCircle, Bed, BedDouble, Building2, ChevronDown } from 'lucide-react';
+import ScrollReveal from './ScrollReveal';
 import styles from './BookingForm.module.css';
+
+const roomIcons = { simple: Bed, double: BedDouble, suite: Building2 };
 
 export default function BookingForm({ translations, currentLang, selectedRoom }) {
   const t = translations[currentLang].booking;
@@ -8,7 +11,9 @@ export default function BookingForm({ translations, currentLang, selectedRoom })
   const [checkIn, setCheckIn] = useState('');
   const [checkOut, setCheckOut] = useState('');
   const [guests, setGuests] = useState('2');
-  const [roomType, setRoomType] = useState('family'); // Default to Suite Familiale
+  const [roomType, setRoomType] = useState('suite');
+  const [roomOpen, setRoomOpen] = useState(false);
+  const roomRef = useRef(null);
   const [transfer, setTransfer] = useState('none');
   const [cityChauffeur, setCityChauffeur] = useState(false);
   const [moroccoChauffeur, setMoroccoChauffeur] = useState(false);
@@ -20,6 +25,15 @@ export default function BookingForm({ translations, currentLang, selectedRoom })
       setRoomType(selectedRoom);
     }
   }, [selectedRoom]);
+
+  // Close room dropdown on click outside
+  useEffect(() => {
+    const handleClick = (e) => {
+      if (roomRef.current && !roomRef.current.contains(e.target)) setRoomOpen(false);
+    };
+    document.addEventListener('mousedown', handleClick);
+    return () => document.removeEventListener('mousedown', handleClick);
+  }, []);
 
 
   // Get current date string for min date validation (YYYY-MM-DD)
@@ -71,7 +85,7 @@ export default function BookingForm({ translations, currentLang, selectedRoom })
       .replace('{moroccoChauffeur}', moroccoLabel);
 
     // WhatsApp target link (using default target phone number from footer)
-    const phone = "212600000000"; 
+    const phone = "212675743038"; 
     const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
     
     // Open in new tab
@@ -79,14 +93,12 @@ export default function BookingForm({ translations, currentLang, selectedRoom })
   };
 
   return (
-    <section id="booking" className={styles.bookingSection}>
-      <div className={styles.sectionHeader}>
-        <span className={styles.badge}>Hôtel Maamoura</span>
-        <h2 className={styles.title}>{t.title}</h2>
-        <div className={styles.ornament}></div>
-      </div>
+    <ScrollReveal>
+      <section id="booking" className={styles.bookingSection}>
+        <div className={styles.sectionHeader}>
+        </div>
 
-      <div className={styles.card}>
+        <div className={styles.card}>
         {error && (
           <div className={styles.errorBanner}>
             <AlertCircle size={18} />
@@ -144,21 +156,44 @@ export default function BookingForm({ translations, currentLang, selectedRoom })
               </select>
             </div>
 
-            {/* Room type selector */}
+            {/* Room type selector with icons */}
             <div className={styles.inputGroup}>
               <label className={styles.label}>
                 <Star size={14} className={styles.icon} />
                 {t.roomType}
               </label>
-              <select 
-                value={roomType} 
-                onChange={(e) => setRoomType(e.target.value)} 
-                className={styles.select}
-              >
-                <option value="traditional">{t.roomOptions.traditional}</option>
-                <option value="family">{t.roomOptions.family}</option>
-                <option value="royal">{t.roomOptions.royal}</option>
-              </select>
+              <div className={styles.customSelect} ref={roomRef}>
+                <button
+                  type="button"
+                  className={styles.selectBtn}
+                  onClick={() => setRoomOpen(!roomOpen)}
+                >
+                  {(() => {
+                    const Icon = roomIcons[roomType];
+                    return <Icon size={16} className={styles.selectIcon} />;
+                  })()}
+                  <span className={styles.selectBtnText}>{t.roomOptions[roomType]}</span>
+                  <ChevronDown size={14} className={`${styles.selectChevron} ${roomOpen ? styles.selectChevronOpen : ''}`} />
+                </button>
+                {roomOpen && (
+                  <div className={styles.dropdown}>
+                    {Object.keys(t.roomOptions).map((key) => {
+                      const Icon = roomIcons[key];
+                      return (
+                        <button
+                          key={key}
+                          type="button"
+                          className={`${styles.dropdownItem} ${roomType === key ? styles.dropdownItemActive : ''}`}
+                          onClick={() => { setRoomType(key); setRoomOpen(false); }}
+                        >
+                          <Icon size={16} className={styles.dropdownIcon} />
+                          <span>{t.roomOptions[key]}</span>
+                        </button>
+                      );
+                    })}
+                  </div>
+                )}
+              </div>
             </div>
 
             {/* Airport Transfer options */}
@@ -219,5 +254,6 @@ export default function BookingForm({ translations, currentLang, selectedRoom })
         </form>
       </div>
     </section>
+    </ScrollReveal>
   );
 }

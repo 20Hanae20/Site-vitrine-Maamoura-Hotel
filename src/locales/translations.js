@@ -22,9 +22,9 @@ export const translations = {
       guests: "Voyageurs",
       roomType: "Hébergement",
       roomOptions: {
-        traditional: "Chambre Traditionnelle",
-        royal: "Suite Royale",
-        family: "Suite Familiale (avec séparation parentale)"
+       simple: "Chambre simple",
+        double: "Chambre Double",
+        suite: "Suite Familiale"
       },
       airportTransfer: "Transfert Aéroport",
       airportOptions: {
@@ -34,39 +34,236 @@ export const translations = {
         both: "Arrivée & Départ"
       },
       chauffeurCity: "Visite de la ville avec chauffeur",
-      chauffeurMorocco: "Séjour au Maroc avec chauffeur (Flexible)",
+      chauffeurMorocco: "Circuit touristique au Maroc avec chauffeur (Flexible)",
       submit: "Vérifier la disponibilité sur WhatsApp",
       whatsappMessage: "Bonjour Hôtel Maamoura, je souhaite réserver un séjour :\n\n🏨 Hébergement : {room}\n📅 Arrivée : {checkIn}\n📅 Départ : {checkOut}\n👥 Voyageurs : {guests}\n🚗 Transfert Aéroport : {transfer}\n🗺️ Visite Ville avec Chauffeur : {cityChauffeur}\n🚙 Séjour Maroc avec Chauffeur : {moroccoChauffeur}\n\nMerci de me confirmer la disponibilité."
+    },
+    about: {
+      badge: "À Propos de Nous",
+      title: "Bienvenue à l'Hôtel Maamoura",
+      subtitle: "Une oasis de sérénité au cœur de Casablanca.",
+      storyTitle: "Notre Histoire",
+      storyParagraphs: [
+        "L'Hôtel Maamoura est un hôtel 3 étoiles situé au cœur de Casablanca, dans le quartier historique de la Médina Sidi Belyout.",
+        "Inspiré de l'architecture marocaine traditionnelle, notre établissement allie authenticité et confort moderne afin d'offrir une expérience chaleureuse et raffinée.",
+        "Avec ses 60 chambres climatisées et équipées, son restaurant, son accueil attentif et ses services personnalisés, l'hôtel accompagne chaque voyageur tout au long de son séjour.",
+        "Depuis votre arrivée jusqu'à votre départ, notre équipe veille à transformer votre visite en un souvenir inoubliable."
+      ],
+      storyBtn: "Découvrir notre histoire",
+      valuesTitle: "Nos Valeurs",
+      values: [
+        { title: "Authenticité", desc: "Une décoration inspirée du patrimoine marocain et de l'art traditionnel." },
+        { title: "Excellence", desc: "Un service personnalisé et une attention particulière à chaque détail." },
+        { title: "Hospitalité", desc: "Un accueil chaleureux pour que chaque visiteur se sente comme chez lui." }
+      ],
+      stats: [
+        { target: 5000, isPlus: true, suffix: "", label: "Voyageurs satisfaits" },
+        { target: 60, isPlus: false, suffix: "", label: "Chambres élégantes" },
+        { target: 3, isPlus: false, suffix: "étoiles", label: "Hôtel" },
+        { target: 24, isPlus: false, suffix: "/7", label: "Service disponible" }
+      ],
+      info: {
+        title: "Informations",
+        items: [
+          "Check-in : 12h00 – 23h59",
+          "Check-out : jusqu'à 12h00",
+          "Licence : 20000HT0596",
+          "Petit-déjeuner continental servi chaque jour"
+        ]
+      },
+      equipment: {
+        title: "Équipements",
+        items: [
+          "Wi-Fi gratuit dans les espaces publics",
+          "Parking disponible",
+          "Coffre-fort",
+          "Ascenseur"
+        ]
+      },
+      roomsAmenities: {
+        title: "Chambres",
+        items: [
+          "Climatisation",
+          "TV satellite",
+          "Coin dressing",
+          "Articles de toilette gratuits",
+          "Réveil AM/FM"
+        ]
+      }
     },
     rooms: {
       title: "Nos Chambres & Suites",
       subtitle: "Un raffinement traditionnel allié au confort moderne absolu",
-      viewDetails: "Découvrir la chambre",
-      maxGuests: "Capacité : {count} personnes",
+      viewDetails: "Voir les détails",
+      reserve: "Réserver",
+      amenities: "Équipements",
+      pricePerNight: "Par nuit",
       types: [
         {
-          id: "traditional",
-          title: "Chambre Traditionnelle",
-          desc: "Un cocon de sérénité orné de plâtres sculptés à la main et de zelliges ancestraux. Parfait pour une immersion calme.",
-          capacity: 2,
-          price: "À partir de 120€ / nuit",
-          features: ["Lit Queen Size", "Salle de bain en tadelakt", "Climatisation", "Vue patio"]
+          id: "simple",
+          title: "Chambre Simple",
+          description: "Chambres élégantes et intimistes, parfaitement adaptées au voyageur seul.",
+          rooms: [
+            {
+              id: "101",
+              number: "Chambre 101",
+              price: "120€",
+              capacity: 1,
+              area: 18,
+              image: "/images/simple/IMG_20260602_164743.jpg",
+              amenities: ["Lit simple", "Salle de bain privée", "Climatisation", "Vue patio"]
+            },
+            {
+              id: "102",
+              number: "Chambre 102",
+              price: "120€",
+              capacity: 1,
+              area: 18,
+              image: "/images/simple/IMG_20260602_164829.jpg",
+              amenities: ["Lit simple", "Salle de bain privée", "Climatisation", "Vue patio"]
+            },
+            {
+              id: "103",
+              number: "Chambre 103",
+              price: "120€",
+              capacity: 1,
+              area: 18,
+              image: "/images/simple/IMG_20260602_164837.jpg",
+              amenities: ["Lit simple", "Salle de bain privée", "Climatisation", "Vue jardin"]
+            },
+            {
+              id: "104",
+              number: "Chambre 104",
+              price: "120€",
+              capacity: 1,
+              area: 18,
+              image: "/images/simple/IMG_20260602_164900.jpg",
+              amenities: ["Lit simple", "Salle de bain privée", "Climatisation", "Vue patio"]
+            },
+            {
+              id: "105",
+              number: "Chambre 105",
+              price: "120€",
+              capacity: 1,
+              area: 18,
+              image: "/images/simple/IMG_20260602_165505.jpg",
+              amenities: ["Lit simple", "Salle de bain privée", "Climatisation", "Vue jardin"]
+            },
+            {
+              id: "106",
+              number: "Chambre 106",
+              price: "120€",
+              capacity: 1,
+              area: 18,
+              image: "/images/simple/IMG_20260602_165924.jpg",
+              amenities: ["Lit simple", "Salle de bain privée", "Climatisation", "Vue patio"]
+            }
+          ]
         },
         {
-          id: "family",
+          id: "double",
+          title: "Chambre Double",
+          description: "Espaces raffinés pour les couples, avec un confort moderne et une atmosphère chaleureuse.",
+          rooms: [
+            {
+              id: "201",
+              number: "Chambre 201",
+              price: "180€",
+              capacity: 2,
+              area: 28,
+              image: "/images/double/IMG_20260602_162151.jpg",
+              amenities: ["Lit Queen Size", "Salle de bain en marbre", "Climatisation", "Balcon privé"]
+            },
+            {
+              id: "202",
+              number: "Chambre 202",
+              price: "180€",
+              capacity: 2,
+              area: 28,
+              image: "/images/double/IMG_20260602_162355.jpg",
+              amenities: ["Lit Queen Size", "Salle de bain en marbre", "Climatisation", "Balcon privé"]
+            },
+            {
+              id: "203",
+              number: "Chambre 203",
+              price: "180€",
+              capacity: 2,
+              area: 28,
+              image: "/images/double/IMG_20260602_162648.jpg",
+              amenities: ["Lit Queen Size", "Salle de bain en marbre", "Climatisation", "Vue jardin"]
+            },
+            {
+              id: "204",
+              number: "Chambre 204",
+              price: "180€",
+              capacity: 2,
+              area: 28,
+              image: "/images/double/IMG_20260602_162726.jpg",
+              amenities: ["Lit Queen Size", "Salle de bain en marbre", "Climatisation", "Balcon privé"]
+            },
+            {
+              id: "205",
+              number: "Chambre 205",
+              price: "180€",
+              capacity: 2,
+              area: 28,
+              image: "/images/double/IMG_20260602_162741.jpg",
+              amenities: ["Lit Queen Size", "Salle de bain en marbre", "Climatisation", "Vue jardin"]
+            },
+            {
+              id: "206",
+              number: "Chambre 206",
+              price: "180€",
+              capacity: 2,
+              area: 28,
+              image: "/images/double/IMG_20260602_163043.jpg",
+              amenities: ["Lit Queen Size", "Salle de bain en marbre", "Climatisation", "Balcon privé"]
+            }
+          ]
+        },
+        {
+          id: "suite",
           title: "Suite Familiale",
-          desc: "Un espace luxueux conçu spécialement pour les familles, offrant une véritable séparation des chambres pour préserver l'intimité parentale tout en gardant les enfants à proximité.",
-          capacity: 5,
-          price: "À partir de 250€ / nuit",
-          features: ["Chambre parentale séparée", "Deuxième chambre séparée", "Salon traditionnel marocain", "2 salles de bain", "Terrasse privée"]
-        },
-        {
-          id: "royal",
-          title: "Suite Royale",
-          desc: "L'incarnation suprême du luxe traditionnel. De grands volumes, un lit King Size majestueux et des détails artisanaux dignes des plus grands palais.",
-          capacity: 3,
-          price: "À partir de 380€ / nuit",
-          features: ["Lit King Size", "Salon avec cheminée", "Baignoire en cuivre", "Balcon sur jardin", "Service majordome"]
+          description: "Des suites luxueuses offrant espace, raffinement et intimité pour les familles.",
+          rooms: [
+            {
+              id: "301",
+              number: "Suite 301",
+              price: "320€",
+              capacity: 4,
+              area: 50,
+              image: "/images/familia/IMG_20260602_165447.jpg",
+              amenities: ["2 chambres", "Salon privé", "2 salles de bain", "Terrasse", "Service concierge"]
+            },
+            {
+              id: "302",
+              number: "Suite 302",
+              price: "320€",
+              capacity: 4,
+              area: 50,
+              image: "/images/familia/IMG_20260602_165523.jpg",
+              amenities: ["2 chambres", "Salon privé", "2 salles de bain", "Terrasse", "Service concierge"]
+            },
+            {
+              id: "303",
+              number: "Suite 303",
+              price: "320€",
+              capacity: 4,
+              area: 50,
+              image: "/images/familia/IMG_20260602_170941.jpg",
+              amenities: ["2 chambres", "Salon privé", "2 salles de bain", "Terrasse", "Service concierge"]
+            },
+            {
+              id: "304",
+              number: "Suite 304",
+              price: "320€",
+              capacity: 4,
+              area: 50,
+              image: "/images/familia/IMG_20260602_172038.jpg",
+              amenities: ["2 chambres", "Salon privé", "2 salles de bain", "Terrasse", "Service concierge"]
+            },
+            
+          ]
         }
       ]
     },
@@ -85,7 +282,7 @@ export const translations = {
           highlight: "Chauffeur privé à la journée"
         },
         {
-          title: "Séjour au Maroc avec Chauffeur",
+          title: "Circuit Touristique au Maroc avec Chauffeur",
           desc: "Concevez un itinéraire sur mesure à travers le Maroc (désert, montagnes de l'Atlas, côte atlantique). Voyagez en toute flexibilité avec un chauffeur expérimenté à votre disposition.",
           highlight: "Itinéraire 100% flexible"
         }
@@ -99,10 +296,18 @@ export const translations = {
       rooms: "Suites",
       wellness: "Bien-être"
     },
+    location: {
+      address: "59 Rue Ibn Batouta, Casablanca, Maroc",
+      phoneValue: "+212522452967",
+      emailValue: "hotelmaamoura@yahoo.com",
+      googleMapsDestination: "59 Rue Ibn Batouta, Casablanca, Maroc",
+      mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3324.1!2d-7.6114!3d33.5883!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda7d2b1c2e4f5a6%3A0x0!2s59%20Rue%20Ibn%20Batouta%2C%20Casablanca!5e0!3m2!1sfr!2sma",
+      description: "Idéalement situé au cœur de Casablanca, l'Hôtel Maamoura vous accueille dans un cadre d'exception à quelques pas des principaux quartiers d'affaires et de loisirs de la ville."
+    },
     footer: {
       address: "Adresse : 45 Boulevard Moulay Youssef, Casablanca, Maroc",
-      phone: "Téléphone : +212 6 00 00 00 00",
-      email: "Email : contact@hotelmaamoura.com",
+      phone: "Téléphone : 05.22.45.29.67/68",
+      email: "Email : hotelmaamoura@yahoo.com",
       rights: "© 2026 Hôtel Maamoura. Tous droits réservés. Inspiré du prestige de l'art traditionnel marocain."
     }
   },
@@ -129,9 +334,9 @@ export const translations = {
       guests: "Guests",
       roomType: "Accommodation",
       roomOptions: {
-        traditional: "Traditional Room",
-        royal: "Royal Suite",
-        family: "Family Suite (with parental privacy separation)"
+        simple: "Simple Room",
+        double: "Double Room",
+        suite: "Family Suite (with parental privacy separation)"
       },
       airportTransfer: "Airport Transfer",
       airportOptions: {
@@ -141,39 +346,253 @@ export const translations = {
         both: "Arrival & Departure"
       },
       chauffeurCity: "City tour with chauffeur",
-      chauffeurMorocco: "Morocco flexible tour with chauffeur",
+      chauffeurMorocco: "Tourist circuit in Morocco with chauffeur (Flexible)",
       submit: "Check Availability on WhatsApp",
       whatsappMessage: "Hello Hôtel Maamoura, I would like to book a stay:\n\n🏨 Accommodation: {room}\n📅 Arrival: {checkIn}\n📅 Departure: {checkOut}\n👥 Guests: {guests}\n🚗 Airport Transfer: {transfer}\n🗺️ City Tour with Chauffeur: {cityChauffeur}\n🚙 Morocco Tour with Chauffeur: {moroccoChauffeur}\n\nThank you for confirming availability."
+    },
+    about: {
+      badge: "About Us",
+      title: "Welcome to Hôtel Maamoura",
+      subtitle: "An oasis of serenity in the heart of Casablanca.",
+      storyTitle: "Our Story",
+      storyParagraphs: [
+        "Hôtel Maamoura is a 3-star hotel located in the heart of Casablanca, in the historic district of Médina Sidi Belyout.",
+        "Inspired by traditional Moroccan architecture, our establishment combines authenticity and modern comfort to offer a warm and refined experience.",
+        "With its 60 air-conditioned and well-equipped rooms, restaurant, attentive welcome, and personalized services, the hotel accompanies every traveler throughout their stay.",
+        "From your arrival until your departure, our team is dedicated to turning your visit into an unforgettable memory."
+      ],
+      storyBtn: "Discover our story",
+      valuesTitle: "Our Values",
+      values: [
+        { title: "Authenticity", desc: "A decor inspired by Moroccan heritage and traditional art." },
+        { title: "Excellence", desc: "Personalized service with special attention to every detail." },
+        { title: "Hospitality", desc: "A warm welcome so every guest feels at home." }
+      ],
+      stats: [
+        { target: 5000, isPlus: true, suffix: "", label: "Satisfied travelers" },
+        { target: 60, isPlus: false, suffix: "", label: "Elegant rooms" },
+        { target: 3, isPlus: false, suffix: "stars", label: "Hotel" },
+        { target: 24, isPlus: false, suffix: "/7", label: "Service available" }
+      ],
+      info: {
+        title: "Information",
+        items: [
+          "Check-in: 12:00 PM – 11:59 PM",
+          "Check-out: until 12:00 PM",
+          "License: 20000HT0596",
+          "Continental breakfast served daily"
+        ]
+      },
+      equipment: {
+        title: "Equipment",
+        items: [
+          "Free Wi-Fi in public areas",
+          "Parking available",
+          "Safety deposit box",
+          "Elevator"
+        ]
+      },
+      roomsAmenities: {
+        title: "Rooms",
+        items: [
+          "Air conditioning",
+          "Satellite TV",
+          "Dressing area",
+          "Free toiletries",
+          "AM/FM alarm clock"
+        ]
+      }
     },
     rooms: {
       title: "Our Rooms & Suites",
       subtitle: "Traditional refinement combined with absolute modern comfort",
       viewDetails: "View Details",
-      maxGuests: "Capacity: {count} guests",
+      reserve: "Reserve",
+      amenities: "Amenities",
+      pricePerNight: "Per night",
       types: [
         {
-          id: "traditional",
-          title: "Traditional Room",
-          desc: "A cocoon of serenity adorned with hand-carved plaster and ancestral zellige tiling. Perfect for a quiet immersion.",
-          capacity: 2,
-          price: "From €120 / night",
-          features: ["Queen Size Bed", "Tadelakt bathroom", "Air conditioning", "Patio view"]
+          id: "simple",
+          title: "Simple Room",
+          description: "Elegant private rooms designed for the solo traveler.",
+          rooms: [
+            {
+              id: "101",
+              number: "Room 101",
+              price: "€120",
+              capacity: 1,
+              area: 18,
+              image: "/images/simple/IMG_20260602_164743.jpg",
+              amenities: ["Single bed", "Private bathroom", "Air conditioning", "Patio view"]
+            },
+            {
+              id: "102",
+              number: "Room 102",
+              price: "€120",
+              capacity: 1,
+              area: 18,
+              image: "/images/simple/IMG_20260602_164829.jpg",
+              amenities: ["Single bed", "Private bathroom", "Air conditioning", "Patio view"]
+            },
+            {
+              id: "103",
+              number: "Room 103",
+              price: "€120",
+              capacity: 1,
+              area: 18,
+              image: "/images/simple/IMG_20260602_164837.jpg",
+              amenities: ["Single bed", "Private bathroom", "Air conditioning", "Garden view"]
+            },
+            {
+              id: "104",
+              number: "Room 104",
+              price: "€120",
+              capacity: 1,
+              area: 18,
+              image: "/images/simple/IMG_20260602_164900.jpg",
+              amenities: ["Single bed", "Private bathroom", "Air conditioning", "Patio view"]
+            },
+            {
+              id: "105",
+              number: "Room 105",
+              price: "€120",
+              capacity: 1,
+              area: 18,
+              image: "/images/simple/IMG_20260602_165505.jpg",
+              amenities: ["Single bed", "Private bathroom", "Air conditioning", "Garden view"]
+            },
+            {
+              id: "106",
+              number: "Room 106",
+              price: "€120",
+              capacity: 1,
+              area: 18,
+              image: "/images/simple/IMG_20260602_165924.jpg",
+              amenities: ["Single bed", "Private bathroom", "Air conditioning", "Patio view"]
+            }
+          ]
         },
         {
-          id: "family",
+          id: "double",
+          title: "Double Room",
+          description: "Refined spaces for couples with modern comfort and warm ambiance.",
+          rooms: [
+            {
+              id: "201",
+              number: "Room 201",
+              price: "€180",
+              capacity: 2,
+              area: 28,
+              image: "/images/double/IMG_20260602_162151.jpg",
+              amenities: ["Queen size bed", "Marble bathroom", "Air conditioning", "Private balcony"]
+            },
+            {
+              id: "202",
+              number: "Room 202",
+              price: "€180",
+              capacity: 2,
+              area: 28,
+              image: "/images/double/IMG_20260602_162355.jpg",
+              amenities: ["Queen size bed", "Marble bathroom", "Air conditioning", "Private balcony"]
+            },
+            {
+              id: "203",
+              number: "Room 203",
+              price: "€180",
+              capacity: 2,
+              area: 28,
+              image: "/images/double/IMG_20260602_162648.jpg",
+              amenities: ["Queen size bed", "Marble bathroom", "Air conditioning", "Garden view"]
+            },
+            {
+              id: "204",
+              number: "Room 204",
+              price: "€180",
+              capacity: 2,
+              area: 28,
+              image: "/images/double/IMG_20260602_162726.jpg",
+              amenities: ["Queen size bed", "Marble bathroom", "Air conditioning", "Private balcony"]
+            },
+            {
+              id: "205",
+              number: "Room 205",
+              price: "€180",
+              capacity: 2,
+              area: 28,
+              image: "/images/double/IMG_20260602_162741.jpg",
+              amenities: ["Queen size bed", "Marble bathroom", "Air conditioning", "Garden view"]
+            },
+            {
+              id: "206",
+              number: "Room 206",
+              price: "€180",
+              capacity: 2,
+              area: 28,
+              image: "/images/double/IMG_20260602_163043.jpg",
+              amenities: ["Queen size bed", "Marble bathroom", "Air conditioning", "Private balcony"]
+            }
+          ]
+        },
+        {
+          id: "suite",
           title: "Family Suite",
-          desc: "A luxurious space designed specifically for families, offering physical room separation to preserve parents' privacy while keeping children close.",
-          capacity: 5,
-          price: "From €250 / night",
-          features: ["Separate master bedroom", "Second separate bedroom", "Traditional Moroccan salon", "2 bathrooms", "Private terrace"]
-        },
-        {
-          id: "royal",
-          title: "Royal Suite",
-          desc: "The ultimate embodiment of traditional luxury. Spacious rooms, majestic King Size bed, and artisanal details worthy of the finest palaces.",
-          capacity: 3,
-          price: "From €380 / night",
-          features: ["King Size Bed", "Living room with fireplace", "Copper bathtub", "Balcony overlooking the garden", "Butler service"]
+          description: "Luxurious suites offering space and refinement for family stays.",
+          rooms: [
+            {
+              id: "301",
+              number: "Suite 301",
+              price: "€320",
+              capacity: 4,
+              area: 50,
+              image: "/images/familia/IMG_20260602_165447.jpg",
+              amenities: ["2 bedrooms", "Private lounge", "2 bathrooms", "Terrace", "Concierge service"]
+            },
+            {
+              id: "302",
+              number: "Suite 302",
+              price: "€320",
+              capacity: 4,
+              area: 50,
+              image: "/images/familia/IMG_20260602_165523.jpg",
+              amenities: ["2 bedrooms", "Private lounge", "2 bathrooms", "Terrace", "Concierge service"]
+            },
+            {
+              id: "303",
+              number: "Suite 303",
+              price: "€320",
+              capacity: 4,
+              area: 50,
+              image: "/images/familia/IMG_20260602_170941.jpg",
+              amenities: ["2 bedrooms", "Private lounge", "2 bathrooms", "Terrace", "Concierge service"]
+            },
+            {
+              id: "304",
+              number: "Suite 304",
+              price: "€320",
+              capacity: 4,
+              area: 50,
+              image: "/images/familia/IMG_20260602_172038.jpg",
+              amenities: ["2 bedrooms", "Private lounge", "2 bathrooms", "Terrace", "Concierge service"]
+            },
+            {
+              id: "305",
+              number: "Suite 305",
+              price: "€320",
+              capacity: 4,
+              area: 50,
+              image: "/images/familia/IMG_20260602_172240.jpg",
+              amenities: ["2 bedrooms", "Private lounge", "2 bathrooms", "Terrace", "Concierge service"]
+            },
+            {
+              id: "306",
+              number: "Suite 306",
+              price: "€320",
+              capacity: 4,
+              area: 50,
+              image: "/images/familia/f2.jpeg",
+              amenities: ["2 bedrooms", "Private lounge", "2 bathrooms", "Terrace", "Concierge service"]
+            }
+          ]
         }
       ]
     },
@@ -192,7 +611,7 @@ export const translations = {
           highlight: "Full-day private chauffeur"
         },
         {
-          title: "Morocco Stay with Chauffeur",
+          title: "Tourist Circuit in Morocco with Chauffeur",
           desc: "Design a tailor-made journey across Morocco (desert, Atlas mountains, Atlantic coast). Travel with ultimate flexibility.",
           highlight: "100% flexible itinerary"
         }
@@ -206,10 +625,18 @@ export const translations = {
       rooms: "Suites",
       wellness: "Wellness"
     },
+    location: {
+      address: "59 Rue Ibn Batouta, Casablanca, Morocco",
+      phoneValue: "+212522452967",
+      emailValue: "hotelmaamoura@yahoo.com",
+      googleMapsDestination: "59 Rue Ibn Batouta, Casablanca, Morocco",
+      mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3324.1!2d-7.6114!3d33.5883!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda7d2b1c2e4f5a6%3A0x0!2s59%20Rue%20Ibn%20Batouta%2C%20Casablanca!5e0!3m2!1sen!2sma",
+      description: "Ideally located in the heart of Casablanca, Hôtel Maamoura welcomes you in an exceptional setting just steps from the city's main business and leisure districts."
+    },
     footer: {
       address: "Address: 45 Moulay Youssef Boulevard, Casablanca, Morocco",
-      phone: "Phone: +212 6 00 00 00 00",
-      email: "Email: contact@hotelmaamoura.com",
+      phone: "Phone: 05.22.45.29.67/68",
+      email: "Email: hotelmaamoura@yahoo.com",
       rights: "© 2026 Hôtel Maamoura. All rights reserved. Inspired by the prestige of Moroccan traditional art."
     }
   },
@@ -236,9 +663,9 @@ export const translations = {
       guests: "عدد الضيوف",
       roomType: "نوع الإقامة",
       roomOptions: {
-        traditional: "غرفة تقليدية",
-        royal: "جناح ملكي",
-        family: "جناح عائلي (مع فصل تام لخصوصية الوالدين)"
+        simple: "غرفة مفردة",
+        double: "غرفة مزدوجة",
+        suite: "جناح عائلي (مع فصل تام لخصوصية الوالدين)"
       },
       airportTransfer: "توصيل المطار",
       airportOptions: {
@@ -248,39 +675,253 @@ export const translations = {
         both: "وصول ومغادرة"
       },
       chauffeurCity: "جولة في المدينة مع سائق",
-      chauffeurMorocco: "رحلة مرنة في المغرب مع سائق",
+      chauffeurMorocco: "دورة سياحية في المغرب مع سائق (مرن)",
       submit: "التحقق من التوفر عبر الواتساب",
       whatsappMessage: "مرحباً فندق المعمورة، أود حجز إقامة:\n\n🏨 الإقامة: {room}\n📅 الوصول: {checkIn}\n📅 المغادرة: {checkOut}\n👥 الضيوف: {guests}\n🚗 توصيل المطار: {transfer}\n🗺️ جولة المدينة مع سائق: {cityChauffeur}\n🚙 جولة المغرب مع سائق: {moroccoChauffeur}\n\nشكراً لتأكيد التوفر."
+    },
+    about: {
+      badge: "معلومات عنا",
+      title: "مرحباً بكم في فندق المعمورة",
+      subtitle: "واحة من السكينة في قلب الدار البيضاء.",
+      storyTitle: "قصتنا",
+      storyParagraphs: [
+        "فندق المعمورة هو فندق 3 نجوم يقع في قلب الدار البيضاء، في الحي التاريخي للمدينة سيدي بليوط.",
+        "مستوحى من العمارة المغربية التقليدية، يمزج فندقنا بين الأصالة والراحة العصرية لتقديم تجربة دافئة وراقية.",
+        "بفضل 60 غرفة مكيفة ومجهزة تجهيزاً كاملاً، ومطعم، واستقبال يقظ، وخدمات شخصية، يرافق الفندق كل مسافر طوال إقامته.",
+        "من وصولك حتى مغادرتك، يحرص فريقنا على تحويل زيارتك إلى ذكرى لا تنسى."
+      ],
+      storyBtn: "اكتشف قصتنا",
+      valuesTitle: "قيمنا",
+      values: [
+        { title: "الأصالة", desc: "ديكور مستوحى من التراث المغربي والفن التقليدي." },
+        { title: "التميز", desc: "خدمة شخصية واهتمام خاص بكل التفاصيل." },
+        { title: "الضيافة", desc: "استقبال دافئ ليشعر كل زائر وكأنه في منزله." }
+      ],
+      stats: [
+        { target: 5000, isPlus: true, suffix: "", label: "مسافر راضٍ" },
+        { target: 60, isPlus: false, suffix: "", label: "غرفة راقية" },
+        { target: 3, isPlus: false, suffix: "نجوم", label: "فندق" },
+        { target: 24, isPlus: false, suffix: "/7", label: "خدمة متوفرة" }
+      ],
+      info: {
+        title: "معلومات",
+        items: [
+          "تسجيل الوصول: 12:00 – 23:59",
+          "تسجيل المغادرة: حتى 12:00",
+          "الرخصة: 20000HT0596",
+          "إفطار كونتيننتال يُقدم يومياً"
+        ]
+      },
+      equipment: {
+        title: "التجهيزات",
+        items: [
+          "واي فاي مجاني في الأماكن العامة",
+          "موقف سيارات متوفر",
+          "خزينة أمان",
+          "مصعد"
+        ]
+      },
+      roomsAmenities: {
+        title: "الغرف",
+        items: [
+          "تكييف الهواء",
+          "تلفاز فضائي",
+          "منطقة ملابس",
+          "مستلزمات استحمام مجانية",
+          "منبه AM/FM"
+        ]
+      }
     },
     rooms: {
       title: "غرفنا وأجنحتنا",
       subtitle: "رقي تقليدي يمتزج بالراحة العصرية المطلقة",
       viewDetails: "اكتشف الغرفة",
-      maxGuests: "السعة: {count} أشخاص",
+      reserve: "احجز",
+      amenities: "المرافق",
+      pricePerNight: "لكل ليلة",
       types: [
         {
-          id: "traditional",
-          title: "غرفة تقليدية",
-          desc: "ملاذ من الطمأنينة مزين بنقوش الجبس اليدوية والزليج التقليدي العريق. مثالية لتجربة هادئة.",
-          capacity: 2,
-          price: "ابتداءً من 120€ / ليلة",
-          features: ["سرير حجم كوين", "حمام من التادلاكت", "تكييف هواء", "إطلالة على البهو"]
+          id: "simple",
+          title: "غرفة بسيطة",
+          description: "غرف أنيقة وخاصة مثالية للمسافر الفردي.",
+          rooms: [
+            {
+              id: "101",
+              number: "الغرفة 101",
+              price: "120€",
+              capacity: 1,
+              area: 18,
+              image: "/images/simple/IMG_20260602_164743.jpg",
+              amenities: ["سرير مفرد", "حمام خاص", "تكييف", "إطلالة على البهو"]
+            },
+            {
+              id: "102",
+              number: "الغرفة 102",
+              price: "120€",
+              capacity: 1,
+              area: 18,
+              image: "/images/simple/IMG_20260602_164829.jpg",
+              amenities: ["سرير مفرد", "حمام خاص", "تكييف", "إطلالة على البهو"]
+            },
+            {
+              id: "103",
+              number: "الغرفة 103",
+              price: "120€",
+              capacity: 1,
+              area: 18,
+              image: "/images/simple/IMG_20260602_164837.jpg",
+              amenities: ["سرير مفرد", "حمام خاص", "تكييف", "إطلالة على الحديقة"]
+            },
+            {
+              id: "104",
+              number: "الغرفة 104",
+              price: "120€",
+              capacity: 1,
+              area: 18,
+              image: "/images/simple/IMG_20260602_164900.jpg",
+              amenities: ["سرير مفرد", "حمام خاص", "تكييف", "إطلالة على البهو"]
+            },
+            {
+              id: "105",
+              number: "الغرفة 105",
+              price: "120€",
+              capacity: 1,
+              area: 18,
+              image: "/images/simple/IMG_20260602_165505.jpg",
+              amenities: ["سرير مفرد", "حمام خاص", "تكييف", "إطلالة على الحديقة"]
+            },
+            {
+              id: "106",
+              number: "الغرفة 106",
+              price: "120€",
+              capacity: 1,
+              area: 18,
+              image: "/images/simple/IMG_20260602_165924.jpg",
+              amenities: ["سرير مفرد", "حمام خاص", "تكييف", "إطلالة على البهو"]
+            }
+          ]
         },
         {
-          id: "family",
+          id: "double",
+          title: "غرفة مزدوجة",
+          description: "مساحات راقية للأزواج مع أجواء دافئة وراحة عصرية.",
+          rooms: [
+            {
+              id: "201",
+              number: "الغرفة 201",
+              price: "180€",
+              capacity: 2,
+              area: 28,
+              image: "/images/double/IMG_20260602_162151.jpg",
+              amenities: ["سرير كوين", "حمام رخامي", "تكييف", "شرفة خاصة"]
+            },
+            {
+              id: "202",
+              number: "الغرفة 202",
+              price: "180€",
+              capacity: 2,
+              area: 28,
+              image: "/images/double/IMG_20260602_162355.jpg",
+              amenities: ["سرير كوين", "حمام رخامي", "تكييف", "شرفة خاصة"]
+            },
+            {
+              id: "203",
+              number: "الغرفة 203",
+              price: "180€",
+              capacity: 2,
+              area: 28,
+              image: "/images/double/IMG_20260602_162648.jpg",
+              amenities: ["سرير كوين", "حمام رخامي", "تكييف", "إطلالة على الحديقة"]
+            },
+            {
+              id: "204",
+              number: "الغرفة 204",
+              price: "180€",
+              capacity: 2,
+              area: 28,
+              image: "/images/double/IMG_20260602_162726.jpg",
+              amenities: ["سرير كوين", "حمام رخامي", "تكييف", "شرفة خاصة"]
+            },
+            {
+              id: "205",
+              number: "الغرفة 205",
+              price: "180€",
+              capacity: 2,
+              area: 28,
+              image: "/images/double/IMG_20260602_162741.jpg",
+              amenities: ["سرير كوين", "حمام رخامي", "تكييف", "إطلالة على الحديقة"]
+            },
+            {
+              id: "206",
+              number: "الغرفة 206",
+              price: "180€",
+              capacity: 2,
+              area: 28,
+              image: "/images/double/IMG_20260602_163043.jpg",
+              amenities: ["سرير كوين", "حمام رخامي", "تكييف", "شرفة خاصة"]
+            }
+          ]
+        },
+        {
+          id: "suite",
           title: "الجناح العائلي",
-          desc: "مساحة فاخرة مصممة خصيصاً للعائلات، وتوفر غرفاً منفصلة تماماً للحفاظ على خصوصية الوالدين مع إبقاء الأطفال بالقرب.",
-          capacity: 5,
-          price: "ابتداءً من 250€ / ليلة",
-          features: ["غرفة ماستر منفصلة", "غرفة أطفال منفصلة ثانية", "صالون مغربي تقليدي", "حمامين", "شرفة خاصة"]
-        },
-        {
-          id: "royal",
-          title: "الجناح الملكي",
-          desc: "التجسيد الأسمى للفخامة التقليدية. مساحات شاسعة، سرير ملكي فاخر، وتفاصيل حرفية تليق بأرقى القصور.",
-          capacity: 3,
-          price: "ابتداءً من 380€ / ليلة",
-          features: ["سرير ملكي ضخم", "صالون مع مدفأة", "حوض استحمام نحاسي", "شرفة مطلة على الحديقة", "خدمة خادم خاص"]
+          description: "أجنحة فخمة تجمع بين الفخامة والمساحة المثالية للعائلات.",
+          rooms: [
+            {
+              id: "301",
+              number: "الجناح 301",
+              price: "320€",
+              capacity: 4,
+              area: 50,
+              image: "/images/familia/IMG_20260602_165447.jpg",
+              amenities: ["غرفتان", "صالون خاص", "حمامين", "شرفة", "خدمة كونسيرج"]
+            },
+            {
+              id: "302",
+              number: "الجناح 302",
+              price: "320€",
+              capacity: 4,
+              area: 50,
+              image: "/images/familia/IMG_20260602_165523.jpg",
+              amenities: ["غرفتان", "صالون خاص", "حمامين", "شرفة", "خدمة كونسيرج"]
+            },
+            {
+              id: "303",
+              number: "الجناح 303",
+              price: "320€",
+              capacity: 4,
+              area: 50,
+              image: "/images/familia/IMG_20260602_170941.jpg",
+              amenities: ["غرفتان", "صالون خاص", "حمامين", "شرفة", "خدمة كونسيرج"]
+            },
+            {
+              id: "304",
+              number: "الجناح 304",
+              price: "320€",
+              capacity: 4,
+              area: 50,
+              image: "/images/familia/IMG_20260602_172038.jpg",
+              amenities: ["غرفتان", "صالون خاص", "حمامين", "شرفة", "خدمة كونسيرج"]
+            },
+            {
+              id: "305",
+              number: "الجناح 305",
+              price: "320€",
+              capacity: 4,
+              area: 50,
+              image: "/images/familia/IMG_20260602_172240.jpg",
+              amenities: ["غرفتان", "صالون خاص", "حمامين", "شرفة", "خدمة كونسيرج"]
+            },
+            {
+              id: "306",
+              number: "الجناح 306",
+              price: "320€",
+              capacity: 4,
+              area: 50,
+              image: "/images/familia/f2.jpeg",
+              amenities: ["غرفتان", "صالون خاص", "حمامين", "شرفة", "خدمة كونسيرج"]
+            }
+          ]
         }
       ]
     },
@@ -299,7 +940,7 @@ export const translations = {
           highlight: "سائق خاص طوال اليوم"
         },
         {
-          title: "رحلة في المغرب مع سائق",
+          title: "دورة سياحية في المغرب مع سائق",
           desc: "صمم مساراً مخصصاً لك عبر المغرب (الصحراء، جبال الأطلس، الساحل الأطلسي) مع سائق ذو خبرة تحت تصرفكم.",
           highlight: "مسار مرن 100%"
         }
@@ -313,10 +954,18 @@ export const translations = {
       rooms: "الأجنحة",
       wellness: "الاستجمام"
     },
+    location: {
+      address: "59 شارع ابن بطوطة، الدار البيضاء، المغرب",
+      phoneValue: "+212522452967",
+      emailValue: "hotelmaamoura@yahoo.com",
+      googleMapsDestination: "59 Rue Ibn Batouta, Casablanca, Maroc",
+      mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3324.1!2d-7.6114!3d33.5883!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda7d2b1c2e4f5a6%3A0x0!2s59%20Rue%20Ibn%20Batouta%2C%20Casablanca!5e0!3m2!1sfr!2sma",
+      description: "يقع فندق المعمورة في قلب الدار البيضاء، في موقع مثالي على بعد خطوات من أهم أحياء الأعمال والترفيه في المدينة."
+    },
     footer: {
       address: "العنوان: 45 شارع مولاي يوسف، الدار البيضاء، المغرب",
-      phone: "الهاتف: +212 6 00 00 00 00",
-      email: "البريد الإلكتروني: contact@hotelmaamoura.com",
+      phone: "الهاتف: 05.22.45.29.67/68",
+      email: "البريد الإلكتروني: hotelmaamoura@yahoo.com",
       rights: "© 2026 فندق المعمورة. جميع الحقوق محفوظة. مستوحى من هيبة الفن المغربي التقليدي."
     }
   },
@@ -343,9 +992,9 @@ export const translations = {
       guests: "Huéspedes",
       roomType: "Alojamiento",
       roomOptions: {
-        traditional: "Habitación Tradicional",
-        royal: "Suite Real",
-        family: "Suite Familiar (con separación para privacidad parental)"
+        simple: "Habitación Simple",
+        double: "Habitación Doble",
+        suite: "Suite Familiar (con separación para privacidad parental)"
       },
       airportTransfer: "Traslado al Aeropuerto",
       airportOptions: {
@@ -355,39 +1004,253 @@ export const translations = {
         both: "Llegada & Salida"
       },
       chauffeurCity: "Visita de la ciudad con chófer",
-      chauffeurMorocco: "Estancia en Marruecos con chófer (Flexible)",
+      chauffeurMorocco: "Circuito turístico en Marruecos con chófer (Flexible)",
       submit: "Verificar disponibilidad en WhatsApp",
       whatsappMessage: "Hola Hôtel Maamoura, deseo reservar una estancia:\n\n🏨 Alojamiento: {room}\n📅 Entrada: {checkIn}\n📅 Salida: {checkOut}\n👥 Huéspedes: {guests}\n🚗 Traslado Aeropuerto: {transfer}\n🗺️ Visita Ciudad con Chófer: {cityChauffeur}\n🚙 Tour Marruecos con Chófer: {moroccoChauffeur}\n\nGracias por confirmarme disponibilidad."
+    },
+    about: {
+      badge: "Sobre Nosotros",
+      title: "Bienvenido al Hôtel Maamoura",
+      subtitle: "Un oasis de serenidad en el corazón de Casablanca.",
+      storyTitle: "Nuestra Historia",
+      storyParagraphs: [
+        "El Hôtel Maamoura es un hotel de 3 estrellas situado en el corazón de Casablanca, en el histórico barrio de la Médina Sidi Belyout.",
+        "Inspirado en la arquitectura tradicional marroquí, nuestro establecimiento combina autenticidad y confort moderno para ofrecer una experiencia cálida y refinada.",
+        "Con sus 60 habitaciones climatizadas y equipadas, restaurante, recepción atenta y servicios personalizados, el hotel acompaña a cada viajero durante toda su estancia.",
+        "Desde su llegada hasta su partida, nuestro equipo se esfuerza por convertir su visita en un recuerdo inolvidable."
+      ],
+      storyBtn: "Descubrir nuestra historia",
+      valuesTitle: "Nuestros Valores",
+      values: [
+        { title: "Autenticidad", desc: "Una decoración inspirada en el patrimonio marroquí y el arte tradicional." },
+        { title: "Excelencia", desc: "Un servicio personalizado y una atención especial a cada detalle." },
+        { title: "Hospitalidad", desc: "Una cálida bienvenida para que cada huésped se sienta como en casa." }
+      ],
+      stats: [
+        { target: 5000, isPlus: true, suffix: "", label: "Viajeros satisfechos" },
+        { target: 60, isPlus: false, suffix: "", label: "Habitaciones elegantes" },
+        { target: 3, isPlus: false, suffix: "estrellas", label: "Hotel" },
+        { target: 24, isPlus: false, suffix: "/7", label: "Servicio disponible" }
+      ],
+      info: {
+        title: "Información",
+        items: [
+          "Check-in: 12:00 – 23:59",
+          "Check-out: hasta las 12:00",
+          "Licencia: 20000HT0596",
+          "Desayuno continental servido a diario"
+        ]
+      },
+      equipment: {
+        title: "Equipamiento",
+        items: [
+          "Wi-Fi gratuito en áreas públicas",
+          "Estacionamiento disponible",
+          "Caja fuerte",
+          "Ascensor"
+        ]
+      },
+      roomsAmenities: {
+        title: "Habitaciones",
+        items: [
+          "Aire acondicionado",
+          "TV satélite",
+          "Vestidor",
+          "Artículos de aseo gratuitos",
+          "Despertador AM/FM"
+        ]
+      }
     },
     rooms: {
       title: "Nuestras Habitaciones & Suites",
       subtitle: "Refinamiento tradicional combinado con el máximo confort moderno",
       viewDetails: "Descubrir habitación",
-      maxGuests: "Capacidad: {count} personas",
+      reserve: "Reservar",
+      amenities: "Servicios",
+      pricePerNight: "Por noche",
       types: [
         {
-          id: "traditional",
-          title: "Habitación Tradicional",
-          desc: "Un capullo de serenidad adornado con yeso tallado a mano y azulejos zellige ancestrales. Perfecto para una inmersión tranquila.",
-          capacity: 2,
-          price: "Desde 120€ / noche",
-          features: ["Cama Queen Size", "Baño en tadelakt", "Aire acondicionado", "Vista al patio"]
+          id: "simple",
+          title: "Habitación Simple",
+          description: "Habitaciones discretas y elegantes, ideales para el viajero individual.",
+          rooms: [
+            {
+              id: "101",
+              number: "Habitación 101",
+              price: "120€",
+              capacity: 1,
+              area: 18,
+              image: "/images/simple/IMG_20260602_164743.jpg",
+              amenities: ["Cama individual", "Baño privado", "Aire acondicionado", "Vista al patio"]
+            },
+            {
+              id: "102",
+              number: "Habitación 102",
+              price: "120€",
+              capacity: 1,
+              area: 18,
+              image: "/images/simple/IMG_20260602_164829.jpg",
+              amenities: ["Cama individual", "Baño privado", "Aire acondicionado", "Vista al patio"]
+            },
+            {
+              id: "103",
+              number: "Habitación 103",
+              price: "120€",
+              capacity: 1,
+              area: 18,
+              image: "/images/simple/IMG_20260602_164837.jpg",
+              amenities: ["Cama individual", "Baño privado", "Aire acondicionado", "Vista al jardín"]
+            },
+            {
+              id: "104",
+              number: "Habitación 104",
+              price: "120€",
+              capacity: 1,
+              area: 18,
+              image: "/images/simple/IMG_20260602_164900.jpg",
+              amenities: ["Cama individual", "Baño privado", "Aire acondicionado", "Vista al patio"]
+            },
+            {
+              id: "105",
+              number: "Habitación 105",
+              price: "120€",
+              capacity: 1,
+              area: 18,
+              image: "/images/simple/IMG_20260602_165505.jpg",
+              amenities: ["Cama individual", "Baño privado", "Aire acondicionado", "Vista al jardín"]
+            },
+            {
+              id: "106",
+              number: "Habitación 106",
+              price: "120€",
+              capacity: 1,
+              area: 18,
+              image: "/images/simple/IMG_20260602_165924.jpg",
+              amenities: ["Cama individual", "Baño privado", "Aire acondicionado", "Vista al patio"]
+            }
+          ]
         },
         {
-          id: "family",
+          id: "double",
+          title: "Habitación Doble",
+          description: "Espacios refinados para parejas con una atmósfera cálida y moderna.",
+          rooms: [
+            {
+              id: "201",
+              number: "Habitación 201",
+              price: "180€",
+              capacity: 2,
+              area: 28,
+              image: "/images/double/IMG_20260602_162151.jpg",
+              amenities: ["Cama Queen Size", "Baño de mármol", "Aire acondicionado", "Balcón privado"]
+            },
+            {
+              id: "202",
+              number: "Habitación 202",
+              price: "180€",
+              capacity: 2,
+              area: 28,
+              image: "/images/double/IMG_20260602_162355.jpg",
+              amenities: ["Cama Queen Size", "Baño de mármol", "Aire acondicionado", "Balcón privado"]
+            },
+            {
+              id: "203",
+              number: "Habitación 203",
+              price: "180€",
+              capacity: 2,
+              area: 28,
+              image: "/images/double/IMG_20260602_162648.jpg",
+              amenities: ["Cama Queen Size", "Baño de mármol", "Aire acondicionado", "Vista al jardín"]
+            },
+            {
+              id: "204",
+              number: "Habitación 204",
+              price: "180€",
+              capacity: 2,
+              area: 28,
+              image: "/images/double/IMG_20260602_162726.jpg",
+              amenities: ["Cama Queen Size", "Baño de mármol", "Aire acondicionado", "Balcón privado"]
+            },
+            {
+              id: "205",
+              number: "Habitación 205",
+              price: "180€",
+              capacity: 2,
+              area: 28,
+              image: "/images/double/IMG_20260602_162741.jpg",
+              amenities: ["Cama Queen Size", "Baño de mármol", "Aire acondicionado", "Vista al jardín"]
+            },
+            {
+              id: "206",
+              number: "Habitación 206",
+              price: "180€",
+              capacity: 2,
+              area: 28,
+              image: "/images/double/IMG_20260602_163043.jpg",
+              amenities: ["Cama Queen Size", "Baño de mármol", "Aire acondicionado", "Balcón privado"]
+            }
+          ]
+        },
+        {
+          id: "suite",
           title: "Suite Familiar",
-          desc: "Un espacio lujoso diseñado especialmente para familias, que ofrece una verdadera separación física de habitaciones para preservar la privacidad de los padres manteniendo a los niños cerca.",
-          capacity: 5,
-          price: "Desde 250€ / noche",
-          features: ["Dormitorio principal independiente", "Segundo dormitorio independiente", "Salón tradicional marroquí", "2 baños", "Terraza privada"]
-        },
-        {
-          id: "royal",
-          title: "Suite Real",
-          desc: "La encarnación suprema del lujo tradicional. Amplios espacios, cama King Size majestuosa y detalles artesanales dignos de los palacios más distinguidos.",
-          capacity: 3,
-          price: "Desde 380€ / noche",
-          features: ["Cama King Size", "Salón con chimenea", "Bañera de cobre", "Balcón con vistas al jardín", "Servicio de mayordomo"]
+          description: "Suites de lujo con espacio para toda la familia.",
+          rooms: [
+            {
+              id: "301",
+              number: "Suite 301",
+              price: "320€",
+              capacity: 4,
+              area: 50,
+              image: "/images/familia/IMG_20260602_165447.jpg",
+              amenities: ["2 dormitorios", "Sala privada", "2 baños", "Terraza", "Servicio de concierge"]
+            },
+            {
+              id: "302",
+              number: "Suite 302",
+              price: "320€",
+              capacity: 4,
+              area: 50,
+              image: "/images/familia/IMG_20260602_165523.jpg",
+              amenities: ["2 dormitorios", "Sala privada", "2 baños", "Terraza", "Servicio de concierge"]
+            },
+            {
+              id: "303",
+              number: "Suite 303",
+              price: "320€",
+              capacity: 4,
+              area: 50,
+              image: "/images/familia/IMG_20260602_170941.jpg",
+              amenities: ["2 dormitorios", "Sala privada", "2 baños", "Terraza", "Servicio de concierge"]
+            },
+            {
+              id: "304",
+              number: "Suite 304",
+              price: "320€",
+              capacity: 4,
+              area: 50,
+              image: "/images/familia/IMG_20260602_172038.jpg",
+              amenities: ["2 dormitorios", "Sala privada", "2 baños", "Terraza", "Servicio de concierge"]
+            },
+            {
+              id: "305",
+              number: "Suite 305",
+              price: "320€",
+              capacity: 4,
+              area: 50,
+              image: "/images/familia/IMG_20260602_172240.jpg",
+              amenities: ["2 dormitorios", "Sala privada", "2 baños", "Terraza", "Servicio de concierge"]
+            },
+            {
+              id: "306",
+              number: "Suite 306",
+              price: "320€",
+              capacity: 4,
+              area: 50,
+              image: "/images/familia/f2.jpeg",
+              amenities: ["2 dormitorios", "Sala privada", "2 baños", "Terraza", "Servicio de concierge"]
+            }
+          ]
         }
       ]
     },
@@ -406,7 +1269,7 @@ export const translations = {
           highlight: "Chófer privado todo el día"
         },
         {
-          title: "Estancia en Marruecos con Chófer",
+          title: "Circuito Turístico en Marruecos con Chófer",
           desc: "Diseñe un viaje a medida a través de Marruecos (desierto, montañas del Atlas, costa atlántica) con total flexibilidad y un conductor experimentado a su servicio.",
           highlight: "Itinerario 100% flexible"
         }
@@ -420,10 +1283,18 @@ export const translations = {
       rooms: "Suites",
       wellness: "Bienestar"
     },
+    location: {
+      address: "59 Rue Ibn Batouta, Casablanca, Maroc",
+      phoneValue: "+212522452967",
+      emailValue: "hotelmaamoura@yahoo.com",
+      googleMapsDestination: "59 Rue Ibn Batouta, Casablanca, Maroc",
+      mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3323.5!2d-7.627!3d33.578!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda7d2b0c8f4a6e2%3A0x7b3c9d1e5f2a4b6c!2s59 Rue Ibn Batouta, Casablanca, Maroc!5e0!3m2!1sfr!2sma",
+      description: "Idealmente situado en el corazón de Casablanca, el Hôtel Maamoura le recibe en un entorno excepcional a pocos pasos de los principales distritos de negocios y ocio de la ciudad."
+    },
     footer: {
-      address: "Dirección: 45 Boulevard Moulay Youssef, Casablanca, Marruecos",
-      phone: "Teléfono: +212 6 00 00 00 00",
-      email: "Correo: contact@hotelmaamoura.com",
+      address: "59 Rue Ibn Batouta, Casablanca, Maroc",
+      phone: "Teléfono: 05.22.45.29.67/68",
+      email: "Correo: hotelmaamoura@yahoo.com",
       rights: "© 2026 Hôtel Maamoura. Todos los derechos reservados. Inspirado en el prestigio del arte tradicional marroquí."
     }
   }

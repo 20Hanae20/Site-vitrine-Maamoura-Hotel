@@ -8,15 +8,16 @@ import Loader from '../components/Loader';
 import Navbar from '../components/Navbar';
 import MusicPlayer from '../components/MusicPlayer';
 import Hero from '../components/Hero';
-import BookingForm from '../components/BookingForm';
+import About from '../components/About';
 import Rooms from '../components/Rooms';
 import Services from '../components/Services';
 import Gallery from '../components/Gallery';
+import Location from '../components/Location';
 import Footer from '../components/Footer';
 
 export default function Home() {
   const [language, setLanguage] = useState('fr');
-  const [selectedRoom, setSelectedRoom] = useState('family');
+  const [selectedRoom, setSelectedRoom] = useState('suite');
 
   // React to language change to adjust document dir for Arabic RTL
   useEffect(() => {
@@ -61,18 +62,17 @@ export default function Home() {
 
       {/* Main Content Sections */}
       <main>
-        {/* Welcome Hero Area */}
+        {/* Welcome Hero Area with booking overlay */}
         <Hero 
           translations={translations} 
           currentLang={language} 
+          selectedRoom={selectedRoom}
         />
 
-        {/* Calendar Booking & WhatsApp Contact */}
-        <BookingForm 
+        {/* About Section */}
+        <About 
           translations={translations} 
           currentLang={language} 
-          selectedRoom={selectedRoom}
-          // We pass down a custom selected room state to synchronize it on click
         />
 
         {/* Accommodation Section */}
@@ -90,6 +90,12 @@ export default function Home() {
 
         {/* Immersive Photo Gallery */}
         <Gallery 
+          translations={translations} 
+          currentLang={language} 
+        />
+
+        {/* Location & Map */}
+        <Location 
           translations={translations} 
           currentLang={language} 
         />

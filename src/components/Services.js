@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { Plane, Compass, Map, CheckCircle2 } from 'lucide-react';
+import ScrollReveal from './ScrollReveal';
 import styles from './Services.module.css';
 
 export default function Services({ translations, currentLang }) {
@@ -14,21 +15,23 @@ export default function Services({ translations, currentLang }) {
   ];
 
   return (
-    <section id="services" className={styles.servicesSection}>
-      {/* Decorative Background Moroccan arch */}
-      <div className={styles.bgDecoration}></div>
+    <ScrollReveal>
+      <section id="services" className={styles.servicesSection}>
+        {/* Decorative Background Moroccan arch */}
+        <div className={styles.bgDecoration}></div>
 
-      <div className={styles.container}>
-        <div className={styles.sectionHeader}>
-          <span className={styles.badge}>Services d'Élite</span>
-          <h2 className={styles.title}>{t.title}</h2>
-          <div className={styles.ornament}></div>
-          <p className={styles.subtitle}>{t.subtitle}</p>
-        </div>
+        <div className={styles.container}>
+          <div className={styles.sectionHeader}>
+            <span className={styles.badge}>Services d'Élite</span>
+            <h2 className={styles.title}>{t.title}</h2>
+            <div className={styles.ornament}></div>
+            <p className={styles.subtitle}>{t.subtitle}</p>
+          </div>
 
-        <div className={styles.grid}>
-          {t.items.map((service, index) => (
-            <div key={index} className={styles.card}>
+          <div className={styles.grid}>
+            {t.items.map((service, index) => (
+              <ScrollReveal key={index} delay={index * 0.15}>
+                <div className={styles.card}>
               <div className={styles.iconContainer}>
                 {icons[index]}
               </div>
@@ -76,10 +79,12 @@ export default function Services({ translations, currentLang }) {
                   </>
                 )}
               </div>
-            </div>
-          ))}
+              </div>
+              </ScrollReveal>
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </ScrollReveal>
   );
 }
