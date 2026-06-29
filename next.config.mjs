@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  allowedDevOrigins: ['maamoura.luxtech.ma'],
   images: {
     remotePatterns: [
       {

@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect, useRef } from 'react';
+import Image from 'next/image';
 import {
   Heart, Gem, HandHeart, ChevronRight,
   Users, Building2, Star, Clock,
@@ -128,10 +129,13 @@ export default function About({ translations, currentLang }) {
               <div className={styles.imageWrapper}>
                 <div className={styles.imageFrameCorner} />
                 <div className={styles.imageFrameCorner2} />
-                <img
-                  src="/images/lhotel.png"
+                <Image
+                  src="/images/lhotel.jpg"
                   alt="Hôtel Maamoura"
                   className={styles.aboutImage}
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  priority={false}
                 />
               </div>
               <div className={styles.imageAccent} />

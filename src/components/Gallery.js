@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useCallback } from 'react';
+import Image from 'next/image';
 import { X, ChevronLeft, ChevronRight, Maximize2, Image as ImageIcon } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import ScrollReveal from './ScrollReveal';
@@ -59,19 +60,26 @@ export default function Gallery({ translations, currentLang }) {
   const [lightboxIndex, setLightboxIndex] = useState(null);
 
   const galleryItems = [
+    // Hôtel
     { id: 1, category: 'hotel', title: 'Patio Central avec Fontaine', url: "/images/Hotele/hot1.jpg" },
-    { id: 2, category: 'rooms', title: 'Suite Familiale - Salon Privé', url: "https://images.unsplash.com/photo-1600121848594-d8644e57abab?auto=format&fit=crop&q=80&w=1200" },
-    { id: 3, category: 'wellness', title: 'Hammam Traditionnel Marocain', url: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&q=80&w=1200" },
-    { id: 4, category: 'hotel', title: 'Zellige & Architecture', url: "/images/Hotele/hot2.jpg" },
-    { id: 5, category: 'rooms', title: 'Suite Royale - Chambre', url: "https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&q=80&w=1200" },
-    { id: 6, category: 'hotel', title: 'Jardin & Patio', url: "/images/Hotele/hot3.jpg" },
-    { id: 7, category: 'hotel', title: 'Entrée & Réception', url: "/images/Hotele/hot4.jpg" },
-    { id: 10, category: 'hotel', title: 'Entrée & Réception', url: "/images/Hotele/hot5.jpg" },
-        { id: 11, category: 'hotel', title: 'Entrée & Réception', url: "/images/Hotele/hot6.jpg" },
-
-
-    { id: 8, category: 'rooms', title: 'Chambre Double - Vue Patio', url: "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&q=80&w=1200" },
-    { id: 9, category: 'wellness', title: 'Salon de Détente', url: "https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?auto=format&fit=crop&q=80&w=1200" },
+    { id: 2, category: 'hotel', title: 'Zellige & Architecture', url: "/images/Hotele/hot2.jpg" },
+    { id: 3, category: 'hotel', title: 'Jardin & Patio', url: "/images/Hotele/hot3.jpg" },
+    { id: 4, category: 'hotel', title: 'Entrée & Réception', url: "/images/Hotele/hot4.jpg" },
+    { id: 5, category: 'hotel', title: 'Espaces Communs', url: "/images/Hotele/hot5.jpg" },
+    { id: 6, category: 'hotel', title: 'Décoration Intérieure', url: "/images/Hotele/hot6.jpg" },
+    { id: 16, category: 'hotel', title: 'Vue Extérieure', url: "/images/Hotele/IMG_20260602_160123.jpg" },
+    { id: 17, category: 'hotel', title: 'Accueil & Hall', url: "/images/Hotele/IMG_20260602_160150.jpg" },
+    { id: 18, category: 'hotel', title: 'Architecture Traditionnelle', url: "/images/Hotele/IMG_20260602_165901.jpg" },
+    // Chambres
+    { id: 7, category: 'rooms', title: 'Chambre Simple', url: "/images/simple/IMG_20260602_164743.jpg" },
+    { id: 8, category: 'rooms', title: 'Chambre Simple - Vue', url: "/images/simple/IMG_20260602_164829.jpg" },
+    { id: 9, category: 'rooms', title: 'Chambre Double', url: "/images/double/IMG_20260602_162151.jpg" },
+    { id: 10, category: 'rooms', title: 'Chambre Double - Détails', url: "/images/double/IMG_20260602_163112.jpg" },
+    { id: 11, category: 'rooms', title: 'Suite Familiale', url: "/images/familia/IMG_20260602_165447.jpg" },
+    { id: 12, category: 'rooms', title: 'Suite Familiale - Salon', url: "/images/familia/IMG_20260602_165523.jpg" },
+    { id: 13, category: 'rooms', title: 'Suite Premium', url: "/images/suite/IMG_20260602_160040.jpg" },
+    { id: 14, category: 'rooms', title: 'Suite Premium - Détails', url: "/images/suite/IMG_20260602_160335.jpg" },
+    { id: 15, category: 'rooms', title: 'Chambre Triple', url: "/images/triple/IMG_20260602_164806.jpg" },
   ];
 
   const filtered = activeFilter === 'all'
@@ -136,13 +144,13 @@ export default function Gallery({ translations, currentLang }) {
 
           {/* Filter Buttons */}
           <div className={styles.filters}>
-            {['all', 'hotel', 'rooms', 'wellness'].map(f => (
+            {['all', 'hotel', 'rooms'].map(f => (
               <button
                 key={f}
                 onClick={() => handleFilterChange(f)}
                 className={`${styles.filterBtn} ${activeFilter === f ? styles.activeFilter : ''}`}
               >
-                {f === 'all' ? t.all : f === 'hotel' ? t.hotel : f === 'rooms' ? t.rooms : t.wellness}
+                {f === 'all' ? t.all : f === 'hotel' ? t.hotel : t.rooms}
               </button>
             ))}
           </div>
@@ -167,7 +175,14 @@ export default function Gallery({ translations, currentLang }) {
                     className={styles.slide}
                   >
                     <div className={styles.imageWrap} onClick={() => openLightbox(currentItem.id)}>
-                      <img src={currentItem.url} alt={currentItem.title} className={styles.image} />
+                      <Image
+                        src={currentItem.url}
+                        alt={currentItem.title}
+                        className={styles.image}
+                        fill
+                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 80vw, 960px"
+                        priority={true}
+                      />
                       <div className={styles.imageOverlay}>
                         <Maximize2 size={22} className={styles.zoomIcon} />
                       </div>
@@ -222,7 +237,7 @@ export default function Gallery({ translations, currentLang }) {
               <ChevronLeft size={32} />
             </button>
             <div className={styles.lbContent} onClick={(e) => e.stopPropagation()}>
-              <img src={galleryItems[lightboxIndex].url} alt={galleryItems[lightboxIndex].title} className={styles.lbImg} />
+              <img src={galleryItems[lightboxIndex].url} alt={galleryItems[lightboxIndex].title} className={styles.lbImg} loading="lazy" />
               <div className={styles.lbCaption}>{galleryItems[lightboxIndex].title}</div>
             </div>
             <button className={`${styles.lbNav} ${styles.lbNext}`} onClick={(e) => { e.stopPropagation(); navigateLightbox(1); }} aria-label="Next">

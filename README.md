@@ -1,36 +1,55 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Site Vitrine - Hôtel Maamoura Casablanca
 
-## Getting Started
+Ce dépôt contient le code source du site vitrine officiel de l'**Hôtel Maamoura Casablanca**. Conçu sous forme d'une application web moderne et élégante avec **Next.js**, il offre aux visiteurs une immersion chaleureuse inspirée du prestige et du calme de l'art de vivre traditionnel marocain.
 
-First, run the development server:
+## 🌐 URL du Projet
+Le site est accessible en ligne à l'adresse suivante :
+👉 **[https://maamoura.luxtech.ma](https://maamoura.luxtech.ma)**
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 📸 Aperçu du Site
+![Hôtel Maamoura Casablanca](./public/images/screenshot.jpg)
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## ✨ Fonctionnalités Principales
 
-## Learn More
+*   **Design Raffiné & Immersif** : Esthétique soignée inspirée des riads marocains traditionnels au cœur de la ville blanche.
+*   **Formulaire de Réservation Interactif** : Permet aux clients de planifier leur séjour en sélectionnant leurs dates, le nombre de voyageurs et leur suite/chambre.
+*   **Services Exclusifs & Chauffeurs Privés** : Options de réservation de transferts aéroportuaires et de circuits touristiques personnalisés à travers le Maroc.
+*   **Galerie Photo Dynamique** : Présentation visuelle haute définition des chambres, des espaces communs et de l'espace bien-être.
+*   **Support Multilingue** : Interface disponible en Français (FR) et Espagnol (ES).
+*   **Entièrement Responsif** : Expérience fluide optimisée pour tous les types d'écrans (mobiles, tablettes et ordinateurs).
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🛠️ Stack Technique
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+*   **Framework** : [Next.js](https://nextjs.org/) (App Router)
+*   **Styles** : CSS Modules (Vanilla CSS pour un contrôle précis du design)
+*   **Fonts** : Geist & Google Fonts (Inter, Playfair Display)
+*   **Serveur Web / Reverse Proxy** : Nginx avec support SSL (Let's Encrypt)
+*   **Déploiement** : Docker & Docker Compose (environnements conteneurisés)
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🚀 Démarrage Rapide
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### En Développement
+
+1. **Installer les dépendances** :
+   ```bash
+   npm install
+   ```
+
+2. **Lancer le serveur de développement local** :
+   ```bash
+   npm run dev
+   ```
+   Ouvrez [http://localhost:3000](http://localhost:3000) dans votre navigateur pour visualiser le résultat.
+
+### En Production
+
+Pour les instructions détaillées concernant le déploiement sur un serveur VPS de production avec Docker et Nginx, veuillez vous référer au [Guide de Déploiement (DEPLOYMENT.md)](./DEPLOYMENT.md).
+

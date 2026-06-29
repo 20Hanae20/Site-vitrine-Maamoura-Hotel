@@ -34,7 +34,7 @@ export const translations = {
         both: "Arrivée & Départ"
       },
       chauffeurCity: "Visite de la ville avec chauffeur",
-      chauffeurMorocco: "Séjour au Maroc avec chauffeur (Flexible)",
+      chauffeurMorocco: "Circuit touristique au Maroc avec chauffeur (Flexible)",
       submit: "Vérifier la disponibilité sur WhatsApp",
       whatsappMessage: "Bonjour Hôtel Maamoura, je souhaite réserver un séjour :\n\n🏨 Hébergement : {room}\n📅 Arrivée : {checkIn}\n📅 Départ : {checkOut}\n👥 Voyageurs : {guests}\n🚗 Transfert Aéroport : {transfer}\n🗺️ Visite Ville avec Chauffeur : {cityChauffeur}\n🚙 Séjour Maroc avec Chauffeur : {moroccoChauffeur}\n\nMerci de me confirmer la disponibilité."
     },
@@ -110,7 +110,7 @@ export const translations = {
               price: "120€",
               capacity: 1,
               area: 18,
-              image: "/images/double/image.png",
+              image: "/images/simple/IMG_20260602_164743.jpg",
               amenities: ["Lit simple", "Salle de bain privée", "Climatisation", "Vue patio"]
             },
             {
@@ -119,7 +119,7 @@ export const translations = {
               price: "120€",
               capacity: 1,
               area: 18,
-              image: "/images/double/image1.png",
+              image: "/images/simple/IMG_20260602_164829.jpg",
               amenities: ["Lit simple", "Salle de bain privée", "Climatisation", "Vue patio"]
             },
             {
@@ -128,7 +128,7 @@ export const translations = {
               price: "120€",
               capacity: 1,
               area: 18,
-              image: "/images/zalige2.jpg",
+              image: "/images/simple/IMG_20260602_164837.jpg",
               amenities: ["Lit simple", "Salle de bain privée", "Climatisation", "Vue jardin"]
             },
             {
@@ -137,7 +137,7 @@ export const translations = {
               price: "120€",
               capacity: 1,
               area: 18,
-              image: "/images/lhotel.png",
+              image: "/images/simple/IMG_20260602_164900.jpg",
               amenities: ["Lit simple", "Salle de bain privée", "Climatisation", "Vue patio"]
             },
             {
@@ -146,7 +146,7 @@ export const translations = {
               price: "120€",
               capacity: 1,
               area: 18,
-              image: "/images/p2.png",
+              image: "/images/simple/IMG_20260602_165505.jpg",
               amenities: ["Lit simple", "Salle de bain privée", "Climatisation", "Vue jardin"]
             },
             {
@@ -155,7 +155,7 @@ export const translations = {
               price: "120€",
               capacity: 1,
               area: 18,
-              image: "/images/zalige2.jpg",
+              image: "/images/simple/IMG_20260602_165924.jpg",
               amenities: ["Lit simple", "Salle de bain privée", "Climatisation", "Vue patio"]
             }
           ]
@@ -171,7 +171,7 @@ export const translations = {
               price: "180€",
               capacity: 2,
               area: 28,
-              image: "/images/p2.png",
+              image: "/images/double/IMG_20260602_162151.jpg",
               amenities: ["Lit Queen Size", "Salle de bain en marbre", "Climatisation", "Balcon privé"]
             },
             {
@@ -180,7 +180,7 @@ export const translations = {
               price: "180€",
               capacity: 2,
               area: 28,
-              image: "/images/zalige2.jpg",
+              image: "/images/double/IMG_20260602_162355.jpg",
               amenities: ["Lit Queen Size", "Salle de bain en marbre", "Climatisation", "Balcon privé"]
             },
             {
@@ -189,7 +189,7 @@ export const translations = {
               price: "180€",
               capacity: 2,
               area: 28,
-              image: "/images/lhotel.png",
+              image: "/images/double/IMG_20260602_162648.jpg",
               amenities: ["Lit Queen Size", "Salle de bain en marbre", "Climatisation", "Vue jardin"]
             },
             {
@@ -198,7 +198,7 @@ export const translations = {
               price: "180€",
               capacity: 2,
               area: 28,
-              image: "/images/p2.png",
+              image: "/images/double/IMG_20260602_162726.jpg",
               amenities: ["Lit Queen Size", "Salle de bain en marbre", "Climatisation", "Balcon privé"]
             },
             {
@@ -207,7 +207,7 @@ export const translations = {
               price: "180€",
               capacity: 2,
               area: 28,
-              image: "/images/zalige2.jpg",
+              image: "/images/double/IMG_20260602_162741.jpg",
               amenities: ["Lit Queen Size", "Salle de bain en marbre", "Climatisation", "Vue jardin"]
             },
             {
@@ -216,7 +216,7 @@ export const translations = {
               price: "180€",
               capacity: 2,
               area: 28,
-              image: "/images/lhotel.png",
+              image: "/images/double/IMG_20260602_163043.jpg",
               amenities: ["Lit Queen Size", "Salle de bain en marbre", "Climatisation", "Balcon privé"]
             }
           ]
@@ -232,7 +232,7 @@ export const translations = {
               price: "320€",
               capacity: 4,
               area: 50,
-              image: "/images/familia/image.png",
+              image: "/images/familia/IMG_20260602_165447.jpg",
               amenities: ["2 chambres", "Salon privé", "2 salles de bain", "Terrasse", "Service concierge"]
             },
             {
@@ -241,7 +241,7 @@ export const translations = {
               price: "320€",
               capacity: 4,
               area: 50,
-              image: "/images/familia/image1.png",
+              image: "/images/familia/IMG_20260602_165523.jpg",
               amenities: ["2 chambres", "Salon privé", "2 salles de bain", "Terrasse", "Service concierge"]
             },
             {
@@ -250,7 +250,7 @@ export const translations = {
               price: "320€",
               capacity: 4,
               area: 50,
-              image: "/images/familia/f4.jpeg",
+              image: "/images/familia/IMG_20260602_170941.jpg",
               amenities: ["2 chambres", "Salon privé", "2 salles de bain", "Terrasse", "Service concierge"]
             },
             {
@@ -259,7 +259,7 @@ export const translations = {
               price: "320€",
               capacity: 4,
               area: 50,
-              image: "/images/familia/image3.png",
+              image: "/images/familia/IMG_20260602_172038.jpg",
               amenities: ["2 chambres", "Salon privé", "2 salles de bain", "Terrasse", "Service concierge"]
             },
             
@@ -282,7 +282,7 @@ export const translations = {
           highlight: "Chauffeur privé à la journée"
         },
         {
-          title: "Séjour au Maroc avec Chauffeur",
+          title: "Circuit Touristique au Maroc avec Chauffeur",
           desc: "Concevez un itinéraire sur mesure à travers le Maroc (désert, montagnes de l'Atlas, côte atlantique). Voyagez en toute flexibilité avec un chauffeur expérimenté à votre disposition.",
           highlight: "Itinéraire 100% flexible"
         }
@@ -298,16 +298,16 @@ export const translations = {
     },
     location: {
       address: "59 Rue Ibn Batouta, Casablanca, Maroc",
-      phoneValue: "+212600000000",
-      emailValue: "contact@hotelmaamoura.com",
+      phoneValue: "+212522452967",
+      emailValue: "hotelmaamoura@yahoo.com",
       googleMapsDestination: "59 Rue Ibn Batouta, Casablanca, Maroc",
       mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3324.1!2d-7.6114!3d33.5883!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda7d2b1c2e4f5a6%3A0x0!2s59%20Rue%20Ibn%20Batouta%2C%20Casablanca!5e0!3m2!1sfr!2sma",
       description: "Idéalement situé au cœur de Casablanca, l'Hôtel Maamoura vous accueille dans un cadre d'exception à quelques pas des principaux quartiers d'affaires et de loisirs de la ville."
     },
     footer: {
       address: "Adresse : 45 Boulevard Moulay Youssef, Casablanca, Maroc",
-      phone: "Téléphone : +212 6 00 00 00 00",
-      email: "Email : contact@hotelmaamoura.com",
+      phone: "Téléphone : 05.22.45.29.67/68",
+      email: "Email : hotelmaamoura@yahoo.com",
       rights: "© 2026 Hôtel Maamoura. Tous droits réservés. Inspiré du prestige de l'art traditionnel marocain."
     }
   },
@@ -346,7 +346,7 @@ export const translations = {
         both: "Arrival & Departure"
       },
       chauffeurCity: "City tour with chauffeur",
-      chauffeurMorocco: "Morocco flexible tour with chauffeur",
+      chauffeurMorocco: "Tourist circuit in Morocco with chauffeur (Flexible)",
       submit: "Check Availability on WhatsApp",
       whatsappMessage: "Hello Hôtel Maamoura, I would like to book a stay:\n\n🏨 Accommodation: {room}\n📅 Arrival: {checkIn}\n📅 Departure: {checkOut}\n👥 Guests: {guests}\n🚗 Airport Transfer: {transfer}\n🗺️ City Tour with Chauffeur: {cityChauffeur}\n🚙 Morocco Tour with Chauffeur: {moroccoChauffeur}\n\nThank you for confirming availability."
     },
@@ -422,7 +422,7 @@ export const translations = {
               price: "€120",
               capacity: 1,
               area: 18,
-              image: "/images/lhotel.png",
+              image: "/images/simple/IMG_20260602_164743.jpg",
               amenities: ["Single bed", "Private bathroom", "Air conditioning", "Patio view"]
             },
             {
@@ -431,7 +431,7 @@ export const translations = {
               price: "€120",
               capacity: 1,
               area: 18,
-              image: "/images/p2.png",
+              image: "/images/simple/IMG_20260602_164829.jpg",
               amenities: ["Single bed", "Private bathroom", "Air conditioning", "Patio view"]
             },
             {
@@ -440,7 +440,7 @@ export const translations = {
               price: "€120",
               capacity: 1,
               area: 18,
-              image: "/images/zalige2.jpg",
+              image: "/images/simple/IMG_20260602_164837.jpg",
               amenities: ["Single bed", "Private bathroom", "Air conditioning", "Garden view"]
             },
             {
@@ -449,7 +449,7 @@ export const translations = {
               price: "€120",
               capacity: 1,
               area: 18,
-              image: "/images/lhotel.png",
+              image: "/images/simple/IMG_20260602_164900.jpg",
               amenities: ["Single bed", "Private bathroom", "Air conditioning", "Patio view"]
             },
             {
@@ -458,7 +458,7 @@ export const translations = {
               price: "€120",
               capacity: 1,
               area: 18,
-              image: "/images/p2.png",
+              image: "/images/simple/IMG_20260602_165505.jpg",
               amenities: ["Single bed", "Private bathroom", "Air conditioning", "Garden view"]
             },
             {
@@ -467,7 +467,7 @@ export const translations = {
               price: "€120",
               capacity: 1,
               area: 18,
-              image: "/images/zalige2.jpg",
+              image: "/images/simple/IMG_20260602_165924.jpg",
               amenities: ["Single bed", "Private bathroom", "Air conditioning", "Patio view"]
             }
           ]
@@ -483,7 +483,7 @@ export const translations = {
               price: "€180",
               capacity: 2,
               area: 28,
-              image: "/images/p2.png",
+              image: "/images/double/IMG_20260602_162151.jpg",
               amenities: ["Queen size bed", "Marble bathroom", "Air conditioning", "Private balcony"]
             },
             {
@@ -492,7 +492,7 @@ export const translations = {
               price: "€180",
               capacity: 2,
               area: 28,
-              image: "/images/zalige2.jpg",
+              image: "/images/double/IMG_20260602_162355.jpg",
               amenities: ["Queen size bed", "Marble bathroom", "Air conditioning", "Private balcony"]
             },
             {
@@ -501,7 +501,7 @@ export const translations = {
               price: "€180",
               capacity: 2,
               area: 28,
-              image: "/images/lhotel.png",
+              image: "/images/double/IMG_20260602_162648.jpg",
               amenities: ["Queen size bed", "Marble bathroom", "Air conditioning", "Garden view"]
             },
             {
@@ -510,7 +510,7 @@ export const translations = {
               price: "€180",
               capacity: 2,
               area: 28,
-              image: "/images/p2.png",
+              image: "/images/double/IMG_20260602_162726.jpg",
               amenities: ["Queen size bed", "Marble bathroom", "Air conditioning", "Private balcony"]
             },
             {
@@ -519,7 +519,7 @@ export const translations = {
               price: "€180",
               capacity: 2,
               area: 28,
-              image: "/images/zalige2.jpg",
+              image: "/images/double/IMG_20260602_162741.jpg",
               amenities: ["Queen size bed", "Marble bathroom", "Air conditioning", "Garden view"]
             },
             {
@@ -528,7 +528,7 @@ export const translations = {
               price: "€180",
               capacity: 2,
               area: 28,
-              image: "/images/lhotel.png",
+              image: "/images/double/IMG_20260602_163043.jpg",
               amenities: ["Queen size bed", "Marble bathroom", "Air conditioning", "Private balcony"]
             }
           ]
@@ -544,7 +544,7 @@ export const translations = {
               price: "€320",
               capacity: 4,
               area: 50,
-              image: "/images/zalige2.jpg",
+              image: "/images/familia/IMG_20260602_165447.jpg",
               amenities: ["2 bedrooms", "Private lounge", "2 bathrooms", "Terrace", "Concierge service"]
             },
             {
@@ -553,7 +553,7 @@ export const translations = {
               price: "€320",
               capacity: 4,
               area: 50,
-              image: "/images/lhotel.png",
+              image: "/images/familia/IMG_20260602_165523.jpg",
               amenities: ["2 bedrooms", "Private lounge", "2 bathrooms", "Terrace", "Concierge service"]
             },
             {
@@ -562,7 +562,7 @@ export const translations = {
               price: "€320",
               capacity: 4,
               area: 50,
-              image: "/images/p2.png",
+              image: "/images/familia/IMG_20260602_170941.jpg",
               amenities: ["2 bedrooms", "Private lounge", "2 bathrooms", "Terrace", "Concierge service"]
             },
             {
@@ -571,7 +571,7 @@ export const translations = {
               price: "€320",
               capacity: 4,
               area: 50,
-              image: "/images/zalige2.jpg",
+              image: "/images/familia/IMG_20260602_172038.jpg",
               amenities: ["2 bedrooms", "Private lounge", "2 bathrooms", "Terrace", "Concierge service"]
             },
             {
@@ -580,7 +580,7 @@ export const translations = {
               price: "€320",
               capacity: 4,
               area: 50,
-              image: "/images/lhotel.png",
+              image: "/images/familia/IMG_20260602_172240.jpg",
               amenities: ["2 bedrooms", "Private lounge", "2 bathrooms", "Terrace", "Concierge service"]
             },
             {
@@ -589,7 +589,7 @@ export const translations = {
               price: "€320",
               capacity: 4,
               area: 50,
-              image: "/images/p2.png",
+              image: "/images/familia/f2.jpeg",
               amenities: ["2 bedrooms", "Private lounge", "2 bathrooms", "Terrace", "Concierge service"]
             }
           ]
@@ -611,7 +611,7 @@ export const translations = {
           highlight: "Full-day private chauffeur"
         },
         {
-          title: "Morocco Stay with Chauffeur",
+          title: "Tourist Circuit in Morocco with Chauffeur",
           desc: "Design a tailor-made journey across Morocco (desert, Atlas mountains, Atlantic coast). Travel with ultimate flexibility.",
           highlight: "100% flexible itinerary"
         }
@@ -627,16 +627,16 @@ export const translations = {
     },
     location: {
       address: "59 Rue Ibn Batouta, Casablanca, Morocco",
-      phoneValue: "+212600000000",
-      emailValue: "contact@hotelmaamoura.com",
+      phoneValue: "+212522452967",
+      emailValue: "hotelmaamoura@yahoo.com",
       googleMapsDestination: "59 Rue Ibn Batouta, Casablanca, Morocco",
       mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3324.1!2d-7.6114!3d33.5883!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda7d2b1c2e4f5a6%3A0x0!2s59%20Rue%20Ibn%20Batouta%2C%20Casablanca!5e0!3m2!1sen!2sma",
       description: "Ideally located in the heart of Casablanca, Hôtel Maamoura welcomes you in an exceptional setting just steps from the city's main business and leisure districts."
     },
     footer: {
       address: "Address: 45 Moulay Youssef Boulevard, Casablanca, Morocco",
-      phone: "Phone: +212 6 00 00 00 00",
-      email: "Email: contact@hotelmaamoura.com",
+      phone: "Phone: 05.22.45.29.67/68",
+      email: "Email: hotelmaamoura@yahoo.com",
       rights: "© 2026 Hôtel Maamoura. All rights reserved. Inspired by the prestige of Moroccan traditional art."
     }
   },
@@ -675,7 +675,7 @@ export const translations = {
         both: "وصول ومغادرة"
       },
       chauffeurCity: "جولة في المدينة مع سائق",
-      chauffeurMorocco: "رحلة مرنة في المغرب مع سائق",
+      chauffeurMorocco: "دورة سياحية في المغرب مع سائق (مرن)",
       submit: "التحقق من التوفر عبر الواتساب",
       whatsappMessage: "مرحباً فندق المعمورة، أود حجز إقامة:\n\n🏨 الإقامة: {room}\n📅 الوصول: {checkIn}\n📅 المغادرة: {checkOut}\n👥 الضيوف: {guests}\n🚗 توصيل المطار: {transfer}\n🗺️ جولة المدينة مع سائق: {cityChauffeur}\n🚙 جولة المغرب مع سائق: {moroccoChauffeur}\n\nشكراً لتأكيد التوفر."
     },
@@ -751,7 +751,7 @@ export const translations = {
               price: "120€",
               capacity: 1,
               area: 18,
-              image: "/images/lhotel.png",
+              image: "/images/simple/IMG_20260602_164743.jpg",
               amenities: ["سرير مفرد", "حمام خاص", "تكييف", "إطلالة على البهو"]
             },
             {
@@ -760,7 +760,7 @@ export const translations = {
               price: "120€",
               capacity: 1,
               area: 18,
-              image: "/images/p2.png",
+              image: "/images/simple/IMG_20260602_164829.jpg",
               amenities: ["سرير مفرد", "حمام خاص", "تكييف", "إطلالة على البهو"]
             },
             {
@@ -769,7 +769,7 @@ export const translations = {
               price: "120€",
               capacity: 1,
               area: 18,
-              image: "/images/zalige2.jpg",
+              image: "/images/simple/IMG_20260602_164837.jpg",
               amenities: ["سرير مفرد", "حمام خاص", "تكييف", "إطلالة على الحديقة"]
             },
             {
@@ -778,7 +778,7 @@ export const translations = {
               price: "120€",
               capacity: 1,
               area: 18,
-              image: "/images/lhotel.png",
+              image: "/images/simple/IMG_20260602_164900.jpg",
               amenities: ["سرير مفرد", "حمام خاص", "تكييف", "إطلالة على البهو"]
             },
             {
@@ -787,7 +787,7 @@ export const translations = {
               price: "120€",
               capacity: 1,
               area: 18,
-              image: "/images/p2.png",
+              image: "/images/simple/IMG_20260602_165505.jpg",
               amenities: ["سرير مفرد", "حمام خاص", "تكييف", "إطلالة على الحديقة"]
             },
             {
@@ -796,7 +796,7 @@ export const translations = {
               price: "120€",
               capacity: 1,
               area: 18,
-              image: "/images/zalige2.jpg",
+              image: "/images/simple/IMG_20260602_165924.jpg",
               amenities: ["سرير مفرد", "حمام خاص", "تكييف", "إطلالة على البهو"]
             }
           ]
@@ -812,7 +812,7 @@ export const translations = {
               price: "180€",
               capacity: 2,
               area: 28,
-              image: "/images/p2.png",
+              image: "/images/double/IMG_20260602_162151.jpg",
               amenities: ["سرير كوين", "حمام رخامي", "تكييف", "شرفة خاصة"]
             },
             {
@@ -821,7 +821,7 @@ export const translations = {
               price: "180€",
               capacity: 2,
               area: 28,
-              image: "/images/zalige2.jpg",
+              image: "/images/double/IMG_20260602_162355.jpg",
               amenities: ["سرير كوين", "حمام رخامي", "تكييف", "شرفة خاصة"]
             },
             {
@@ -830,7 +830,7 @@ export const translations = {
               price: "180€",
               capacity: 2,
               area: 28,
-              image: "/images/lhotel.png",
+              image: "/images/double/IMG_20260602_162648.jpg",
               amenities: ["سرير كوين", "حمام رخامي", "تكييف", "إطلالة على الحديقة"]
             },
             {
@@ -839,7 +839,7 @@ export const translations = {
               price: "180€",
               capacity: 2,
               area: 28,
-              image: "/images/p2.png",
+              image: "/images/double/IMG_20260602_162726.jpg",
               amenities: ["سرير كوين", "حمام رخامي", "تكييف", "شرفة خاصة"]
             },
             {
@@ -848,7 +848,7 @@ export const translations = {
               price: "180€",
               capacity: 2,
               area: 28,
-              image: "/images/zalige2.jpg",
+              image: "/images/double/IMG_20260602_162741.jpg",
               amenities: ["سرير كوين", "حمام رخامي", "تكييف", "إطلالة على الحديقة"]
             },
             {
@@ -857,7 +857,7 @@ export const translations = {
               price: "180€",
               capacity: 2,
               area: 28,
-              image: "/images/lhotel.png",
+              image: "/images/double/IMG_20260602_163043.jpg",
               amenities: ["سرير كوين", "حمام رخامي", "تكييف", "شرفة خاصة"]
             }
           ]
@@ -873,7 +873,7 @@ export const translations = {
               price: "320€",
               capacity: 4,
               area: 50,
-              image: "/images/zalige2.jpg",
+              image: "/images/familia/IMG_20260602_165447.jpg",
               amenities: ["غرفتان", "صالون خاص", "حمامين", "شرفة", "خدمة كونسيرج"]
             },
             {
@@ -882,7 +882,7 @@ export const translations = {
               price: "320€",
               capacity: 4,
               area: 50,
-              image: "/images/lhotel.png",
+              image: "/images/familia/IMG_20260602_165523.jpg",
               amenities: ["غرفتان", "صالون خاص", "حمامين", "شرفة", "خدمة كونسيرج"]
             },
             {
@@ -891,7 +891,7 @@ export const translations = {
               price: "320€",
               capacity: 4,
               area: 50,
-              image: "/images/p2.png",
+              image: "/images/familia/IMG_20260602_170941.jpg",
               amenities: ["غرفتان", "صالون خاص", "حمامين", "شرفة", "خدمة كونسيرج"]
             },
             {
@@ -900,7 +900,7 @@ export const translations = {
               price: "320€",
               capacity: 4,
               area: 50,
-              image: "/images/zalige2.jpg",
+              image: "/images/familia/IMG_20260602_172038.jpg",
               amenities: ["غرفتان", "صالون خاص", "حمامين", "شرفة", "خدمة كونسيرج"]
             },
             {
@@ -909,7 +909,7 @@ export const translations = {
               price: "320€",
               capacity: 4,
               area: 50,
-              image: "/images/lhotel.png",
+              image: "/images/familia/IMG_20260602_172240.jpg",
               amenities: ["غرفتان", "صالون خاص", "حمامين", "شرفة", "خدمة كونسيرج"]
             },
             {
@@ -918,7 +918,7 @@ export const translations = {
               price: "320€",
               capacity: 4,
               area: 50,
-              image: "/images/p2.png",
+              image: "/images/familia/f2.jpeg",
               amenities: ["غرفتان", "صالون خاص", "حمامين", "شرفة", "خدمة كونسيرج"]
             }
           ]
@@ -940,7 +940,7 @@ export const translations = {
           highlight: "سائق خاص طوال اليوم"
         },
         {
-          title: "رحلة في المغرب مع سائق",
+          title: "دورة سياحية في المغرب مع سائق",
           desc: "صمم مساراً مخصصاً لك عبر المغرب (الصحراء، جبال الأطلس، الساحل الأطلسي) مع سائق ذو خبرة تحت تصرفكم.",
           highlight: "مسار مرن 100%"
         }
@@ -956,16 +956,16 @@ export const translations = {
     },
     location: {
       address: "59 شارع ابن بطوطة، الدار البيضاء، المغرب",
-      phoneValue: "+212600000000",
-      emailValue: "contact@hotelmaamoura.com",
+      phoneValue: "+212522452967",
+      emailValue: "hotelmaamoura@yahoo.com",
       googleMapsDestination: "59 Rue Ibn Batouta, Casablanca, Maroc",
       mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3324.1!2d-7.6114!3d33.5883!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda7d2b1c2e4f5a6%3A0x0!2s59%20Rue%20Ibn%20Batouta%2C%20Casablanca!5e0!3m2!1sfr!2sma",
       description: "يقع فندق المعمورة في قلب الدار البيضاء، في موقع مثالي على بعد خطوات من أهم أحياء الأعمال والترفيه في المدينة."
     },
     footer: {
       address: "العنوان: 45 شارع مولاي يوسف، الدار البيضاء، المغرب",
-      phone: "الهاتف: +212 6 00 00 00 00",
-      email: "البريد الإلكتروني: contact@hotelmaamoura.com",
+      phone: "الهاتف: 05.22.45.29.67/68",
+      email: "البريد الإلكتروني: hotelmaamoura@yahoo.com",
       rights: "© 2026 فندق المعمورة. جميع الحقوق محفوظة. مستوحى من هيبة الفن المغربي التقليدي."
     }
   },
@@ -1004,7 +1004,7 @@ export const translations = {
         both: "Llegada & Salida"
       },
       chauffeurCity: "Visita de la ciudad con chófer",
-      chauffeurMorocco: "Estancia en Marruecos con chófer (Flexible)",
+      chauffeurMorocco: "Circuito turístico en Marruecos con chófer (Flexible)",
       submit: "Verificar disponibilidad en WhatsApp",
       whatsappMessage: "Hola Hôtel Maamoura, deseo reservar una estancia:\n\n🏨 Alojamiento: {room}\n📅 Entrada: {checkIn}\n📅 Salida: {checkOut}\n👥 Huéspedes: {guests}\n🚗 Traslado Aeropuerto: {transfer}\n🗺️ Visita Ciudad con Chófer: {cityChauffeur}\n🚙 Tour Marruecos con Chófer: {moroccoChauffeur}\n\nGracias por confirmarme disponibilidad."
     },
@@ -1080,7 +1080,7 @@ export const translations = {
               price: "120€",
               capacity: 1,
               area: 18,
-              image: "/images/lhotel.png",
+              image: "/images/simple/IMG_20260602_164743.jpg",
               amenities: ["Cama individual", "Baño privado", "Aire acondicionado", "Vista al patio"]
             },
             {
@@ -1089,7 +1089,7 @@ export const translations = {
               price: "120€",
               capacity: 1,
               area: 18,
-              image: "/images/p2.png",
+              image: "/images/simple/IMG_20260602_164829.jpg",
               amenities: ["Cama individual", "Baño privado", "Aire acondicionado", "Vista al patio"]
             },
             {
@@ -1098,7 +1098,7 @@ export const translations = {
               price: "120€",
               capacity: 1,
               area: 18,
-              image: "/images/zalige2.jpg",
+              image: "/images/simple/IMG_20260602_164837.jpg",
               amenities: ["Cama individual", "Baño privado", "Aire acondicionado", "Vista al jardín"]
             },
             {
@@ -1107,7 +1107,7 @@ export const translations = {
               price: "120€",
               capacity: 1,
               area: 18,
-              image: "/images/lhotel.png",
+              image: "/images/simple/IMG_20260602_164900.jpg",
               amenities: ["Cama individual", "Baño privado", "Aire acondicionado", "Vista al patio"]
             },
             {
@@ -1116,7 +1116,7 @@ export const translations = {
               price: "120€",
               capacity: 1,
               area: 18,
-              image: "/images/p2.png",
+              image: "/images/simple/IMG_20260602_165505.jpg",
               amenities: ["Cama individual", "Baño privado", "Aire acondicionado", "Vista al jardín"]
             },
             {
@@ -1125,7 +1125,7 @@ export const translations = {
               price: "120€",
               capacity: 1,
               area: 18,
-              image: "/images/zalige2.jpg",
+              image: "/images/simple/IMG_20260602_165924.jpg",
               amenities: ["Cama individual", "Baño privado", "Aire acondicionado", "Vista al patio"]
             }
           ]
@@ -1141,7 +1141,7 @@ export const translations = {
               price: "180€",
               capacity: 2,
               area: 28,
-              image: "/images/p2.png",
+              image: "/images/double/IMG_20260602_162151.jpg",
               amenities: ["Cama Queen Size", "Baño de mármol", "Aire acondicionado", "Balcón privado"]
             },
             {
@@ -1150,7 +1150,7 @@ export const translations = {
               price: "180€",
               capacity: 2,
               area: 28,
-              image: "/images/zalige2.jpg",
+              image: "/images/double/IMG_20260602_162355.jpg",
               amenities: ["Cama Queen Size", "Baño de mármol", "Aire acondicionado", "Balcón privado"]
             },
             {
@@ -1159,7 +1159,7 @@ export const translations = {
               price: "180€",
               capacity: 2,
               area: 28,
-              image: "/images/lhotel.png",
+              image: "/images/double/IMG_20260602_162648.jpg",
               amenities: ["Cama Queen Size", "Baño de mármol", "Aire acondicionado", "Vista al jardín"]
             },
             {
@@ -1168,7 +1168,7 @@ export const translations = {
               price: "180€",
               capacity: 2,
               area: 28,
-              image: "/images/p2.png",
+              image: "/images/double/IMG_20260602_162726.jpg",
               amenities: ["Cama Queen Size", "Baño de mármol", "Aire acondicionado", "Balcón privado"]
             },
             {
@@ -1177,7 +1177,7 @@ export const translations = {
               price: "180€",
               capacity: 2,
               area: 28,
-              image: "/images/zalige2.jpg",
+              image: "/images/double/IMG_20260602_162741.jpg",
               amenities: ["Cama Queen Size", "Baño de mármol", "Aire acondicionado", "Vista al jardín"]
             },
             {
@@ -1186,7 +1186,7 @@ export const translations = {
               price: "180€",
               capacity: 2,
               area: 28,
-              image: "/images/lhotel.png",
+              image: "/images/double/IMG_20260602_163043.jpg",
               amenities: ["Cama Queen Size", "Baño de mármol", "Aire acondicionado", "Balcón privado"]
             }
           ]
@@ -1202,7 +1202,7 @@ export const translations = {
               price: "320€",
               capacity: 4,
               area: 50,
-              image: "/images/zalige2.jpg",
+              image: "/images/familia/IMG_20260602_165447.jpg",
               amenities: ["2 dormitorios", "Sala privada", "2 baños", "Terraza", "Servicio de concierge"]
             },
             {
@@ -1211,7 +1211,7 @@ export const translations = {
               price: "320€",
               capacity: 4,
               area: 50,
-              image: "/images/lhotel.png",
+              image: "/images/familia/IMG_20260602_165523.jpg",
               amenities: ["2 dormitorios", "Sala privada", "2 baños", "Terraza", "Servicio de concierge"]
             },
             {
@@ -1220,7 +1220,7 @@ export const translations = {
               price: "320€",
               capacity: 4,
               area: 50,
-              image: "/images/p2.png",
+              image: "/images/familia/IMG_20260602_170941.jpg",
               amenities: ["2 dormitorios", "Sala privada", "2 baños", "Terraza", "Servicio de concierge"]
             },
             {
@@ -1229,7 +1229,7 @@ export const translations = {
               price: "320€",
               capacity: 4,
               area: 50,
-              image: "/images/zalige2.jpg",
+              image: "/images/familia/IMG_20260602_172038.jpg",
               amenities: ["2 dormitorios", "Sala privada", "2 baños", "Terraza", "Servicio de concierge"]
             },
             {
@@ -1238,7 +1238,7 @@ export const translations = {
               price: "320€",
               capacity: 4,
               area: 50,
-              image: "/images/lhotel.png",
+              image: "/images/familia/IMG_20260602_172240.jpg",
               amenities: ["2 dormitorios", "Sala privada", "2 baños", "Terraza", "Servicio de concierge"]
             },
             {
@@ -1247,7 +1247,7 @@ export const translations = {
               price: "320€",
               capacity: 4,
               area: 50,
-              image: "/images/p2.png",
+              image: "/images/familia/f2.jpeg",
               amenities: ["2 dormitorios", "Sala privada", "2 baños", "Terraza", "Servicio de concierge"]
             }
           ]
@@ -1269,7 +1269,7 @@ export const translations = {
           highlight: "Chófer privado todo el día"
         },
         {
-          title: "Estancia en Marruecos con Chófer",
+          title: "Circuito Turístico en Marruecos con Chófer",
           desc: "Diseñe un viaje a medida a través de Marruecos (desierto, montañas del Atlas, costa atlántica) con total flexibilidad y un conductor experimentado a su servicio.",
           highlight: "Itinerario 100% flexible"
         }
@@ -1285,16 +1285,16 @@ export const translations = {
     },
     location: {
       address: "59 Rue Ibn Batouta, Casablanca, Maroc",
-      phoneValue: "+212600000000",
-      emailValue: "contact@hotelmaamoura.com",
+      phoneValue: "+212522452967",
+      emailValue: "hotelmaamoura@yahoo.com",
       googleMapsDestination: "59 Rue Ibn Batouta, Casablanca, Maroc",
       mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3323.5!2d-7.627!3d33.578!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda7d2b0c8f4a6e2%3A0x7b3c9d1e5f2a4b6c!2s59 Rue Ibn Batouta, Casablanca, Maroc!5e0!3m2!1sfr!2sma",
       description: "Idealmente situado en el corazón de Casablanca, el Hôtel Maamoura le recibe en un entorno excepcional a pocos pasos de los principales distritos de negocios y ocio de la ciudad."
     },
     footer: {
       address: "59 Rue Ibn Batouta, Casablanca, Maroc",
-      phone: "Teléfono: +212 6 00 00 00 00",
-      email: "Correo: contact@hotelmaamoura.com",
+      phone: "Teléfono: 05.22.45.29.67/68",
+      email: "Correo: hotelmaamoura@yahoo.com",
       rights: "© 2026 Hôtel Maamoura. Todos los derechos reservados. Inspirado en el prestigio del arte tradicional marroquí."
     }
   }

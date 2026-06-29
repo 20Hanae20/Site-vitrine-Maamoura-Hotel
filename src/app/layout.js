@@ -20,6 +20,7 @@ const cairo = Cairo({
 });
 
 export const metadata = {
+  metadataBase: new URL("https://maamoura.luxtech.ma"),
   title: "Hôtel Maamoura | Hôtel de Luxe Traditionnel Casablanca",
   description: "Découvrez l'Hôtel Maamoura, un havre de calme et de tradition inspiré de La Mamounia au cœur de Casablanca. Suites familiales, chauffeurs privés et services d'élite.",
   keywords: "Hôtel Maamoura, Casablanca, Riad de luxe, Suite familiale Casablanca, Chauffeur privé Maroc, Transfert aéroport Casablanca, La Mamounia style",

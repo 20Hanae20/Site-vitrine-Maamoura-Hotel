@@ -96,11 +96,11 @@ export default function Footer({ translations, currentLang }) {
               </li>
               <li className={styles.contactItem}>
                 <Phone size={16} className={styles.contactIcon} />
-                <a href="tel:+212600000000">{t.phone}</a>
+                <a href="tel:+212522452967">{t.phone}</a>
               </li>
               <li className={styles.contactItem}>
                 <Mail size={16} className={styles.contactIcon} />
-                <a href="mailto:contact@hotelmaamoura.com">{t.email}</a>
+                <a href="mailto:hotelmaamoura@yahoo.com">{t.email}</a>
               </li>
             </ul>
           </div>

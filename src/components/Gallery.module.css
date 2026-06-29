@@ -1,4 +1,4 @@
-﻿.section {
+.section {
   position: relative;
   overflow: hidden;
   width: 100%;
@@ -148,7 +148,7 @@
 .viewAllBtn:hover { border-color: var(--primary-gold); color: var(--primary-gold); box-shadow: 0 4px 15px rgba(178,127,36,0.08); transform: translateY(-2px); }
 .viewAllIcon { transition: transform 0.3s ease; }
 .viewAllBtn:hover .viewAllIcon { transform: translateX(4px); }
-.lightbox { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(14,21,32,0.96); backdrop-filter: blur(8px); z-index: 2000; display: flex; justify-content: center; align-items: center; animation: fadeIn 0.3s ease; }
+.lightbox { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(14,21,32,0.96); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); z-index: 2000; display: flex; justify-content: center; align-items: center; animation: fadeIn 0.3s ease; }
 @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 .closeBtn { position: absolute; top: 24px; right: 24px; color: var(--ivoire); background: transparent; border: none; cursor: pointer; transition: var(--transition-quick); z-index: 2100; opacity: 0.7; }
 .closeBtn:hover { color: var(--primary-gold); opacity: 1; transform: scale(1.1); }
